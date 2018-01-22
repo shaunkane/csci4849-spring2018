@@ -1,0 +1,559 @@
+<html>
+	<head>
+		<title>Index</title>
+		<style>
+			body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+			.slide { width: 600px; height: 338px;}
+			.notes { width: 600px;}
+			.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+			.slide, .notes, .html { margin-bottom: 10px;}
+			.html img { display: none;}
+			/* from https://accessibility.18f.gov/hidden-content/ */
+			.sr-only {
+			      border: 0; 
+			      clip: rect(0 0 0 0); 
+			      height: 1px; 
+			      margin: -1px;
+			      overflow: hidden;
+			      padding: 0;
+			      position: absolute;
+			      width: 1px;
+			    }
+			
+			.wrapper { margin: auto; max-width: 600px;}
+			.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; }
+		</style>
+	</head>
+	<body>
+		<div class='wrapper'>
+		<h1>Week 1: Introduction</h1>
+		<p>How the course works, motivation and background.</p>
+		<div class='content'>
+		<div class="row"><div class="slideNumber">Slide 1</div><div class="slide" aria-hidden="true"><img src='slides/1.png' width='600' height='338'></div><div class="html sr-only"><h1>Input, Interaction, and Accessibility</h1>
+<h3>CSCI 4849/5849, Shaun Kane, Spring 2018</h3></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 2</div><div class="slide" aria-hidden="true"><img src='slides/2.png' width='600' height='338'></div><div class="html sr-only"><h1>Today</h1>
+<ul>
+<li>
+<p>Introduction to the course</p>
+<ul>
+<li>
+<p>Why it's worth your time</p>
+</li>
+<li>
+<p>What we'll do in the course</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Mini-design activity</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 3</div><div class="slide" aria-hidden="true"><img src='slides/3.png' width='600' height='338'></div><div class="html sr-only"><h1>But first... a warm up</h1>
+<ul>
+<li>
+<p>Spend 5 minutes talking to your table neighbors</p>
+</li>
+<li>
+<p>Ask about</p>
+<ol>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Major and degree program</p>
+</li>
+<li>
+<p>Any goals for this course</p>
+</li>
+<li>
+<p>Do you have a superpower? What is it?</p>
+</li>
+<li>
+<p>What is an <strong>unusual</strong> input device that you use?</p>
+</li>
+</ol>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 4</div><div class="slide" aria-hidden="true"><img src='slides/4.png' width='600' height='338'></div><div class="html sr-only"><h1>What did we learn?</h1>
+<ul>
+<li>
+<p>Superpowers?</p>
+<ul>
+<li>Wake up at 5am, immune to nosebleeds, never lost money gambling, intuition, immune to darkness effects, super-smell</li>
+</ul>
+</li>
+<li>
+<p>Unusual input devices?</p>
+<ul>
+<li>fingerprint sensor (for gestures), voice commands in TV remote, cardboard box, SNES controller</li>
+</ul>
+</li>
+<li>
+<p>We'll get to know each other over the course of the semester</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 5</div><div class="slide" aria-hidden="true"><img src='slides/5.png' width='600' height='338'></div><div class="html sr-only"><h1>Who I am (briefly)</h1>
+<p><img alt="right" src="images/goat.jpg" /></p>
+<p>^^ image caption</p>
+<ul>
+<li>
+<p>Assistant Professor of Computer Science, affiliated with Information Science and ATLAS Institute</p>
+</li>
+<li>
+<p>4th year at CU (2nd time teaching this class)</p>
+</li>
+<li>
+<p>Director of the <a href="http://superhuman.cs.colorado,edu">Superhuman Computing Lab</a></p>
+</li>
+<li>
+<p>Use AT in the car, and StickyKeys on the computer, captions on TV</p>
+</li>
+<li>
+<p>[image: Shaun holding a baby goat]</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 6</div><div class="slide" aria-hidden="true"><img src='slides/6.png' width='600' height='338'></div><div class="html sr-only"><h1>My credentials</h1>
+<ul>
+<li>
+<p>Lifetime AT user and complainer</p>
+</li>
+<li>
+<p>Trained with <a href="http://faculty.washington.edu/wobbrock">Jacob Wobbrock</a> and <a href="http://www.cs.washington.edu/people/faculty/ladner">Richard Ladner</a> at U of Washington</p>
+</li>
+<li>
+<p>Working on accessibility research since 2005</p>
+</li>
+<li>
+<p>Former accessibility researcher at <a href="http://microsoft.com/research">Microsoft Research</a></p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 7</div><div class="slide" aria-hidden="true"><img src='slides/7.png' width='600' height='338'></div><div class="html sr-only"><h1>Some of our lab's research</h1>
+<ul>
+<li>
+<p>Designing touch screen user interfaces for blind people</p>
+</li>
+<li>
+<p>Exploring tools for cross-ability collaboration</p>
+</li>
+<li>
+<p>Understanding the social implications of wearable assistive devices</p>
+</li>
+<li>
+<p>Designing tactile animations using autonomous robots</p>
+</li>
+<li>
+<p>Learn more at <a href="http://superhuman.cs.colorado.edu">superhuman.cs.colorado.edu</a></p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 8</div><div class="slide" aria-hidden="true"><img src='slides/8.png' width='600' height='338'></div><div class="html sr-only"><h1>About the course</h1></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 9</div><div class="slide" aria-hidden="true"><img src='slides/9.png' width='600' height='338'></div><div class="html sr-only"><h1>CSCI 4849/5849</h1>
+<ul>
+<li>
+<p>Input  how to control our computing devices</p>
+</li>
+<li>
+<p>Interaction  designing interactive systems</p>
+</li>
+<li>
+<p>Accessibility  focus on "extra-ordinary" interactions</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 10</div><div class="slide" aria-hidden="true"><img src='slides/10.png' width='600' height='338'></div><div class="html sr-only"><h2>Is this an input course or an accessibility course?</h2>
+<ul>
+<li>
+<p>In some ways, it's a weird hybrid</p>
+<ul>
+<li>
+<p>What I know best, and care about most</p>
+</li>
+<li>
+<p>But it's interesting (I'll show you why)</p>
+</li>
+<li>
+<p>And it's useful (I'll show you how)</p>
+</li>
+</ul>
+</li>
+</ul></div><div class='notes'><p>Often we will see these as two separate courses: input and interaction, and accessibility. But I was always taught to take classes about XYZ from the experts on XYZ, and this is what I know best.</p></div></div><div class="row"><div class="slideNumber">Slide 11</div><div class="slide" aria-hidden="true"><img src='slides/11.png' width='600' height='338'></div><div class="html sr-only"><h1>(Some) goals of the course</h1>
+<ul>
+<li>
+<p>Survey of how we interact with computing technologies: pointing, text entry, gesture, speech, etc.</p>
+</li>
+<li>
+<p>Consider users' abilities in context</p>
+</li>
+<li>
+<p>Identify disconnects between a user's ability and modes of interaction</p>
+</li>
+<li>
+<p>Explore "extra-ordinary" use cases: users with differing abilities, emerging user interface technologies</p>
+</li>
+<li>
+<p>Build prototypes of interactive systems (GUI, speech, eye gaze, etc.)</p>
+</li>
+<li>
+<p>Employ human-computer interaction (HCI) methods to remove technology barriers</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 12</div><div class="slide" aria-hidden="true"><img src='slides/12.png' width='600' height='338'></div><div class="html sr-only"><h1>CSCI 5839 vs. 5849</h1>
+<h3>(and 3002 vs. 4849)</h3>
+<ul>
+<li>
+<p>More building and prototyping</p>
+</li>
+<li>
+<p>Focus on emerging interaction modes (speech, voice, etc.)</p>
+</li>
+<li>
+<p>Emphasis on understanding human capabilities in context</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 13</div><div class="slide" aria-hidden="true"><img src='slides/13.png' width='600' height='338'></div><div class="html sr-only"><h1>But why is this useful?</h1>
+<p><img alt="right" src="images/demonic-posession.jpg" /></p>
+<ul>
+<li>
+<p>As computer scientists, we have a real opportunity to improve fairness and equality by considering and including underrepresented groups</p>
+</li>
+<li>
+<p>OK great, but what if I don't care about that? What if I think disability is a sign of demonic posession?</p>
+<ul>
+<li>Knowing this stuff is still useful</li>
+</ul>
+</li>
+</ul></div><div class='notes'><p>Image: Person being treated for "demonic posession" in the middle ages</p></div></div><div class="row"><div class="slideNumber">Slide 14</div><div class="slide" aria-hidden="true"><img src='slides/14.png' width='600' height='338'></div><div class="html sr-only"><h2>Emerging technology</h2>
+<p><img alt="right" src="images/minority-report.jpg" /></p>
+<ul>
+<li>
+<p>How do we take advantage of new interactive technologies?</p>
+</li>
+<li>
+<p>How to understand what works and doesn't work (and why)?</p>
+</li>
+</ul></div><div class='notes'><p>Image: user interface from Minority Report features in-air gestures</p><p>This is an example of the "gorilla arm" effect. Humans are really bad at maintaining this kind of pose.</p></div></div><div class="row"><div class="slideNumber">Slide 15</div><div class="slide" aria-hidden="true"><img src='slides/15.png' width='600' height='338'></div><div class="html sr-only"><h1>PWD are tech explorers</h1>
+<p><img alt="75% right" src="images/courage-wolf.jpg" /></p>
+<ul>
+<li>
+<p>People with disabilities often encounter (and solve) tech problems before everyone else does</p>
+</li>
+<li>
+<p>Examples: texting, speech-based interfaces, eye gaze</p>
+</li>
+</ul></div><div class='notes'><p>Image: Courage wolf meme says "Have a disability, playing life on hard mode"</p></div></div><div class="row"><div class="slideNumber">Slide 16</div><div class="slide" aria-hidden="true"><img src='slides/16.png' width='600' height='338'></div><div class="html sr-only"><h1>AT is cool</h1>
+<p><img alt="75% right" src="images/cool-AT.png" /></p>
+<ul>
+<li>
+<p>Assistive technology is cool</p>
+</li>
+<li>
+<p>Accessible design is often good design</p>
+</li>
+<li>
+<p>Examples: Good Grips kitchen tools, carbon fiber prosthetic legs, fashionable eye glasses, 3D printed Iron Man prosthetic hand</p>
+</li>
+</ul></div><div class='notes'><p>Image: Examples of these AT devices</p></div></div><div class="row"><div class="slideNumber">Slide 17</div><div class="slide" aria-hidden="true"><img src='slides/17.png' width='600' height='338'></div><div class="html sr-only"><h1>Abilities are dynamic</h1>
+<p><img alt="right" src="images/mit-astronaut.jpg" /></p>
+<ul>
+<li>
+<p>Consider:</p>
+<ul>
+<li>
+<p>Older adult with Parkinson's disease</p>
+</li>
+<li>
+<p>Astronaut on a space walk</p>
+</li>
+<li>
+<p>Violinist during a performance</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Each experiences reduced or no hand dexterity</p>
+</li>
+<li>
+<p>Experience similar in some ways, different in others (can they change situation? training?)</p>
+</li>
+<li>
+<p>Core question: what is the user's ability in context?</p>
+</li>
+</ul></div><div class='notes'><p>Image: Astronaut in a space suit with bulky gloves</p></div></div><div class="row"><div class="slideNumber">Slide 18</div><div class="slide" aria-hidden="true"><img src='slides/18.png' width='600' height='338'></div><div class="html sr-only"><h1>GUI design is boring</h1>
+<ul>
+<li>
+<p>Quick: imagine the user interface for a mobile phone messaging app</p>
+</li>
+<li>
+<p>Everyone can do it, and the end results will probably be very similar and <strong>boring</strong></p>
+</li>
+<li>
+<p>Where is interesting design happening? </p>
+<ul>
+<li>Emerging and atypical interactions</li>
+</ul>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 19</div><div class="slide" aria-hidden="true"><img src='slides/19.png' width='600' height='338'></div><div class="html sr-only"><h1>More examples of Cool AT</h1>
+<ul>
+<li>
+<p>[Microsoft Eye Gaze Wheelchair] (https://www.youtube.com/watch?v=B-UwDnN_3-Q)</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=HXOWTLrWqzg">Steve Gleason, eye-gaze communication</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=vHgppLJcRaA">Freedom Machines documentary shows various ATs</a></p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 20</div><div class="slide" aria-hidden="true"><img src='slides/20.png' width='600' height='338'></div><div class="html sr-only"><h1>How will this help me?</h1>
+<ul>
+<li>
+<p>May open up job opportunities (<a href="http://teachaccess,org">teachaccess.org</a>)</p>
+</li>
+<li>
+<p>Get a head start on emerging trends in interaction (e.g. voice interfaces)</p>
+</li>
+<li>
+<p>Practice in designing technology to match user needs and abilities</p>
+</li>
+<li>
+<p>Assistive technology is a great area to explore innovative design</p>
+</li>
+</ul></div><div class='notes'><p>People with disabilities are often willing to try crazy stuff, because their existing technologies suck.</p></div></div><div class="row"><div class="slideNumber">Slide 21</div><div class="slide" aria-hidden="true"><img src='slides/21.png' width='600' height='338'></div><div class="html sr-only"><h1>More about the course</h1></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 22</div><div class="slide" aria-hidden="true"><img src='slides/22.png' width='600' height='338'></div><div class="html sr-only"><h1>Required materials</h1>
+<ul>
+<li>
+<p>Official CU email address </p>
+</li>
+<li>
+<p>Laptop (for some in-class activities)</p>
+</li>
+<li>
+<p>Sketchbook and pencils/pens</p>
+</li>
+<li>
+<p>No textbook. Required readings will be posted on the web site.</p>
+</li>
+<li>
+<p>We will be watching some videos as part of the class. You may need to rent the video (or join a group showing)</p>
+</li>
+</ul>
+<p>=</p></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 23</div><div class="slide" aria-hidden="true"><img src='slides/23.png' width='600' height='338'></div><div class="html sr-only"><h1>Assignments and Grading</h1>
+<h2>What am I actually going to DO in this class?</h2></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 24</div><div class="slide" aria-hidden="true"><img src='slides/24.png' width='600' height='338'></div><div class="html sr-only"><h1>Course work</h1>
+<ul>
+<li>
+<p>Weekly reading and synthesis assignments</p>
+</li>
+<li>
+<p>Weekly mini-assignments (mostly done in class)</p>
+</li>
+<li>
+<p>Course project, developing a new assistive technology solution</p>
+</li>
+<li>
+<p>Class participation</p>
+</li>
+<li>
+<p>Mini-presentation (required for grad students, optional for undergrads)</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 25</div><div class="slide" aria-hidden="true"><img src='slides/25.png' width='600' height='338'></div><div class="html sr-only"><h1>Weekly reading</h1>
+<h3>(due Monday 3pm)</h3>
+<ul>
+<li>
+<p>One or two research articles per week (sometimes a video)</p>
+</li>
+<li>
+<p>Brief quiz in Moodle</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 26</div><div class="slide" aria-hidden="true"><img src='slides/26.png' width='600' height='338'></div><div class="html sr-only"><h1>In-class assignments</h1>
+<h3>(due following Monday at 3pm)</h3>
+<ul>
+<li>
+<p>We will complete an in-class assignment most weeks</p>
+</li>
+<li>
+<p>Work alone or with a group</p>
+</li>
+<li>
+<p>Start in class, finish on your own</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 27</div><div class="slide" aria-hidden="true"><img src='slides/27.png' width='600' height='338'></div><div class="html sr-only"><h1>Course project</h1>
+<ul>
+<li>
+<p>Semester-long project with 2-4 students</p>
+</li>
+<li>
+<p>Prototype a novel form of assistive technology</p>
+</li>
+<li>
+<p>I will help pair you with a project mentor</p>
+</li>
+<li>
+<p>Previous projects: wearable swim tracker for blind and visually impaired people, audio-based Dungeons &amp; Dragons game, voice e-mail for Alexa</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 28</div><div class="slide" aria-hidden="true"><img src='slides/28.png' width='600' height='338'></div><div class="html sr-only"><h1>Class participation</h1>
+<ul>
+<li>
+<p>You are expected to attend class regularly and to participate (by asking questions, sharing your work, etc)</p>
+</li>
+<li>
+<p>If you miss class, you are responsible for making up the work</p>
+</li>
+<li>
+<p>If you are distracting others, I will ask you to leave</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 29</div><div class="slide" aria-hidden="true"><img src='slides/29.png' width='600' height='338'></div><div class="html sr-only"><h1>Mini-Presentations</h1>
+<ul>
+<li>
+<p>Students present a 5-10 minute presentation on an active research topic</p>
+</li>
+<li>
+<p>Required for grad students but open to all</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 30</div><div class="slide" aria-hidden="true"><img src='slides/30.png' width='600' height='338'></div><div class="html sr-only"><h1>Online resources</h1>
+<ul>
+<li>
+<p>Moodle (moodle.cs.colorado.edu)</p>
+</li>
+<li>
+<p>Slack channel</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 31</div><div class="slide" aria-hidden="true"><img src='slides/31.png' width='600' height='338'></div><div class="html sr-only"><h1>A typical week</h1>
+<p><strong>Due every Monday</strong></p>
+<ul>
+<li>
+<p>Reading assignment</p>
+</li>
+<li>
+<p>Weekly assignment write-up from last week</p>
+</li>
+</ul>
+<p><strong>Monday</strong></p>
+<ul>
+<li>
+<p>Discuss last week's assignment</p>
+</li>
+<li>
+<p>Share questions, comments, examples</p>
+</li>
+<li>
+<p>Brief-lecture from Shaun</p>
+</li>
+<li>
+<p>Plan in-class activity</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 32</div><div class="slide" aria-hidden="true"><img src='slides/32.png' width='600' height='338'></div><div class="html sr-only"><h1>A typical week (2)</h1>
+<p><strong>Wednesday</strong></p>
+<ul>
+<li>
+<p>Student mini-presentations</p>
+</li>
+<li>
+<p>Guest speakers</p>
+</li>
+<li>
+<p>Complete design activity</p>
+</li>
+</ul>
+<p><strong>Before next class</strong></p>
+<ul>
+<li>
+<p>Write-up in-class activity</p>
+</li>
+<li>
+<p>Readings for next week</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 33</div><div class="slide" aria-hidden="true"><img src='slides/33.png' width='600' height='338'></div><div class="html sr-only"><h1>How to get help/feedback</h1>
+<ul>
+<li>
+<p>Ask in class (or before or after)</p>
+</li>
+<li>
+<p>Post on Slack (in general channel if appropriate)</p>
+</li>
+<li>
+<p>Schedule an office hours appointment</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 34</div><div class="slide" aria-hidden="true"><img src='slides/34.png' width='600' height='338'></div><div class="html sr-only"><h1>Planned topics</h1>
+<p>| Week | Dates | Subject |</p>
+<p>|---|---|---|</p>
+<p>| 1 | 1/15-1/21 | Course introduction |</p>
+<p>| 2 | 1/22-1/28 | Traditional GUIs, pointing |</p>
+<p>| 3 | 1/29-2/4 | Traditional GUIs, text entry |</p>
+<p>| 4 | 2/5-2/11 | Design methods, project brainstorming |</p>
+<p>| 5 | 2/12-2/18 | Web accessibility |</p>
+<p>| 6 | 2/19-2/25 | Blindness |</p>
+<p>| 7 | 2/26-3/4 | Low vision, intro to research methods |</p>
+<p>| 8 | 3/5-3/11 | Motor impairments |</p></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 35</div><div class="slide" aria-hidden="true"><img src='slides/35.png' width='600' height='338'></div><div class="html sr-only"><h1>Planned topics (2)</h1>
+<p>| Week | Dates | Subject |</p>
+<p>|---|---|---|</p>
+<p>| 9 | 3/12-3/18 | Speech interfaces |</p>
+<p>| 10 | 3/19-3/25 | Hearing, assistive wearables |</p>
+<p>| 11 | 3/26-4/1 | Spring break |</p>
+<p>| 12 | 4/2-4/8 | Communication support |</p>
+<p>| 13 | 4/9-4/15 | Tactile graphics |</p>
+<p>| 14 | 4/16-4/22 | Collaboration, crowd-powered interfaces |</p>
+<p>| 15 | 4/23-4/29 | Cognitive accessibility |</p>
+<p>| 16 | 4/30-5/6 | Wrap up; final project demos |</p></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 36</div><div class="slide" aria-hidden="true"><img src='slides/36.png' width='600' height='338'></div><div class="html sr-only"><h1>Other syllabus items</h1>
+<p><strong>Please read before next class.</strong></p>
+<ul>
+<li>
+<p>Disability Accommodations</p>
+</li>
+<li>
+<p>Religious Observances</p>
+</li>
+<li>
+<p>Classroom Behavior</p>
+</li>
+<li>
+<p>Sexual Misconduct, Discrimination, Harassment and/or Related Retaliation</p>
+</li>
+<li>
+<p>Honor Code</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 37</div><div class="slide" aria-hidden="true"><img src='slides/37.png' width='600' height='338'></div><div class="html sr-only"><h1>Remember: Make it accessible</h1>
+<ul>
+<li>
+<p>How do we get good at avoiding accessibility problems?</p>
+</li>
+<li>
+<p>Practice!</p>
+</li>
+<li>
+<p>So we will try to make everything we do accessible</p>
+</li>
+<li>
+<p>We'll explore this throughout the semester</p>
+</li>
+<li>
+<p>Both pedestrian issues (how to make my PDF accessible?) and deeper design questions (how to design for abilities that change over time?)</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 38</div><div class="slide" aria-hidden="true"><img src='slides/38.png' width='600' height='338'></div><div class="html sr-only"><h1>Questions?</h1></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 39</div><div class="slide" aria-hidden="true"><img src='slides/39.png' width='600' height='338'></div><div class="html sr-only"><h1>For next time</h1>
+<ul>
+<li>
+<p>Sign up for Moodle and Slack</p>
+</li>
+<li>
+<p>Review the syllabus</p>
+</li>
+<li>
+<p>First reading assignment (due Monday at 3pm)</p>
+</li>
+<li>
+<p>Next week: developing GUIs in HTML, CSS, JavaScript, Electron</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 40</div><div class="slide" aria-hidden="true"><img src='slides/40.png' width='600' height='338'></div><div class="html sr-only"><h1>Design Activity</h1></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 41</div><div class="slide" aria-hidden="true"><img src='slides/41.png' width='600' height='338'></div><div class="html sr-only"><h1>Design Activity</h1>
+<p><img alt="fit right" src="images/kavita.jpg" /></p>
+<ul>
+<li>
+<p>This is <a href="https://www.youtube.com/watch?v=P0DzN7oxnX8">Kavita</a></p>
+</li>
+<li>
+<p>Kavita has Spinal Muscular Atrophy and uses the Beam robot for telepresence</p>
+</li>
+<li>
+<p>What kinds of accessibility challenges would Kavita experience in a class like this?</p>
+</li>
+<li>
+<p>Let's brainstorm problems (together) and solutions (with our neighbors)</p>
+</li>
+</ul></div><div class='notes'></div></div><div class="row"><div class="slideNumber">Slide 42</div><div class="slide" aria-hidden="true"><img src='slides/42.png' width='600' height='338'></div><div class="html sr-only"><h1>Problems and solutions</h1>
+<ul>
+<li>
+<p>Problems</p>
+<ul>
+<li>...</li>
+</ul>
+</li>
+<li>
+<p>Solutions</p>
+<ul>
+<li>...</li>
+</ul>
+</li>
+</ul></div><div class='notes'></div></div></div></div></body></html>
