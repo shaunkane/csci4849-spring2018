@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="creator" content="Marked.app"/>
+</head>
+<body>
+
+<h1>Assignment 1: GUI Programming</h1>
+
+<p>Due Wednesday January 31 at 3pm. It's OK to discuss this project with others as you work on it, but each person needs to complete this assignment.</p>
+
+<p>In this assignment, we will code up our first user interface. For this activity, and throughout the course, we will be building user interfaces in HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and JavaScript.</p>
+
+<p>Why use HTML?</p>
+
+<ul>
+<li>It's the easiest way to build user interfaces that work across a variety of device platforms (Mac, Windows, Android, iOS). Although HTML was originally intended for web documents, it is often used for desktop and mobile applications.</li>
+<li>We can create our interfaces using a text editor, and don't need any fancy development tools.</li>
+<li>Web apps are very easy to distribute. We'll use <a href="http://pages.github.com">Github Pages</a> to host our apps.</li>
+<li>Increasingly, many popular apps are written in HTML, including <a href="http://slack.com">Slack</a>, <a href="http://atom.io">Atom</a>, and <a href="http://www.whatsapp.com">WhatsApp</a>.</li>
+<li>Once you learn the basics, it's easy. If you are worried this is going to be too challenging, take inspiration from <a href="https://en.wikipedia.org/wiki/Sreelakshmi_Suresh">Sreelakshmi Suresh</a>, who developed her school's web site when she was 8 years old.</li>
+</ul>
+
+<p>For this assignment, we will be developing the UI structure for our prototype and using JavaScript to add simple interactive behaviors, like switching UI tabs. We won't be programming the &quot;back end&quot; code that controls the logic of our application, although you could certainly do that part too if you wanted.</p>
+
+<h2>What you will need</h2>
+
+<ul>
+<li>A text editor. You can use whatever text editor is installed on your system - Notepad on Windows, TextEdit on Mac. Later you may want to upgrade to a text editor with more features. <a href="http://atom.io">Atom</a> is a good, cross-platform solution, and its user interface is even written in HTML/CSS/JavaScript!</li>
+<li>A local folder to store your files. We'll be doing a bunch of these assignments, so you might want to create an &quot;assignment1&quot; folder for this one.</li>
+<li>A GitHub account. GitHub is a service for hosting program source code. We'll be using <a href="http://pages.github.com">Github Pages</a> to host our code, as it's free and relatively convenient (and because the university no longer provides convenient web hosting). It's free, and if you sign up via <a href="https://education.github.com">Github Education</a></li>
+</ul>
+
+<h2>Useful reference materials</h2>
+
+<p>Before we start, it's a really good idea to load up some reference pages in case you run into something you don't know how to do. Here are a few useful references for HTML, CSS, and JavaScript:</p>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">next steps</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS">next steps</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a> and <a href="http://jqfundamentals.com/chapter/javascript-basics">JQuery fundamentals</a></li>
+</ul>
+
+<p>We'll be using two libraries to make our work a little easier. We'll be using the <a href="https://api.jquery.com">JQuery</a> JavaScript library to simplify the code that we need to write, and the <a href="https://purecss.io">Pure CSS</a> library to make our user interfaces look a little bit nicer. We can link to these directly from our code, so you don't need to download or install them.</p>
+
+<h2>What you'll do</h2>
+
+<p>In this assignment, we will be creating a simpler phone dialer application, similar to the iOS and Android Phone apps. A demo version of the app is shown below. </p>
+
+<p>The general idea is to create a three-tab user interface. Tab 1 has a dialer interface with a phone-style keypad, a text field, and buttons to dial and clear the text field. Tab 2 has a list of contacts. Tab 3 has a form for adding contacts: a field for name, phone, and email, and buttons to add the contact or clear the form.</p>
+
+<figure>
+<img src="images/tabs.gif" alt="animated image shows switching between tabs" />
+<figcaption>animated image shows switching between tabs</figcaption>
+</figure>
+
+<p>For this particular assignment, we will be writing the HTML code that represents the user interface structure, writing some CSS code to adjust the presentation of that interface, and writing JavaScript code to handle the tab switching. All of this code runs right in the browser itself, so there's no code on the server or anything else. </p>
+
+<p>In the future, if you wanted to make this into a &quot;real&quot; application, you could write code that runs on a web server, or in a standalone application (using <a href="http://electronjs.org">Electron</a>). We won't do that in this course but you will have the knowledge you need to do so.</p>
+
+<p>Right now, we are not going to add in all the accessibility features that we could add. Over the next few weeks, we will extend this prototype to add more features, including accessibility features.</p>
+
+<h2>Some advice before you start</h2>
+
+<p>Completing this assignment will probably involve learning some new coding techniques, including some HTML, CSS, and JavaScript. If you know those already, you still may need to learn about how to use these new libraries.</p>
+
+<p>Example code to do all of these things is available online. However, I am imploring you not to complete this assignment by just copying code from the web, or from someone else in the class. Once you learn how these this setup works, it will be much easier to build on that knowledge as we go through the course. It's very tempting, and common, to hack some code together for the first assignment, only to get stuck later when we add on to this project. </p>
+
+<p><strong>My advice for this particular assignment is to write out all the code by hand, and to not copy and paste anything.</strong> Later on, it will be easier to copy and paste things to put something together more quickly, but for now, it will help your understanding if you put the code together yourself piece by piece.</p>
+
+<p>If you get stuck, I am happy to help, but I'll ask you to talk to me about what you're attempting to do and what you've tried already. You can also ask others for help. Just remember that if you're stuck on something, the important thing to do is to figure out why something isn't working, and how it's supposed to work. Getting help on what a specific line of code should be, without understanding why it is that way, is just going to cause you future problems.</p>
+
+<h2>Step-by-step instructions</h2>
+
+<h3>Step 1: Create your files</h3>
+
+<p>We will create three text files that comprise your app:</p>
+
+<ol>
+<li><p><em>index.html</em> - this HTML file will contain the underlying structure of the user interface. In this file, you will write code that represents the three UI tabs and their contents. All three tabs will go in a single file; we'll use JavaScript to control which tab is active at a given time.</p>
+
+<p>We will annotate our HTML document with <em>classes</em>, which indicate a certain type of element in our user interface (such as buttons on the tab bar), and <em>IDs</em>, which indicate specific items in our user interface (such as the &quot;Dial&quot; button). </p></li>
+<li><p><em>phone.css</em> - this CSS file tells the web browser how to render the given web page: for example, how big specific buttons are, and where they appear on the screen. Our CSS file consists of a list of rules, and refers to the styles and IDs in the HTML file so that we can, for example, change the appearance of buttons in the tab bar without changing all of the buttons.</p>
+
+<p>The cool thing about the CSS file is that it allows us to change the presentation of our UI without changing the HTML code - for example, to create a &quot;high contrast&quot; version of our UI, we only need to change the CSS file.</p></li>
+<li><p><em>phone.js</em> - this file will contain JavaScript code that controls our user interface. We will write code to hide the inactive user interface tabs, and to show the appropriate tab when the user clicks on the tab.</p></li>
+</ol>
+
+<p>We will also be importing two libraries, described below. The <a href="https://api.jquery.com">JQuery</a> library provides some JavaScript library to simplify the code that we need to write, and the <a href="https://purecss.io">Pure CSS</a> library, which provides some nice-looking, pre-made styles for our buttons and other interface elements.</p>
+
+<h3>Step 2: Create a blank HTML page</h3>
+
+<p>Edit your index.html file. Every HTML document has the same basic structure, which we will add on to as we go.</p>
+
+<p>Here is what your basic HTML page will look like. (Again, I beg you to go through this and write it up yourself rather than just copy and pasting, so you will get some practice in structuring HTML documents).</p>
+<pre><code>&lt;html&gt;
+ &lt;head&gt;
+ &lt;title&gt;Your Page Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ Your page content.
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>As you can see, HTML consists of a series of nested &quot;tags&quot;. Over time you will learn what most of the tags do. Many of the tags have both a starting tag, like <code>&lt;html&gt;</code>, and an ending tag, like <code>&lt;/html&gt;</code>. Everything inside it is, you guessed it, the HTML document.</p>
+
+<p>Everything that is rendered as part of the HTML document, and our user interface, will be placed within the body tags.</p>
+
+<h3>Step 3: Getting to know our HTML tags</h3>
+
+<p>HTML has a whole bunch of tags. For creating our user interface, we are going to use a relatively small subset of the tags. For this activity, we will be using the following tags - although you are free to use others.</p>
+
+<ul>
+<li><p><code>&lt;div class=&quot;className&quot; id=&quot;idName&quot;&gt;&lt;/div&gt;</code> - The div tag represents a section in the document or user interface. For example, we would use a separate div tag for each of the user interface tabs.</p>
+
+<p>You'll notice that the example div tag has both a class name and an id. For this assignment, you should choose class names and ids for each of your elements. The class represents the type of the UI element - such as a tab bar, tab content, etc. Multiple tags can have the same class, and each tag can have multiple classes, separated by a space. The id represents a unique identifier for a specific item, which we can use to style that element or control it via JavaScript code.</p></li>
+<li><p><code>&lt;button class=&quot;className&quot; id=&quot;idName&quot;&gt;Button label&lt;/button&gt;</code> - These are buttons. We must give the button an id if we want to be able to respond to clicks, so it is good practice to give each button an ID. The <a href="https://purecss.io">Pure CSS</a> library contains some built-in classes that make our buttons look good.</p></li>
+<li><p><code>&lt;input class=&quot;className&quot; id=&quot;idName&quot;/&gt;</code> - this represents a text box. In general, we will place inputs within a <code>&lt;form&gt;</code> tag, and will add an accompanying label tag to label the form. Pure CSS also contains classes for styling the form.</p>
+
+<p>For example, the following code snippet describes a form with a single input and a label for that input.</p></li>
+</ul>
+<pre><code class="(null)">&lt;form class=&quot;pure-form pure-form-stacked&quot;&gt;
+ &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+ &lt;input id=&quot;name&quot; placeholder=&quot;Jane Smith&quot;&gt;
+&lt;/form&gt;</code></pre>
+
+<p>By using these tags, we can create the interface shown in the above image. You may use other tags, and over time you will learn more as needed.</p>
+
+<h3>Step 4: Importing PureCSS and JQuery</h3>
+
+<p>In your HTML page, you will add references to import those two libraries. For now, we will copy these tags directly into your document.</p>
+
+<ul>
+<li><p><strong>Pure CSS</strong>: Add the following tag somewhere in your HTML document's <code>&lt;head&gt;</code> tag.</p>
+
+<p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/purecss@1.0.0/build/pure-min.css&quot; integrity=&quot;sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w&quot; crossorigin=&quot;anonymous&quot;&gt;</code></p></li>
+<li><p><strong>JQuery</strong>: To import the JQuery JavaScript library, add the following tag. For reasons that aren't important now, you should add this tag to the end of your HTML body, i.e., before the closing <code>&lt;/body&gt;</code> tag:</p></li>
+</ul>
+<pre><code class="(null)">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+<p>You also need to add references in your HTML document to the CSS and JS files that you are creating. Put them in the same place that you placed the other Pure CSS and JQuery tags above.</p>
+
+<p>In the document head:</p>
+
+<p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;phone.css&quot;&gt;</code></p>
+
+<p>At the end of the document body:</p>
+
+<p><code>&lt;script src=&quot;phone.js&quot;&gt;&lt;/script&gt;</code></p>
+
+<h3>Step 5: Set up the structure of your app</h3>
+
+<p>Next, you should focus on writing the HTML code to represent your document. Don't worry about how it looks now; we'll fix that later. Also, at the start, all three tabs will be visible on the screen at once. We'll fix that in the next step.</p>
+
+<p>There are many ways to structure your document, but here is one good way to do it:</p>
+
+<ul>
+<li>At the top of your body, create a <code>&lt;div&gt;</code> tag with an id of &quot;tab_bar&quot; or something like that. Inside that tag, add three buttons, one for each of the UI tab buttons. Each button needs an id so we can wire them up to our JavaScript code later.</li>
+<li>After the tab bar, create another <code>&lt;div&gt;</code> tab with an id of &quot;content&quot; or something similar. This div will contain the content of the three tabs (i.e., the phone dialer interface, the add contact interface)</li>
+<li>Inside the content div, create three other divs. These will represent the three tab &quot;screens&quot;. Give them ids that represent their content, like &quot;content_dialer&quot; and &quot;content_list&quot;. Naming your UI elements in a sensible way will save you a lot of trouble later.</li>
+</ul>
+
+<p>You don't need to exactly follow the demo app we created, but your app should have all he same elements. Once you have set these up, you are done with the HTML part of this activity.</p>
+
+<h3>Step 6: Add JavaScript code to control the user interface</h3>
+
+<p>In the phone.js file, you will add code to do control the interactive parts of the user interface. For this assignment, we will mainly use JQuery's <a href="http://api.jquery.com/show/">show</a> and <a href="http://api.jquery.com/hide/">hide</a> functions to hide the non-active tabs.</p>
+
+<p>JavaScript syntax is pretty complicated, so we'll give you a starting point here. This code should go into your JavaScript file.</p>
+<pre><code class="(null)">$(document).ready(function() { // do this when the document is loaded
+ $(&quot;#element&quot;).show(); // show the element with ID &quot;element&quot;
+ $(&quot;#otherElement&quot;).hide(); // hide the element with ID &quot;otherElement&quot;
+});</code></pre>
+
+<p>Note that we will often use the JQuery code block <code>$(&quot;#x&quot;)</code> to mean do something to the HTML tag with label 'x'.</p>
+
+<p>You will need to customize this code to hide all others but the default tab.</p>
+
+<p>You will also need to add code to this JS file to handle your tab buttons. When a tab button is clicked, the corresponding tab is shown and the others are hidden. Here is an example to get you started.</p>
+<pre><code class="(null)">$(&quot;#button_id&quot;).click(function() { // when &quot;button_id&quot; is clicked
+ $(&quot;#element&quot;).show(); // show element
+ $(&quot;#other_element&quot;).hide(); // hide other element
+});</code></pre>
+
+<p>Again, you will need to customize this to your HTML file.</p>
+
+<h3>Step 7: Add styles to control the representation of your buttons</h3>
+
+<p>You can add content to your .css file to change the appearance of your HTML. You can do this to change button sizes, change spacing, change colors, etc. The CSS file consists of a series of &quot;selectors&quot; that reference some part of your HTML document, and a set of attributes that will then be applied to those elements.</p>
+
+<p>In general, you will use the class names and id names in your HTML documents in your CSS file. This is why it's important to give your elements class names and id names. In CSS, &quot;.className&quot; refers to all elements with that class name, and &quot;#idName&quot; refers to the single element with that ID name.</p>
+
+<p>We could spend weeks exploring the intricacies of HTML. For now, we'll start with some simple examples. Here are a few examples that could be used in this project. You can read the <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics document</a> for next steps.</p>
+<pre><code class="(null)">/* make all buttons 20 by 20 pixels with white text and green background and a 10 pixel margin */
+button { width: 20px; height: 20px; background: green; color: white; margin: 10px; }
+
+<p>/* make all tags with the &quot;cool&quot; class name have blue text */
+.cool { color: blue; }</p>
+
+<p>/* make the button with ID &quot;delete&quot; red */</p>
+
+<h1>delete { background: red; }</h1>
+</code></pre>
+
+<p>The goal for this step is to do something interesting with your file - you can copy the design from the demo, or make something your own.</p>
+
+<h3>Step 8: Publish your files</h3>
+
+<p>You will post your three files (html, css, and js) on <a href="http://pages.github.com">GitHub Pages</a>. That page contains step-by-step instructions for posting your files. If you don't want to use the GitHub program, you can create files using the GitHub interface and paste the contents of your local files in.</p>
+
+<h2>What to turn in</h2>
+
+<p>All you need to turn in is the URL for your prototype. Make sure to test it to make sure it works properly.</p>
+
+</body>
+</html>
