@@ -1,0 +1,454 @@
+<html>
+<head>
+<title>More on Pointing and Evaluation</title>
+<style> body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+.slide { width: 600px; height: 338px;}
+.notes { width: 600px;}
+.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+.slide, .notes, .html { margin-bottom: 10px;}
+.html img { display: none;}
+.sr-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.wrapper { margin: auto; max-width: 600px;}
+.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; };</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>More on Pointing and Evaluation</h1>
+<div class='content'><div class="row">
+<div class="slideNumber">Slide 1</div>
+<div class="slide" aria-hidden="true"><img src='images/images.001.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>More on Pointing and Evaluation</h2>
+<ul><li>Input, Interaction, and Accessibility</li>
+<li>Spring 2018</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 2</div>
+<div class="slide" aria-hidden="true"><img src='images/images.002.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Today</h2>
+<ul><li>Pointing problems</li>
+<li>What Fitts's Law tells us about pointing</li>
+<li>Pointing facilitation</li>
+<li>Project brainstorming</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 3</div>
+<div class="slide" aria-hidden="true"><img src='images/images.003.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>On Wednesday</h2>
+<ul><li>We'll start brainstorming projects</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 4</div>
+<div class="slide" aria-hidden="true"><img src='images/images.004.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Check-in on coding assignment</h2>
+<ul><li>How is it going?</li>
+<li>Stuck on anything?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 5</div>
+<div class="slide" aria-hidden="true"><img src='images/images.005.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Pointing</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 6</div>
+<div class="slide" aria-hidden="true"><img src='images/images.006.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What is pointing, anyway?</h2>
+<ul><li>We might think of it in narrow terms: e.g., using a mouse to move a cursor and click an icon</li>
+<li>More generally, all aimed movements are pointing</li>
+<li>Typing == pointing at a series of physical keys, and actuating them</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 7</div>
+<div class="slide" aria-hidden="true"><img src='images/images.007.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Ballistic vs. corrective movement</h2>
+<ul></ul>
+</div><div class="notes"><p>Image: screen shot from <a href="http://depts.washington.edu/madlab/proj/fittsstudy/">FittsStudy</a> software shows mouse data from a single pointing trial, including the distance over time, velocity over time, acceleration over time, and jerk (the change in acceleration) over time.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 8</div>
+<div class="slide" aria-hidden="true"><img src='images/images.008.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Ballistic vs. corrective movement</h2>
+<ul></ul>
+</div><div class="notes"><p>Image: close up of the previous slide shows overshoot and corrective movement phase.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 9</div>
+<div class="slide" aria-hidden="true"><img src='images/images.009.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How can we evaluate pointing?</h2>
+<ul><li>Answer questions like:</li>
+<li>How does this input device compare to another?</li>
+<li>Is interface layout A or B more efficient?</li>
+<li>Does interface C or D work better for User X?</li>
+<li>What would we even measure?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 10</div>
+<div class="slide" aria-hidden="true"><img src='images/images.010.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Evaluating pointing</h2>
+<ul><li>We can measure movement times (and error rates)</li>
+<li>But these have relatively little explanatory power</li>
+<li>If pointing is slow, should we always just make the cursor move faster?</li>
+<li>What knobs should we turn to improve performance?</li>
+<li>What do our test results tell us about other situations?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 11</div>
+<div class="slide" aria-hidden="true"><img src='images/images.011.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts's Law</h2>
+<ul><li>Formula that provides an accurate model of pointing performance in a given context</li>
+<li>Allows us to estimate in what-if scenarios</li>
+<li>Helps explain differences between different pointing scenarios</li>
+<li>Provides actionable steps for changing pointing performance</li>
+</ul>
+</div><div class="notes"><p>We talk quite a bit about Fitts in 3002 and 5839. Today we'll bring everyone up to speed - but there is more to learn</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 12</div>
+<div class="slide" aria-hidden="true"><img src='images/images.012.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts's Law</h2>
+<ul><li>Movement time = f(target size, target distance, efficiency of the pointing device)</li>
+<li>MT = a + b * log2(A / W + 1)</li>
+<li>A = amplitude (aka distance of movement)</li>
+<li>W = width (aka target size)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 13</div>
+<div class="slide" aria-hidden="true"><img src='images/images.013.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Index of difficulty</h2>
+<ul><li>MT = a + bx, where x = log2(A / W + 1)</li>
+<li>x is the Index of Difficulty</li>
+<li>It represents the difficulty of the pointing task</li>
+<li>a and b are constants</li>
+<li>b is a slope</li>
+<li>these represent performance characteristics of the pointing device itself! </li>
+</ul>
+</div><div class="notes"><p>OK, so what does our index of difficulty tell us about pointing tasks?</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 14</div>
+<div class="slide" aria-hidden="true"><img src='images/images.014.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>So what?</h2>
+<ul><li>A and W give us a way of thinking about pointing task difficulty</li>
+<li>a and b give us a way of measuring different pointing contexts</li>
+<li>Different pointing devices (mouse vs. trackball)</li>
+<li>User groups (older adults vs. kids)</li>
+<li>Contexts (sitting vs. standing vs. walking)</li>
+<li>1/b is often called Index of Performance (or throughput)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 15</div>
+<div class="slide" aria-hidden="true"><img src='images/images.015.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Using Fitts's Law</h2>
+<ul><li>We can predict how pointing performance would change on an easier or more difficult interface</li>
+<li>We can compare objective performance between devices, even if they perform differently in different contexts</li>
+<li>e.g. Input device A is great at small targets but overall slow; input device B is pretty good at all target sizes - which is better?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 16</div>
+<div class="slide" aria-hidden="true"><img src='images/images.016.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts's Law history</h2>
+<ul><li>Developed by Paul M. Fitts in 1954</li>
+<li>Designed for a reciprocal pointing task</li>
+<li>Movement in 1 dimension only</li>
+<li>Used a stylus on touch pads</li>
+</ul>
+</div><div class="notes"><h3 id="images">Images:</h3><p>Top: Image of Paul Fitts, from <a href="https://lsa.umich.edu/psych/news-events/all-news/awards/psychology-awards-banquet-celebrates-department-achievements-and.html">University of Michigan</a> Bottom: Reciprocal tapping task from <a href="http://www.yorku.ca/mack/GI92.html">Scott MacKenzie</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 17</div>
+<div class="slide" aria-hidden="true"><img src='images/images.017.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Does Fitts's Law apply to me?</h2>
+<ul><li>It has been tested across a variety of user groups, body parts, input devices, even underwater</li>
+<li>It is a loose approximation that works in many contexts</li>
+<li>Useful as long as we can measure start time, end time, target distance, target size</li>
+<li>Applies to 1-dimensional movement only</li>
+<li>Models for 2D and 3D movement have been proposed</li>
+</ul>
+</div><div class="notes"><p>Even a touch screen - although we can't track movement above the screen.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 18</div>
+<div class="slide" aria-hidden="true"><img src='images/images.018.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Using Fitts's Law</h2>
+<ul><li>If we know a and b</li>
+<li>Predict movement times for different indices of difficulty (A and W)</li>
+<li>If we don't know a and b</li>
+<li>Run tests to collect movement times; solve for a and b</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 19</div>
+<div class="slide" aria-hidden="true"><img src='images/images.019.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Improving performance</h2>
+<ul><li>Pointing performance will be improved when targets are nearby and large</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 20</div>
+<div class="slide" aria-hidden="true"><img src='images/images.020.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Radial menus</h2>
+<ul><li>Place menus around the cursor</li>
+<li>Often used in games and artistic software</li>
+<li>Limitations?</li>
+</ul>
+</div><div class="notes"><p>Not scalable. Not discoverable.</p><p>Image: radial menu shows menu options clustered in a circle around the cursor.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 21</div>
+<div class="slide" aria-hidden="true"><img src='images/images.021.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Edges and corners</h2>
+<ul><li>Edges and corners typically have infinite size</li>
+<li>No penalty for overshooting the target</li>
+</ul>
+</div><div class="notes"><p>Sometimes visual target doesn't match what is clickable.</p><p>Image: Apple Menu in the top-left corner of Mac OS.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 22</div>
+<div class="slide" aria-hidden="true"><img src='images/images.022.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Running a Fitts's Law study</h2>
+<ul><li>When we want to calculate a and b </li>
+<li>Use a variety of indices of difficulty</li>
+<li>Collect movement times</li>
+<li>Use regression to calculate a and b</li>
+</ul>
+</div><div class="notes"><p>a and b are more general measurements. think current speed vs. horsepower rating</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 23</div>
+<div class="slide" aria-hidden="true"><img src='images/images.023.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts's Law Software</h2>
+<ul><li>FittsStudy by Jake Wobbrock</li>
+<li>GoFitts from Scott MacKenzie</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 24</div>
+<div class="slide" aria-hidden="true"><img src='images/images.024.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Analyzing Fitts's Data</h2>
+<ul></ul>
+</div><div class="notes"><p>It's not any given measurement that matters, it's the overall trend. Index of Performance is measured in bits per second</p><p>Image: two scatterplots showing movement time vs. index of difficulty for index finger (left) and thumb (right). The plot on the left has a lower slope, indicating higher throughput and suggesting the index finger is a more efficient pointing device.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 25</div>
+<div class="slide" aria-hidden="true"><img src='images/images.025.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Limitations of Fitts's Law</h2>
+<ul><li>Does not tell us anything about error rate</li>
+<li>Expects a fixed 4% error rate</li>
+<li>Does not consider speed-accuracy tradeoffs</li>
+<li>Other models focus on errors (e.g. Harada et al)</li>
+<li>Only 1D movement</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 26</div>
+<div class="slide" aria-hidden="true"><img src='images/images.026.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts's Law is an approximation</h2>
+<ul><li>Doesn't actually model anything about the user</li>
+<li>Individual dexterity, practice, fatigue</li>
+<li>Doesn't model other aspects of pointing</li>
+<li>Visual search, cognition</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 27</div>
+<div class="slide" aria-hidden="true"><img src='images/images.027.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Interesting physiological problems</h2>
+<ul><li>Fat Finger problem - fingers are too large to select some targets, can occlude touch screen</li>
+<li>Gorilla arms - inability to keep arms raised</li>
+<li>Midas Touch problem - more on this later</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 28</div>
+<div class="slide" aria-hidden="true"><img src='images/images.028.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Other trade-offs</h2>
+<ul><li>What is optimal for pointing may negatively affect readability, aesthetics, etc.</li>
+<li>Larger buttons may mean more screens to click through</li>
+<li>Hit area of target does not need to exactly match visual appearance</li>
+</ul>
+</div><div class="notes"><p>Image: clickable region on iOS address book is larger than the visual size of the button.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 29</div>
+<div class="slide" aria-hidden="true"><img src='images/images.029.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Pointing facilitation</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 30</div>
+<div class="slide" aria-hidden="true"><img src='images/images.030.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Can we beat Fitts's Law?</h2>
+<ul><li>How does Fitts's Law teach us how to improve performance?</li>
+<li>Reduce (effective) distance to target</li>
+<li>Increase (effective) size of target </li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 31</div>
+<div class="slide" aria-hidden="true"><img src='images/images.031.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Pointing facilitation</h2>
+<ul><li>Two fundamental approaches</li>
+<li>Target aware - the system knows where targets are on the screen</li>
+<li>Target agnostic - the system does not know where targets are on the screen</li>
+</ul>
+</div><div class="notes"><p>Target agnostic is more challenging but potentially more robust.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 32</div>
+<div class="slide" aria-hidden="true"><img src='images/images.032.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why target agnostic?</h2>
+<ul><li>Sometimes the programmer does not have the ability to programmatically identify UI layout (e.g. old UI toolkits)</li>
+<li>Sometimes the number of targets is too large (e.g. I can click on any letter in this sentence)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 33</div>
+<div class="slide" aria-hidden="true"><img src='images/images.033.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Facilitating movement</h2>
+<ul><li>Jump between icons or make "sticky" icons</li>
+<li>"Gravity fields"</li>
+</ul>
+</div><div class="notes"><p>These are target-aware methods: the system needs to know where the targets are for this method to work.</p><p>Image: Gravity wells can pull the pointer in when it approaches a target. From <a href="http://www.weriumsolutions.com/wp-content/uploads/2017/03/preprint-mousefield.pdf">MouseField by Velasco et al., 2012</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 34</div>
+<div class="slide" aria-hidden="true"><img src='images/images.034.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Area Cursors</h2>
+<ul><li>One way to improve pointing is to increase the size of the cursor: easier to hit targets with a bigger cursor</li>
+<li>Downside: this method can break down when targets are close to each other</li>
+</ul>
+</div><div class="notes"><p>Image: area cursor is shown as a square rather than a point, from <a href="https://www.cc.gatech.edu/gvu/people/Faculty/hudson/papers/older_adults/cursors_paper.html">Worden et al.</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 35</div>
+<div class="slide" aria-hidden="true"><img src='images/images.035.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Limitation of area cursor</h2>
+<ul><li>What to do with densely packed targets?</li>
+</ul>
+</div><div class="notes"><p>Densely packed targets.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 36</div>
+<div class="slide" aria-hidden="true"><img src='images/images.036.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Bubble Cursor (Grossman and Balakrishnan 2005)</h2>
+<ul><li>Dynamically resize area cursor to contain the closest target, but not the second closest</li>
+<li>Considered by many to be the best pointer facilitation method</li>
+</ul>
+</div><div class="notes"><h3 id="links">Links</h3><p><a href="https://dl.acm.org/citation.cfm?id=1055012">Bubble Cursor paper</a> <a href="https://www.youtube.com/watch?v=JUBXkD_8ZeQ">Bubble Cursor video</a></p><h3 id="images">Images</h3><ul><li>Image: Bubble Cursor expands in size to envelop the closest target, but not the second-closest</li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 37</div>
+<div class="slide" aria-hidden="true"><img src='images/images.037.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Target-agnostic methods</h2>
+<ul><li>Angle Mouse (Wobbrock et al.)</li>
+<li>Detect when corrective movements start (based on speed and angular deviation)</li>
+<li>Slow the cursorduring correctionphase</li>
+</ul>
+</div><div class="notes"><h3 id="links">Links</h3><p><a href="https://dl.acm.org/citation.cfm?id=1518701.1518912">Angle Mouse paper</a> <a href="https://www.youtube.com/watch?v=O4ahGmHenps">Angle Mouse video</a></p><h3 id="images">Images</h3><ul><li>Image: Illustration of the angle mouse. When the mouse moves toward the target, the change in angle is minimal and the cursor moves quickly. When the user begins the corrective phase, the angular deviation increases, and the Angle Mouse system improves precision.</li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 38</div>
+<div class="slide" aria-hidden="true"><img src='images/images.038.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>More target-agnostic methods</h2>
+<ul><li>Steady Clicks (Trewin et al.)</li>
+<li>For pen-based interfaces</li>
+<li>Some users, especially older users, accidentally "slip" the cursor while clicking</li>
+<li>Detect this movement (based on characteristic shape) and find the target from a few seconds before</li>
+</ul>
+</div><div class="notes"><h3 id="links">Links</h3><ul><li><a href="https://dl.acm.org/citation.cfm?id=1168993">Steady Clicks paper</a></li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 39</div>
+<div class="slide" aria-hidden="true"><img src='images/images.039.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>User-specific models</h2>
+<ul><li>Some individuals may have additional, atypical challenges related to pointing</li>
+<li>Examples</li>
+<li>Parkinson's Disease may cause tremor when using a pointing device</li>
+<li>Muscular Dystrophy may impair large movements, but doesn't affect precision</li>
+<li>Can we build user-specific models of pointing?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 40</div>
+<div class="slide" aria-hidden="true"><img src='images/images.040.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Supple++ (Gajos et al.)</h2>
+<ul></ul>
+</div><div class="notes"><h3 id="links">Links</h3><ul><li><a href="https://dl.acm.org/citation.cfm?doid=1294211.1294253">Supple++ paper</a></li></ul><h3 id="images">Images</h3><ul><li>Image: Supple++ produces three versions of a user interface: 1) the standard user interface, representing a font-choice dialog; 2) a user interface optimized for a user with muscular dystrophy, where icons are small and close together; 3) a user interface optimized for an eye tracker user, with large targets.</li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 41</div>
+<div class="slide" aria-hidden="true"><img src='images/images.041.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Mini-design activity</h2>
+<ul><li>Consider our phone dialer user interface</li>
+<li>Sketch out a variant for</li>
+<li>User with tremor</li>
+<li>User with hand fatigue</li>
+<li>User with low vision (but fine motor ability)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 42</div>
+<div class="slide" aria-hidden="true"><img src='images/images.042.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>A bit about the project</h2>
+<ul><li>Groups of 3-4</li>
+<li>Develop a technology to support an underrepresented user or support givers</li>
+<li>Will build an interactive prototype</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 43</div>
+<div class="slide" aria-hidden="true"><img src='images/images.043.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Projects from last year</h2>
+<ul><li>Wearable swim tracker for blind swimmers</li>
+<li>Audio-based Dungeons & Dragons</li>
+<li>Voice-based email reader</li>
+<li>Programmable smart home alarm</li>
+<li>Anxiety management app</li>
+<li>Audio descriptions for comics</li>
+<li>Alternative pointing method for tablets</li>
+<li>Visual accessibility checker</li>
+<li>ASL a day tutor</li>
+<li>Accessible route finder with HoloLens</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 44</div>
+<div class="slide" aria-hidden="true"><img src='images/images.044.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Project goals</h2>
+<ul><li>Design for a specific (interesting) user group</li>
+<li>Extend your skills at least a little bit</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 45</div>
+<div class="slide" aria-hidden="true"><img src='images/images.045.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Some tips on brainstorming</h2>
+<ul><li>Look at related work and think about how it could be extended, adapted to a new use context, or combined with some other technology</li>
+<li>Consider your skill set and interests - what do you know? What are you interested in? Can you make these things more inclusive?</li>
+<li>When in doubt, use randomness</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 46</div>
+<div class="slide" aria-hidden="true"><img src='images/images.046.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>One brainstorming technique: Bootlegging</h2>
+<ul><li>Brainstorming technique to create "mashups"</li>
+<li>Choose 3 or 4 categories</li>
+<li>For example: user group, kind of activity, device</li>
+<li>Come up with 3 or 4 items in each category</li>
+<li>Then, select a random item from each category and spend some time thinking about that</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://dl.acm.org/citation.cfm?id=1795260">Bootlegging</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 47</div>
+<div class="slide" aria-hidden="true"><img src='images/images.047.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Bootlegging example</h2>
+<ul><li>User groups: teenagers, older adults, injured athletes in rehab, astronauts</li>
+<li>Activities: social networking, creativity, physical activity, studying</li>
+<li>Device: smartwatch, smart glasses, tablet, smart whiteboard </li>
+<li>Body part: head, arms, legs, hands</li>
+</ul>
+</div><div class="notes"><p>For pretty much any of these, you can come up with something.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 48</div>
+<div class="slide" aria-hidden="true"><img src='images/images.048.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Next time</h2>
+<ul><li>Project brainstorming</li>
+<li>Bring paper and pens (no coding!)</li>
+</ul>
+</div><div class="notes"></div></div>
+</div>
+</div>
+</body>
+</html>
