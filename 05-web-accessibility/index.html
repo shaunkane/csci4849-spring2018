@@ -1,0 +1,346 @@
+<html>
+<head>
+<title>Accessibility on the Web</title>
+<style> body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+.slide { width: 600px; height: 338px;}
+.notes { width: 600px;}
+.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+.slide, .notes, .html { margin-bottom: 10px;}
+.html img { display: none;}
+.sr-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.wrapper { margin: auto; max-width: 600px;}
+.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; };</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>Accessibility on the Web</h1>
+<div class='content'><div class="row">
+<div class="slideNumber">Slide 1</div>
+<div class="slide" aria-hidden="true"><img src='images/images.001.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Accessibility on the Web</h2>
+<ul><li>Input, Interaction, and Accessibility</li>
+<li>Spring 2018</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 2</div>
+<div class="slide" aria-hidden="true"><img src='images/images.002.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Today</h2>
+<ul><li>Project next steps</li>
+<li>Models of accessible design</li>
+<li>Accessibility on the web</li>
+<li>Deadline for reading Qs extended to the end of the week</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 3</div>
+<div class="slide" aria-hidden="true"><img src='images/images.003.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Project next steps</h2>
+<ul><li>Many ideas posted on the forum!</li>
+<li>This week we will pick groups</li>
+<li>Aiming for 3 or 4 students</li>
+<li>To pick a group, fill out the form on Moodle</li>
+<li>If you don't choose a group, I'll assign you to one (and may merge/shift groups as needed)</li>
+</ul>
+</div><div class="notes"><p>We will reserve some time today for group speed dating.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 4</div>
+<div class="slide" aria-hidden="true"><img src='images/images.004.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>ASSETS Student Research Competition</h2>
+<ul><li>Opportunity to submit your project to the student research competition at the ACM ASSETS conference</li>
+<li>In October, in Galway, Ireland</li>
+<li>Win cash prizes, get attention from academia and industry</li>
+<li>Undergraduate and graduate categories</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://assets18.sigaccess.org/student_research_competition.html">ASSETS student research competition</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 5</div>
+<div class="slide" aria-hidden="true"><img src='images/images.005.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>10,000 foot view</h2>
+<ul><li>Beginning our exploration of interaction challenges and solutions</li>
+<li>Exploring different kinds of interactions</li>
+<li>How to engineer accessible user interfaces</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 6</div>
+<div class="slide" aria-hidden="true"><img src='images/images.006.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Today</h2>
+<ul><li>Design perspectives</li>
+<li>Insight into creating accessible UIs</li>
+<li>Basics of accessible HTML</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 7</div>
+<div class="slide" aria-hidden="true"><img src='images/images.007.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Considering diverse users</h2>
+<ul><li>How do we think about the individual?</li>
+<li>How do we think about the design process?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 8</div>
+<div class="slide" aria-hidden="true"><img src='images/images.008.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>A quick note on terminology</h2>
+<ul><li>Class follows the reasonable person principle: assume everyone is reasonable, acting in good faith</li>
+<li>Disability isn't a bad word</li>
+<li>Some terms have gone out of fashion (e.g., wheelchair bound, mental retardation)</li>
+<li>Some terms raise questions: what does it mean to call something normal?</li>
+</ul>
+</div><div class="notes"><p>Don't be afraid of saying the wrong thing. It's better to speak clearly, and adjust your language as you learn more.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 9</div>
+<div class="slide" aria-hidden="true"><img src='images/images.009.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Models of disability</h2>
+<ul><li>Medical model: people with disabilities (PWD) are patients; our goal is to restore or replace function</li>
+<li>Social model: What counts as "disability" is defined socially; people are naturally different, but society sets the bounds for what is considered normal and what is abnormal. Maybe we don't need to fix people.</li>
+</ul>
+</div><div class="notes"><p>This is a pretty big idea. Worth thinking about. It's somewhat straightforward to imagine a perspective where there's nothing "wrong" with a disabled person. It's a whole different thing to take the perspective that the very idea of disability is a social construct.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 10</div>
+<div class="slide" aria-hidden="true"><img src='images/images.010.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The social model in action</h2>
+<ul><li>The Shared Sign Language of Martha's Vineyard </li>
+<li>In the 18th century, deafness was common on the island of Martha's Vineyard</li>
+<li>Sign language was commonly used by everyone</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="www.missedinhistory.com/podcasts/the-shared-sign-language-of-marthas-vineyard.htm">Sign language on Martha's Vineyard</a></p><p>Image: boat pier on Martha's Vineyard with text "By the early 18th century, it was not uncommon for peopleon Martha's Vineyard to be deaf from birth. This had a profound effect on the culture of Martha's Vineyard, and one that went on to influence Deaf cilture in the United States as a whole."</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 11</div>
+<div class="slide" aria-hidden="true"><img src='images/images.011.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Definitions change over time</h2>
+<ul><li>Being nearsighted was not a significant disability until literacy become common</li>
+<li>Changing norms around texting may benefit some (e.g., deaf people) and impair others (e.g., people with dyslexia)</li>
+<li>Other examples from history? Possible examples in the future?</li>
+</ul>
+</div><div class="notes"><p>In the future, one could imagine stereo vision or VR sickness to count as disability.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 12</div>
+<div class="slide" aria-hidden="true"><img src='images/images.012.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>WHO model of disability (2012)</h2>
+<ul><li>Body functions and body structures describes how a person's body functions</li>
+<li>Impairments refer to functional limitations of a person's body</li>
+<li>Activity limitations refer to difficulties performing specific activities</li>
+<li>Participation restrictions refer to difficulties participating in activities of daily life</li>
+<li>(and all of this is affected by environmental factors)</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="http://www.who.int/classifications/icf/icfbeginnersguide.pdf">WHO document</a></p><p>The WHO has moved to more complex classifications; but this is a clear model that is useful for getting the big idea.</p><p>For example, a deaf person might not be able to hear. We might consider that an impairment. But does it affect activities, like conversation? And if so, does that affect participation in school, work, social life, etc.?</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 13</div>
+<div class="slide" aria-hidden="true"><img src='images/images.013.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Is VR sexist?</h2>
+<ul><li>Two ways that humans detect depth: motion parallax, shape-from-shading </li>
+<li>danah boyd found that women favor shape-from-shading; men the opposite</li>
+<li>But most current VR systems use motion parallax (it's also easier to compute)</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://qz.com/192874/is-the-oculus-rift-designed-to-be-sexist/">Danah Boyd, Is the Oculus Rift sexist?</a></p><p>Image: screen shot of the above article showing a woman wearing an Oculus Rift VR headset</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 14</div>
+<div class="slide" aria-hidden="true"><img src='images/images.014.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>But really, is VR sexist?</h2>
+<ul><li>Let's say you work at Oculus and verify the results of this study</li>
+<li>Let's discuss arguments on both sides</li>
+<li>1: Oculus is responsible for addressing this</li>
+<li>2: Oculus is not responsible for addressing this</li>
+<li>Either way, what do we do about it?</li>
+</ul>
+</div><div class="notes"><p>Let's talk about it for a few minutes.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 15</div>
+<div class="slide" aria-hidden="true"><img src='images/images.015.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Comments on sex and VR</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 16</div>
+<div class="slide" aria-hidden="true"><img src='images/images.016.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>In-groups, out-groups, group size</h2>
+<ul><li>One thing that is tricky with all of this work is dealing with in-group and out-group effects, and our own ability to empathize outside of our own identity. </li>
+<li>Often, looking at a larger group (e.g. women) feels different than a smaller group (e.g. people with disabilities). But why is it that way?</li>
+<li>For context, about 32 million PWD in US; about 5 million Chinese Americans</li>
+</ul>
+</div><div class="notes"><p>Stats from the American Community Survey.</p><p>Note: I picked Chinese-Americans at random as a sub-group in the US.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 17</div>
+<div class="slide" aria-hidden="true"><img src='images/images.017.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Perspectives and solutions "What should we do about it?"</h2>
+<ul><li>Rehabilitation technology - enable people to restore natural function (usually temporary)</li>
+<li>Assistive technology - provide technology to solve an accessibility problem (usually permanent)</li>
+<li>Special education - focus on access to education and empowerment</li>
+<li>Legal perspective - focus on rights and societal supports</li>
+<li>Whose responsibility is this problem?</li>
+</ul>
+</div><div class="notes"><p>Ladner groups these in as models of disability. I think that's fine, but it is useful to separate out the underlying perspective on what disability is, from the perspectives of how to intervene</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 18</div>
+<div class="slide" aria-hidden="true"><img src='images/images.018.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Design approaches</h2>
+<ul><li>Assistive technology - developing technology to "repair" a disability or address an activity limitation</li>
+<li>Universal design - build it from the ground up to accommodate the widest user group</li>
+<li>Inclusive design - often more pragmatic than universal design (include more, but not everyone), emphasizes participation by excluded users in the design process</li>
+</ul>
+</div><div class="notes"><p>Assistive technology might be a ramp attached to a building, while universal design would involve building the floor at the ground level so there are no steps to get in anyway.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 19</div>
+<div class="slide" aria-hidden="true"><img src='images/images.019.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>More design approaches</h2>
+<ul><li>Ability-based design - develop systems that model and adapt to a user's ability</li>
+<li>Design for empowerment - emphasize empowering and increasing representation from marginalized groups</li>
+<li>Value Sensitive Design - consider other values in design other than usability (e.g., independence, self-determination)</li>
+<li>Example: if we could, should we replace ASL interpreters with ASL-translating smart gloves? Why or why not?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 20</div>
+<div class="slide" aria-hidden="true"><img src='images/images.020.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>But who is right?</h2>
+<ul><li>ø\_(?)_/ø</li>
+<li>All of these perspectives may be useful at certain times</li>
+<li>Not necessarily mutually exclusive</li>
+<li>Useful to be aware of any implicit assumptions we are carrying with us</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 21</div>
+<div class="slide" aria-hidden="true"><img src='images/images.021.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Setting norms</h2>
+<ul><li>An eternal challenge for designers of more accessible technology is setting norms - what should we consider a "normal" level of caring about this stuff?</li>
+<li>Not taking a stance isn't very different than taking a stance; it has effects either way</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 22</div>
+<div class="slide" aria-hidden="true"><img src='images/images.022.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Considering impact</h2>
+<ul><li>Often we are considering trade-offs between the size of the group we are including and the magnitude of the impact</li>
+<li>Consider:</li>
+<li>Helping 1 million people do their jobs 1% faster</li>
+<li>Helping 100k people gain access to education</li>
+<li>Helping 500 people live independently</li>
+<li>In reality, we are often dealing with external constraints. But it's worth taking a moment to consider this in the abstract case.</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 23</div>
+<div class="slide" aria-hidden="true"><img src='images/images.023.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Questions? Thoughts?</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 24</div>
+<div class="slide" aria-hidden="true"><img src='images/images.024.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>OK, so what do we actually do about it?</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 25</div>
+<div class="slide" aria-hidden="true"><img src='images/images.025.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why make things accessible?</h2>
+<ul><li>Laws or regulations</li>
+<li>Because we want to do the right thing</li>
+<li>Because accessible design is good design</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 26</div>
+<div class="slide" aria-hidden="true"><img src='images/images.026.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Laws and regulations in the US</h2>
+<ul><li>Section 508 of Rehabilitation Act - guidelines for access to electronic resources</li>
+<li>Americans with Disabilities Act - guidelines for "reasonable accommodations" to work, education, public life</li>
+<li>Individuals with Disabilities Education Act (IDEA) - guidelines for access to education</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://webaim.org/articles/laws/usa/">Summary of US laws related to technology access</a></p><p>Often these laws tell us what the expectations are in providing access, but don't tell us how.</p><p>Section 508 provides somewhat clear guidelines for web accessibility.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 27</div>
+<div class="slide" aria-hidden="true"><img src='images/images.027.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How to know what to do?</h2>
+<ul><li>In the old days, sometimes it was difficult or impossible to create accessible versions of our programs</li>
+<li>Fortunately, we now have better tools on our side:</li>
+<li>Programming frameworks that support accessibility (if you do the right thing)</li>
+<li>Guidelines for accessible design (and sometimes automated testing tools)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 28</div>
+<div class="slide" aria-hidden="true"><img src='images/images.028.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>HTML is great for this</h2>
+<ul><li>Well defined standards for creating accessible content</li>
+<li>Web Content Accessibility Guidelines (WCAG)</li>
+<li>By design, the web separates content (HTML) from presentation (CSS)</li>
+<li>Everything is rendered as HTML, can be scraped or altered by user's own device</li>
+</ul>
+</div><div class="notes"><p>HTML can support remixing through tools like Greasemonkey, that allow you to customize your own</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 29</div>
+<div class="slide" aria-hidden="true"><img src='images/images.029.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Remix the Web</h2>
+<ul></ul>
+</div><div class="notes"><p>This slide shows images of the Twitter homepage that are customized using the Stylish browser extension. <a href="https://userstyles.org/styles/browse/twitter">Image source</a></p><p>This can change not only the visual appearance, but the layout as well - showing and hiding elements for example.</p><p>The <a href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en">Stylish</a> browser extension renders custom CSS for pages. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">Tampermonkey</a> and its ancestor Greasemonkey, allow you to run custom JavaScript on web pages.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 30</div>
+<div class="slide" aria-hidden="true"><img src='images/images.030.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Making HTML accessible</h2>
+<ul><li>We'll get into the guts of how to do it in code on Wednesday</li>
+<li>But first, let's think about what it actually means</li>
+<li>So: what does it mean for a web application to be accessible?</li>
+</ul>
+</div><div class="notes"><p>Going beyond "it's usable by people with disabilities." What are the characteristics of an accessible user interface? How would we argue that one version of a design is more or less accessible than another?</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 31</div>
+<div class="slide" aria-hidden="true"><img src='images/images.031.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What IS accessibility on the web?</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 32</div>
+<div class="slide" aria-hidden="true"><img src='images/images.032.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Ways to think about accessibility</h2>
+<ul><li>Following standards - this helps our design work on a variety of current and future devices</li>
+<li>Presenting content in multiple ways - since people may consume media in different ways, have we included the appropriate content for doing so?</li>
+<li>Supporting various input methods - including mouse, touch, keyboard</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 33</div>
+<div class="slide" aria-hidden="true"><img src='images/images.033.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>More ways to think about accessibility</h2>
+<ul><li>Using appropriate accessibility features of HTML (e.g., alt tags for images, ARIA labels for dynamic user interfaces)</li>
+<li>Semantic UI code - should represent the logical structure of the interface, not just visual</li>
+<li>Support end-user customization - e.g. font size, color contrast</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 34</div>
+<div class="slide" aria-hidden="true"><img src='images/images.034.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Where we go wrong</h2>
+<ul><li>Writing buggy UI code</li>
+<li>Neglecting to include alternative representations (image descriptions, video captions) - or including lousy versions of these</li>
+<li>Getting the visual presentation right but messing up the semantic representation</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 35</div>
+<div class="slide" aria-hidden="true"><img src='images/images.035.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Semantic UI</h2>
+<ul><li><h1>My favorite animals</h1></li>
+<li><ul></li>
+<li><li>Cat</li></li>
+<li><li>Goat</li></li>
+<li><li>Capybara</li></li>
+<li><li>Axlotl</li></li>
+<li></ul></li>
+</ul>
+</div><div class="notes"><p>These two code snippets will render as mostly identical (close enough, anyway) on most browsers. But the structure of the code is very different.</p><p>The left example, semantically, reads: a heading, then a list of items. The right one reads as 5 paragraphs. The left code tells us that the 4 animals are part of a set. The right code does not.</p><p>A note on typography: For the bullet I used the Unicode bullet character (¥); you could also use the html code "¥". However, you pretty much never want to do this. Instead, specify your list using a list tag.</p><p>We need to mark what our user interface is, not just how it looks.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 36</div>
+<div class="slide" aria-hidden="true"><img src='images/images.036.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Up next</h2>
+<ul><li>For today: focus on making project groups</li>
+<li>For Wednesday: bring a computer, we're going to make some accessible web documents</li>
+</ul>
+</div><div class="notes"></div></div>
+</div>
+</div>
+</body>
+</html>
