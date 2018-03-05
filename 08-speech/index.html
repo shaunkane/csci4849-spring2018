@@ -1,0 +1,298 @@
+<html>
+<head>
+<title>Speech Input and Output</title>
+<style> body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+.slide { width: 600px; height: 338px;}
+.notes { width: 600px;}
+.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+.slide, .notes, .html { margin-bottom: 10px;}
+.html img { display: none;}
+.sr-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.wrapper { margin: auto; max-width: 600px;}
+.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; };</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>Speech Input and Output</h1>
+<div class='content'><div class="row">
+<div class="slideNumber">Slide 1</div>
+<div class="slide" aria-hidden="true"><img src='images/images.001.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Speech Input and Output</h2>
+<ul><li>Spring 2017</li>
+</ul>
+</div><div class="notes"><p>Image: Two Google Home devices covered with sticky notes. Image is a screenshot from <a href="https://www.twitch.tv/seebotschat">Twitch</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 2</div>
+<div class="slide" aria-hidden="true"><img src='images/images.002.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>This week</h2>
+<ul><li>Monday: Introduction to VUIs, brainstorming VUIs, prototyping VUIs with DialogFlow</li>
+<li>Wednesday: Wizard of Oz testing of our VUIs</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 3</div>
+<div class="slide" aria-hidden="true"><img src='images/images.003.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>A brief history of voice user interfaces</h2>
+<ul><li>1970s/80s - Interactive Voice Response systems ("press 3 for voicemail…")</li>
+<li>1990s/2000s - first commercial speech recognition systems (e.g., Dragon NaturallySpeaking)</li>
+<li>Require significant per-user training</li>
+<li>2010s - Siri and voice agents, speaker-independent speech recognition </li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 4</div>
+<div class="slide" aria-hidden="true"><img src='images/images.004.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>Image: Screen shot of Dragon NaturallySpeaking training. Image from <a href="http://downloadastro.com">DownloadAstro</a></p><p>Moving to speaker-independent models is hugely important as it supports "walk up and use"</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 5</div>
+<div class="slide" aria-hidden="true"><img src='images/images.005.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Voice interfaces in fiction</h2>
+<ul><li>HAL 9000 (1968)</li>
+<li>Star Trek (1966-present)</li>
+</ul>
+</div><div class="notes"><h3 id="images">Images</h3><p>HAL 9000 from film 2001: A Space Odyssey. Image from <a href="http://imdb.com">IMDB</a> Officers on bridge from the</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 6</div>
+<div class="slide" aria-hidden="true"><img src='images/images.006.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Research prototypes</h2>
+<ul><li>"Put that There"</li>
+<li>Knowledge Navigator</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 7</div>
+<div class="slide" aria-hidden="true"><img src='images/images.007.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Put That There (1979)</h2>
+<ul><li>https://www.youtube.com/watch?v=RyBEUyEtxQo</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 8</div>
+<div class="slide" aria-hidden="true"><img src='images/images.008.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Knowledge Navigator (1987)</h2>
+<ul><li>https://www.youtube.com/watch?v=QRH8eimU_20</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 9</div>
+<div class="slide" aria-hidden="true"><img src='images/images.009.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Brainstorming about speech</h2>
+<ul><li>Why are speech interfaces desirable?</li>
+<li>What are the challenges of creating speech UIs?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 10</div>
+<div class="slide" aria-hidden="true"><img src='images/images.010.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Benefits of speech</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 11</div>
+<div class="slide" aria-hidden="true"><img src='images/images.011.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>More benefits of speech</h2>
+<ul><li>Support completion of tasks using natural language, without knowing commands</li>
+<li>Commands can take many forms ("play music", "play Kanye West", "play track 3 from Graduation")</li>
+<li>Accessible to users of different abilities</li>
+<li>Can interact in the background or at a distance</li>
+</ul>
+</div><div class="notes"><p>Speech UIs can also support partial queries.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 12</div>
+<div class="slide" aria-hidden="true"><img src='images/images.012.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Challenges of speech</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 13</div>
+<div class="slide" aria-hidden="true"><img src='images/images.013.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>More challenges of speech</h2>
+<ul><li>Accounting for many different entry paths</li>
+<li>Partial or incorrectly formed requests</li>
+<li>Noise and recognition errors</li>
+<li>Navigating output can be tricky</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 14</div>
+<div class="slide" aria-hidden="true"><img src='images/images.014.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Voice agents vs. screen readers</h2>
+<ul><li>How are voice agents different than screen readers?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 15</div>
+<div class="slide" aria-hidden="true"><img src='images/images.015.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Voice agents vs. screen readers</h2>
+<ul><li>How are voice agents different than screen readers?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 16</div>
+<div class="slide" aria-hidden="true"><img src='images/images.016.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why is speech challenging?
+adapted from Schnelle and Lyardet</h2>
+<ul><li>Speech is one-dimensional</li>
+<li>Speech is transient</li>
+<li>Speech is invisible</li>
+<li>Speech is asymmetric</li>
+<li>Flexibility vs. accuracy</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 17</div>
+<div class="slide" aria-hidden="true"><img src='images/images.017.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why is speech challenging?
+adapted from Schnelle and Lyardet</h2>
+<ul><li>One-dimensional. Not easy to skim speech, have to listen through it</li>
+<li>Transient. Spoken information requires short- or long-term memory </li>
+<li>Invisible. Possible actions are not clear</li>
+<li>Asymmetric. Faster to speak than type; slower to listen than read</li>
+<li>Flexibility vs. accuracy. Classic HCI tradeoff!</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 18</div>
+<div class="slide" aria-hidden="true"><img src='images/images.018.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Designing for speech interaction</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 19</div>
+<div class="slide" aria-hidden="true"><img src='images/images.019.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How to do it</h2>
+<ul><li>Dialog tree</li>
+<li>Models possible inputs and conversation paths</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://www.oreilly.com/ideas/basic-principles-for-designing-voice-user-interfaces">Designing Voice User Interfaces</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 20</div>
+<div class="slide" aria-hidden="true"><img src='images/images.020.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Let's try it</h2>
+<ul><li>Let's model the dialog tree for a smart thermostat</li>
+<li>Assume we have working speech recognition, entity extraction</li>
+</ul>
+</div><div class="notes"><p>Image: Nest thermostat, a device with a circular screen that says the current temperature is 65, but it will be 68 in 20 minutes. The user is adjusting the thermostat by rotating the dial surrounding the display.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 21</div>
+<div class="slide" aria-hidden="true"><img src='images/images.021.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Wizard of Oz prototyping</h2>
+<ul><li>Person acts out what the computer would do</li>
+<li>But must follow some rules</li>
+<li>Is our interaction logic robust enough for the real world?</li>
+</ul>
+</div><div class="notes"><p>Image: Man behind the curtain from the film The Wizard of Oz (1939)</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 22</div>
+<div class="slide" aria-hidden="true"><img src='images/images.022.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Testing our WOz thermostat</h2>
+<ul></ul>
+</div><div class="notes"><p>Note: being a good software tester can really help in this process.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 23</div>
+<div class="slide" aria-hidden="true"><img src='images/images.023.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Where did we go wrong?</h2>
+<ul></ul>
+</div><div class="notes"><p>Things to try: unit conversion. Asking questions about the status. Absolute vs. relative changes. Noise. Ask "what can I do?"</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 24</div>
+<div class="slide" aria-hidden="true"><img src='images/images.024.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Designing "natural" voice UIs</h2>
+<ul><li>Identify use cases, intents</li>
+<li>Identify use cases that we get "for free" with a graphical user interface, and forgot about</li>
+<li>Work out the details of each intent (including edge cases)</li>
+<li>Design output (verbosity, controls to navigate output)</li>
+<li>Test and iterate</li>
+</ul>
+</div><div class="notes"><p>Here is one possible path.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 25</div>
+<div class="slide" aria-hidden="true"><img src='images/images.025.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Example: an email voice client</h2>
+<ul></ul>
+</div><div class="notes"><p>Image: Apple Mail shows a two-pane email view, with a list of messages on the left side and the current conversation thread on the right side</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 26</div>
+<div class="slide" aria-hidden="true"><img src='images/images.026.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>1. Identify intents</h2>
+<ul></ul>
+</div><div class="notes"><p>Image: Apple Mail shows a two-pane email view, with a list of messages on the left side and the current conversation thread on the right side</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 27</div>
+<div class="slide" aria-hidden="true"><img src='images/images.027.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>2. Identify visual tasks</h2>
+<ul></ul>
+</div><div class="notes"><p>Where can we make shortcuts to</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 28</div>
+<div class="slide" aria-hidden="true"><img src='images/images.028.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>3. Work out logic for each intent</h2>
+<ul><li>For now, let's design "compose"</li>
+</ul>
+</div><div class="notes"><p>Where can we make shortcuts to</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 29</div>
+<div class="slide" aria-hidden="true"><img src='images/images.029.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>4. Design output</h2>
+<ul></ul>
+</div><div class="notes"><p>What can we do to make this less painful? Verbosity requirements vary by the domain! For example, it is different for emails than tweets.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 30</div>
+<div class="slide" aria-hidden="true"><img src='images/images.030.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What we didn't cover</h2>
+<ul><li>Advanced composing options (reply all, forward)</li>
+<li>Address book lookup</li>
+<li>Formatting</li>
+<li>Organizing messages into tags and folders</li>
+<li>…</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 31</div>
+<div class="slide" aria-hidden="true"><img src='images/images.031.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Design suggestions</h2>
+<ul><li>Questions may be formulated in a variety of ways</li>
+<li>Can use dialogs to fill in missing variables</li>
+<li>User must remember what she just heard (short-term), must remember what the system can do (long-term)</li>
+<li>Provide clear feedback:</li>
+<li>System is listening, system has heard your command, system has performed an action</li>
+<li>Balance verbosity with clarity about what the system is expecting</li>
+<li>Provide help and guidance</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 32</div>
+<div class="slide" aria-hidden="true"><img src='images/images.032.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>It can get complicated…</h2>
+<ul><li>Using pronouns (and keeping them across queries)</li>
+<li>"What is the capitol of Germany?"</li>
+<li>"How many people live there?"</li>
+<li>Bilingual queries</li>
+<li>"Siri, play Los Lobos"</li>
+<li>Domain-specific language changes meaning</li>
+<li>"Play Nevermind"</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 33</div>
+<div class="slide" aria-hidden="true"><img src='images/images.033.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Some unsolved problems</h2>
+<ul><li>Expressivity of synthesized speech</li>
+<li>Identifying speakers (although this is improving)</li>
+<li>Understanding user's context</li>
+<li>User privacy</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 34</div>
+<div class="slide" aria-hidden="true"><img src='images/images.034.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Weekly activity</h2>
+<ul><li>We will use DialogFlow to prototype a speech interface</li>
+</ul>
+</div><div class="notes"></div></div>
+</div>
+</div>
+</body>
+</html>
