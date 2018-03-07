@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>Prototyping in Dialogflow</title>
+<style> body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+.slide { width: 600px; height: 338px;}
+.notes { width: 600px;}
+.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+.slide, .notes, .html { margin-bottom: 10px;}
+.html img { display: none;}
+.sr-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.wrapper { margin: auto; max-width: 600px;}
+.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; };</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>Prototyping in Dialogflow</h1>
+<div class='content'><div class="row">
+<div class="slideNumber">Slide 1</div>
+<div class="slide" aria-hidden="true"><img src='images/images.001.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Prototyping in Dialogflow</h2>
+<ul><li>Spring 2017</li>
+</ul>
+</div><div class="notes"><p>I'll preface this by saying this is a complex tool, and part of the work will involve figuring out how to do stuff with it. It's OK if you don't understand all of it.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 2</div>
+<div class="slide" aria-hidden="true"><img src='images/images.002.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What is Dialogflow?</h2>
+<ul><li>Web service from Google that supports the creation of conversational agents/bots</li>
+<li>Provides Natural Language Processing (NLP) features for identifying the user's intent, understanding multiple variations of a command</li>
+<li>Supports deployment to Facebook Messenger, Google Assistant, Alexa</li>
+</ul>
+</div><div class="notes"><p>This was a startup that Google bought. This is a good example of the value of making usable tools for creating new user interfaces.</p><p>Coding NLP for conversation is actually hard. This makes it much easier.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 3</div>
+<div class="slide" aria-hidden="true"><img src='images/images.003.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Dialogflow interaction model</h2>
+<ul><li>In Dialogflow, you can model your conversation structure</li>
+<li>Dialogflow uses webhooks to send the user's intent to your web app (what the user intended, not what they said)</li>
+<li>Your app then returns a result to Dialogflow</li>
+<li>Dialogflow reads the appropriate response to the user via their preferred method</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 4</div>
+<div class="slide" aria-hidden="true"><img src='images/images.004.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why use Dialogflow?</h2>
+<ul><li>NLP is hard; this provides robust support for conversational interaction</li>
+<li>Your code only needs to focus on the actions taken by the bot, not what users say</li>
+<li>Easy deployment to different platforms</li>
+<li>Very fast way to build prototypes, that can later be used for the real apps</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 5</div>
+<div class="slide" aria-hidden="true"><img src='images/images.005.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What we will do</h2>
+<ul><li>Build conversation structure using Dialogflow intents</li>
+<li>Prototype state using contexts</li>
+<li>Deploy our bot to the web</li>
+<li>What we won't do: develop the backing code (although you are welcome to experiment)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 6</div>
+<div class="slide" aria-hidden="true"><img src='images/images.006.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Dialogflow basics</h2>
+<ul><li>Intents, parameters, entities, contexts</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 7</div>
+<div class="slide" aria-hidden="true"><img src='images/images.007.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Intents</h2>
+<ul><li>Possible responses to a user request</li>
+<li>One (and only one) intent is always triggered</li>
+<li>Chosen based on matching of the request syntax, and context</li>
+<li>May include followup requests if some parameters are missing</li>
+<li>Generates a response (chosen from a list of possible responses)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 8</div>
+<div class="slide" aria-hidden="true"><img src='images/images.008.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Parameters</h2>
+<ul><li>Represent data in user requests and responses</li>
+<li>Each intent specifies required and optional parameters</li>
+<li>An intent can prompt for missing parameters</li>
+<li>Can refer to parameters inside our responses"Hello $name"</li>
+<li>By default, parameters aren't saved between requests - we need contexts for that</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 9</div>
+<div class="slide" aria-hidden="true"><img src='images/images.009.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Entities</h2>
+<ul><li>These are essentially variable types</li>
+<li>Some built in (@sys.number, @sys.any)</li>
+<li>But we can specify our own</li>
+<li>Example: majors ("computer science", "applied math", É)</li>
+</ul>
+</div><div class="notes"><p>sys.any is essentially a string variable</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 10</div>
+<div class="slide" aria-hidden="true"><img src='images/images.010.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Contexts</h2>
+<ul><li>Represent state of the current conversation</li>
+<li>Last for a set number of interactions (unless we cancel or overwrite them)</li>
+<li>Output context: created after an intent is executed; has a developer-specified lifespan</li>
+<li>Input context: Determines what state is needed for an intent to fire</li>
+<li>Think about these as boolean variables</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 11</div>
+<div class="slide" aria-hidden="true"><img src='images/images.011.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Variables within contexts</h2>
+<ul><li>We can also use contexts to pass parameters across intents</li>
+<li>Each parameter value is stored in the output context</li>
+<li>Can reference them later using #contextName.parameterName</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 12</div>
+<div class="slide" aria-hidden="true"><img src='images/images.012.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What is difficult about Dialogflow?</h2>
+<ul><li>We have to rely on the built-in intent matching and entity extraction</li>
+<li>But we can add more training data, and test</li>
+<li>Can't include conditional behaviors in intents</li>
+<li>Instead, we can add input contexts into our intents</li>
+<li>Intent only fires if the matching input context exists</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 13</div>
+<div class="slide" aria-hidden="true"><img src='images/images.013.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Conditional behaviors</h2>
+<ul><li>The best way to add conditional behaviors is to use input contexts</li>
+<li>Example: lightbulb bot</li>
+<li>"Turn on" intent sets the output context light-on</li>
+<li>"Turn off" intent sets the output context light-off (and cancels light-on)</li>
+<li>"Is the light on?" is then two intents: one requires light-on and one requires light-off</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 14</div>
+<div class="slide" aria-hidden="true"><img src='images/images.014.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Examples</h2>
+<ul><li>LightbulbBot - using contexts to track state; conditional intents</li>
+<li>FanBot - entities; storing variables across requests using contexts</li>
+</ul>
+</div><div class="notes"><p>There may be many ways to implement these features, but here are ways to address some common interactions.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 15</div>
+<div class="slide" aria-hidden="true"><img src='images/images.015.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What we'll do</h2>
+<ul><li>Prototype a smart appliance</li>
+<li>45 minutes development; then Wizard of Oz testing</li>
+<li>Or use Google Assistant app</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 16</div>
+<div class="slide" aria-hidden="true"><img src='images/images.016.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Testing</h2>
+<ul><li>Write down the name of your appliance on the board</li>
+<li>For test users: tell them what the appliance is, but not what the commands are</li>
+<li>Did you include the right intents?</li>
+<li>Did you include enough test phrases for each intent?</li>
+<li>Does your app correctly track state?</li>
+</ul>
+</div><div class="notes"></div></div>
+</div>
+</div>
+</body>
+</html>
