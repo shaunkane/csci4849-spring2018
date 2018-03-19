@@ -1,0 +1,236 @@
+<html>
+<head>
+<title>Eye Gaze Input</title>
+<style> body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+.slide { width: 600px; height: 338px;}
+.notes { width: 600px;}
+.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+.slide, .notes, .html { margin-bottom: 10px;}
+.html img { display: none;}
+.sr-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.wrapper { margin: auto; max-width: 600px;}
+.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; };</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>Eye Gaze Input</h1>
+<div class='content'><div class="row">
+<div class="slideNumber">Slide 1</div>
+<div class="slide" aria-hidden="true"><img src='images/images.001.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Eye Gaze Input</h2>
+<ul></ul>
+</div><div class="notes"><p>This is a picture of Steve Gleason and his eye gaze controlled wheelchair. This system was only recently invented, and is a huge deal because up until recently, someone who couldn't control a wheelchair joystick would be unable to independently navigate.</p><p>Image: Steve Gleason, http://www.athletepromotions.com/blog/wp-content/uploads/2014/09/Steve-Gleason.jpg</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 2</div>
+<div class="slide" aria-hidden="true"><img src='images/images.002.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>This week</h2>
+<ul><li>Monday: Exploring eye gaze user interfaces</li>
+<li>Wednesday: Technology for deaf and hard of hearing people</li>
+</ul>
+</div><div class="notes"><p>This is a mish mash of topics, but it helps us transition from input to communication and cognitive disabilities.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 3</div>
+<div class="slide" aria-hidden="true"><img src='images/images.003.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Eye Gaze Interaction?</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 4</div>
+<div class="slide" aria-hidden="true"><img src='images/images.004.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why study eye gaze?</h2>
+<ul><li>Very different input modality than we typically encounter</li>
+<li>In some ways, represents a worst case scenario for interaction</li>
+<li>Usable even by severely impaired people</li>
+<li>Relatively easy to understand how to design for eye gaze input</li>
+<li>But implementation can be challenging</li>
+</ul>
+</div><div class="notes"><p>Getting good at designing for eye gaze is a complementary skill to learning other assistive technologies like switch control.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 5</div>
+<div class="slide" aria-hidden="true"><img src='images/images.005.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Eye gaze</h2>
+<ul><li>How eye trackers work</li>
+<li>Traditional and alternative UIs</li>
+<li>Interaction challenges and how to overcome them</li>
+<li>Designing for eye gaze input</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 6</div>
+<div class="slide" aria-hidden="true"><img src='images/images.006.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The Human Eye</h2>
+<ul><li>Light enters the pupil and is projected onto the retina</li>
+<li>Fovea is a dense group of cells representing our center vision</li>
+<li>Peripheral vision much worse</li>
+<li>Eye muscles allow focus</li>
+<li>Eye gaze saccades rapidly back and forth, fixates on visually salient targets</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 7</div>
+<div class="slide" aria-hidden="true"><img src='images/images.007.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How eye trackers work</h2>
+<ul><li>Bounce infrared light off of the cornea</li>
+<li>Reflection changes as the user's gaze changes</li>
+<li>Requires per user calibration (3-5 minutes)</li>
+<li>Eye tracker hardware is essentially an infrared light array and infrared cameras</li>
+<li>Users typically select by dwelling on a target</li>
+</ul>
+</div><div class="notes"><p>The original use of eye tracking technology was "eye switches" developed by NASA for astronauts, so that they could interact with distant objects.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 8</div>
+<div class="slide" aria-hidden="true"><img src='images/images.008.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Form factors</h2>
+<ul></ul>
+</div><div class="notes"><p>All of these are fundamentally the same kind of system. There may be other ways of tracking eye gaze - e.g. you can track it very coarsely with a 2D camera, and maybe with 3D face scanning, but none of these approaches are currently in common use.</p><p>The main differences across these is the form factor. Also, the high-end trackers have better camera optics, but use the same fundamental approach.</p><p>Desktop tracker image: http://2.bp.blogspot.com/--3PdtqoTQKI/VM8BLfK_mUI/AAAAAAAARMo/96b44ltRBxA/s1600/JBA-Tobii%2BEyeX%2BController-%2B(13).JPG Monocular: http://www.arringtonresearch.com/Remote%20Camera%20With%20Shadow.jpg Mobile: https://www.smivision.com/eye-tracking/products/mobile-eye-tracking/ AR: https://www.smivision.com/oem-eye-tracking/platform/augmented-reality</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 9</div>
+<div class="slide" aria-hidden="true"><img src='images/images.009.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Target selection</h2>
+<ul><li>Typically involves dwelling on target (typical dwell time is 300-1000ms)</li>
+<li>Midas Touch problem</li>
+<li>Worse for eye gaze because looking at something does not necessarily mean you want to interact with it!</li>
+<li>Can also select using blink (which can be fatiguing) or a switch</li>
+</ul>
+</div><div class="notes"><p>With dwell selection, we really need to think about the design of our UIs differently.</p><p>King Midas: http://vignette3.wikia.nocookie.net/greekmythology/images/4/41/Midas.jpg/revision/latest?cb=20151119081635</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 10</div>
+<div class="slide" aria-hidden="true"><img src='images/images.010.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Sip-and-puff</h2>
+<ul><li>Can suck in or blow out to provide input</li>
+<li>Sometimes combined with a joystick controlled by chin or mouth</li>
+<li>Not always compatible with breathing equipment</li>
+</ul>
+</div><div class="notes"><p>Not usually directly related to eye gaze, although it can be combined with eye gaze to provide more input capabilities (if the user can operate it).</p><p>http://www.orin.com/access/photos/JoelwiBook1.png</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 11</div>
+<div class="slide" aria-hidden="true"><img src='images/images.011.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why eye tracking is hard</h2>
+<ul><li>Must maintain specific distance (for Tobii, 18 to 45 inches)</li>
+<li>Must limit head movements</li>
+<li>Requires calibration for every user</li>
+<li>Sensitive to environmental factors</li>
+<li>Saccades - our eyes move even when they appear not to</li>
+<li>In general, not nearly as precise as a mouse or touch screen</li>
+<li>Selecting targets can be a problem (Midas Touch)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 12</div>
+<div class="slide" aria-hidden="true"><img src='images/images.012.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>When eye tracking fails</h2>
+<ul><li>Environmental factors (especially sunlight!)</li>
+<li>Eye trackers typically do not work outdoors</li>
+<li>Physiological differences (e.g., people with very dark eyes, irregular eye shape)</li>
+<li>User fatigue</li>
+<li>Positioning (especially challenging when needed for communication)</li>
+<li>Medications can affect focusing, dry out eyes (common with ALS)</li>
+<li>Less accurate at screen edges</li>
+</ul>
+</div><div class="notes"><p>This is a prototype of the Microsoft eye-gaze wheelchair. It's shown with an umbrella to block the sun. Because eye trackers use IR, they can get washed out by bright sources of IR, like the sun. This is true for other IR-based sensors, like the Kinect and the 3D camera in the new iPhone (which doesn't always work in the sun). Why use IR? This may seem like a silly question, but it's worth thinking about. With IR, we can control the illumination (by adding lots of light) without shining a visible light in the user's eyes. We can then use specially modified cameras that can see IR, and often these filter out visible light also.</p><p>http://blog.jaybeavers.org/content/images/2015/05/Full-Monty-Chair.jpg</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 13</div>
+<div class="slide" aria-hidden="true"><img src='images/images.013.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Eye trackers vs. head mice</h2>
+<ul><li>Head mice provide a similar level of control to eye trackers for users whho retain head movement</li>
+<li>Use camera to track head movement</li>
+<li>Track an IR-reflective dot or use computer vision features</li>
+</ul>
+</div><div class="notes"><p>Paralyzed with Joy (paralyzedwithjoy.blogspot.com/2012/08/faqs-how-my-computer-works.html) is a blog about Joy, who writes about her experiences using voice input and a head mouse. For Joy, the dot is stuck on her microphone.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 14</div>
+<div class="slide" aria-hidden="true"><img src='images/images.014.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Software-based head mice</h2>
+<ul><li>Camera Mouse (Windows)</li>
+<li>MouseTrap (Linux)</li>
+<li>ViaCam (Linux)</li>
+</ul>
+</div><div class="notes"><p>We'll look at these for the next assignment.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 15</div>
+<div class="slide" aria-hidden="true"><img src='images/images.015.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Designing for eye trackers</h2>
+<ul><li>Target size</li>
+<li>Selection mode</li>
+<li>Target design</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 16</div>
+<div class="slide" aria-hidden="true"><img src='images/images.016.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Designing for eye trackers</h2>
+<ul><li>Target size"Sizes can vary from 0.94*1.24 cm for users that track well, up to 5.96*6.24 cm if we want to allow robust interaction for nearly all users in our dataset." (Feit et al., CHI 2017) - 2.3 x 2.5 inches</li>
+<li>Selection modeSupport adjustable dwell time, switch and keyboard based selection</li>
+<li>Target designVisual screen design can distract eye gaze users; crosshair-like targets easier to select (Thaler et al., 2012) - but test with usersShowing the cursor can also be distracting!</li>
+</ul>
+</div><div class="notes"><p>Target size actually needs to be quite big! This limits the kinds of user interfaces we can create.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 17</div>
+<div class="slide" aria-hidden="true"><img src='images/images.017.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Additional design guidelines</h2>
+<ul><li>Reduce amount of text input needed</li>
+<li>Predict the user's behavior when possible</li>
+</ul>
+</div><div class="notes"><p>This is an example of our eye gaze keyboard from Microsoft. You can see at the top that there are suggested words - in this case, we are using both a language model, and we are using computer vision to recognize nearby objects - in this case, buildings, roads, and streets.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 18</div>
+<div class="slide" aria-hidden="true"><img src='images/images.018.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Word prediction</h2>
+<ul><li>Word completion: complete words as they are typed</li>
+<li>Uses word frequency; prior words entered</li>
+<li>Word prediction: suggest next word based on prior words</li>
+<li>Uses a bigram (or N-gram) model; prior words or bigrams</li>
+<li>Other sources of prediction?</li>
+<li>Can also use word prediction to adjust dwell time (see Mott et al., CHI '17)</li>
+</ul>
+</div><div class="notes"><p>Often we may lump these together - on our phones, we tend to just accept suggestions whenever they come up. But word completion and word prediction are different in terms of how they are implemented, and how users interact with them. An emerging research area is to look at other environmental sources for prediction: like location, nearby objects, conversation partners.</p><p>Mott's work presents an interesting alternative implementation of prediction. It dynamically changes dwell time as you eye type, so if you type "frien", the dwell time to select "d" would be very low, and to select, say, "x" would be very high. This seems to improve speed, and especially to reduce errors.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 19</div>
+<div class="slide" aria-hidden="true"><img src='images/images.019.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Can we go faster?</h2>
+<ul><li>Typical eye typing rate is 10-20 wpm (Majaranta and Ralta)</li>
+<li>Adaptive dwell, prediction have marginal benefits</li>
+<li>Swype doesn't seem to improve performance (Pedrosa et al.)</li>
+</ul>
+</div><div class="notes"><p>We don't have great ideas about how to substantially improve eye typing speed. One thing that you might consider is alternative keyboard layouts; however, these require a lot of training, and users may not want to put in that time for a marginal improvement. In the case of progressive conditions like ALS, the individual needs to spend their very limited time wisely, and learning a new keyboard layout may not be worth the effort.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 20</div>
+<div class="slide" aria-hidden="true"><img src='images/images.020.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Alternative gaze-based UIs</h2>
+<ul><li>Use "smooth pursuit" to track eye gaze (Esteves et al, "Orbits")</li>
+<li>Combine eye gaze with other input methods (e.g. Pfeuffer et al., "Gaze-Touch")</li>
+<li>Use gaze to track attention, rather than input</li>
+</ul>
+</div><div class="notes"><p>These are links to YouTube! Orbits is especially cool, as it uses a totally different method of input, using smooth eye movements (which do not have jitter). The Pfeuffer work is a great example of how gaze can be a secondary input.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 21</div>
+<div class="slide" aria-hidden="true"><img src='images/images.021.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Eye gaze as input to the world</h2>
+<ul><li>Eye gaze can also be used to ccontrol physical objects</li>
+<li>Wheelchairs, drum sets</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://www.microsoft.com/en-us/research/video/microsoft-hands-free-music/">Microsoft Hands Free Music</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 22</div>
+<div class="slide" aria-hidden="true"><img src='images/images.022.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Open challenges</h2>
+<ul><li>Improving the speed of input (typing maxes out at around 20wpm)</li>
+<li>Supporting environmental awareness and social connections while using eye gaze</li>
+<li>Supporting precise input</li>
+<li>Supporting time-sensitive input (e.g. music, gaming)</li>
+</ul>
+</div><div class="notes"><p>Image: http://media.jrn.com/images/als1_7654948_ver1.0_640_480.jpg</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 23</div>
+<div class="slide" aria-hidden="true"><img src='images/images.023.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Let's try it</h2>
+<ul><li>Let's convert an existing smartphone user interface into an eye gaze-based interface</li>
+<li>Pick an app on your phone</li>
+<li>Sketch out an eye gaze-based version</li>
+<li>(or start working on head mouse)</li>
+</ul>
+</div><div class="notes"></div></div>
+</div>
+</div>
+</body>
+</html>
