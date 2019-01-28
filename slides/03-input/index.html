@@ -1,0 +1,915 @@
+<html>
+<head>
+<title>Modeling Input</title>
+<style> body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+.slide { width: 600px; height: 338px;}
+.notes { width: 600px;}
+.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+.slide, .notes, .html { margin-bottom: 10px;}
+.html img { display: none;}
+.sr-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.wrapper { margin: auto; max-width: 600px;}
+.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; };</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>Modeling Input</h1>
+<p>Download slides: (<a href="03-input.key">Keynote</a>, <a href="03-input.pdf">PDF</a>)</p>
+<div class='content'><div class="row">
+<div class="slideNumber">Slide 1</div>
+<div class="slide" aria-hidden="true"><img src='images/images.001.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Modeling Input</h2>
+<ul><li>Input, Interaction, & Accessibility</li>
+<li>Spring 2019</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 2</div>
+<div class="slide" aria-hidden="true"><img src='images/images.002.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Check-in on HTML/CSS assignment</h2>
+<ul><li>How is it going?</li>
+<li>Stuck on anything?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 3</div>
+<div class="slide" aria-hidden="true"><img src='images/images.003.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Today</h2>
+<ul><li>Modeling input methods</li>
+<li>Describing input devices</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 4</div>
+<div class="slide" aria-hidden="true"><img src='images/images.004.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Note</h2>
+<ul><li>Today is a bit of an infodump</li>
+<li>Want to give you some high level tools to work with</li>
+<li>We'll revisit later</li>
+<li>Focus on the concepts and knowing which tools are available</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 5</div>
+<div class="slide" aria-hidden="true"><img src='images/images.005.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Goals for today</h2>
+<ul><li>Establish a solid foundation for talking about input and interaction methods</li>
+<li>Begin to explore tools for evaluating and comparing these methods</li>
+<li>See an input device and think about how it can be used, what performance might be like</li>
+</ul>
+</div><div class="notes"><p>Image: Mad Catz Gametrak. Image from the Buxton Collection.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 6</div>
+<div class="slide" aria-hidden="true"><img src='images/images.006.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Today</h2>
+<ul><li>More on KLM</li>
+<li>Input devices</li>
+<li>State models in HCI</li>
+<li>Pointing</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 7</div>
+<div class="slide" aria-hidden="true"><img src='images/images.007.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The Keystroke-Level Model (1983)</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 8</div>
+<div class="slide" aria-hidden="true"><img src='images/images.008.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Big ideas</h2>
+<ul><li>Top-down vs. bottom-up thinking in user interfaces</li>
+<li>Top-down: Understanding users' goals, plans, understanding, examining misconceptions</li>
+<li>Bottom-up: Understanding the mechanics of how people perform tasks</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 9</div>
+<div class="slide" aria-hidden="true"><img src='images/images.009.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>KLM: Background</h2>
+<ul><li>Developed by</li>
+<li>Stu Card - psychologist from Xerox PARC</li>
+<li>Tom Moran - engineer from Xerox PARC</li>
+<li>Allen Newell - psychologist from CMU</li>
+<li>Followed on from cognitive modeling / information processing theory in psychology</li>
+<li>Goal: estimate task performance by timing each component of an interaction </li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 10</div>
+<div class="slide" aria-hidden="true"><img src='images/images.010.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Big ideas: KLM</h2>
+<ul><li>We can think about interactions with our UI in terms of a sequence of low level actions: keystrokes, pointing, homing, drawing, and "mental work"</li>
+<li>Pointing and text entry are the fundamental building blocks of UI interaction</li>
+<li>What else is there?</li>
+</ul>
+</div><div class="notes"><p>Other types of interactions: Voice input, gestures</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 11</div>
+<div class="slide" aria-hidden="true"><img src='images/images.011.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Relatives of KLM</h2>
+<ul><li>Model Human Processor (Card, Moran, Newell 1983) - Model cognitive operations</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 12</div>
+<div class="slide" aria-hidden="true"><img src='images/images.012.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Relatives of KLM (2)</h2>
+<ul><li>GOMS (Card, Moran, Newell 1983):</li>
+<li>Defines tasks in terms of goals, operators, methods, and selection (of methods)</li>
+<li>Multiple GOMS models (KLM is the simplest one)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 13</div>
+<div class="slide" aria-hidden="true"><img src='images/images.013.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Cognitive models in HCI</h2>
+<ul><li>Extremely popular in the 1980s</li>
+<li>Currently a niche topic - why?</li>
+<li>Still used in some domains</li>
+<li>Mobile input</li>
+<li>Screen reader use </li>
+</ul>
+</div><div class="notes"><p>Cognitive models fell out of fashion as they did not scale to most modern tasks</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 14</div>
+<div class="slide" aria-hidden="true"><img src='images/images.014.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why bother with cognitive models?</h2>
+<ul><li>In this class, we'll be examining different types of input devices</li>
+<li>Provides a way of estimating the overall effort to access an interface, and approximating the effects of different input methods</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 15</div>
+<div class="slide" aria-hidden="true"><img src='images/images.015.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Modeling example</h2>
+<ul><li>Consider a numeric keypad used to dial 10-digit numbers</li>
+<li>Using the test string: 001–010-0101</li>
+<li>How do we model this for mouse input? Keyboard input?</li>
+</ul>
+</div><div class="notes"><p>Mouse input: PK PK PK PK PK PK PK PK PK PK</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 16</div>
+<div class="slide" aria-hidden="true"><img src='images/images.016.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Modeling 001–010-0001</h2>
+<ul><li>Mouse input:</li>
+<li>(H?)(PK)*10</li>
+<li>By default in HTML, the user would navigate between keys using TAB (K) and will select using enter (K):</li>
+<li>(H?)K(tab)*10+K(enter)+K(enter)+K(shift)+K(tab)*10+K(enter) …</li>
+<li>What if we add keyboard shortcuts? (1-0)</li>
+<li>K(0)+K(0)+K(1) …</li>
+</ul>
+</div><div class="notes"><p>This may seem like an artificially difficult example, but this is what we built last week. :-/</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 17</div>
+<div class="slide" aria-hidden="true"><img src='images/images.017.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>KLM for screen readers(Trewin et al., ASSETS 2010)</h2>
+<ul><li>Operations:</li>
+<li>Hearing</li>
+<li>Cognition</li>
+<li>Left hand</li>
+<li>Right hand</li>
+</ul>
+</div><div class="notes"><p>We can build keystroke-level models for different sets of inputs. We separate out hands here because many screen reader tasks are bimanual Shari Trewin, Bonnie E. John, John Richards, Cal Swart, Jonathan Brezin, Rachel Bellamy, and John Thomas. 2010. Towards a tool for keystroke level modeling of skilled screen reading. In Proceedings of the 12th international ACM SIGACCESS conference on Computers and accessibility (ASSETS '10). ACM, New York, NY, USA, 27-34. DOI: https://doi.org/10.1145/1878803.1878811</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 18</div>
+<div class="slide" aria-hidden="true"><img src='images/images.018.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Example 2</h2>
+<ul><li>FAQ has 4 categories (preparing application, completing application, after submitting the application, understanding admissions decisions)</li>
+<li>Assume student wants to get to 5th item of 4th section</li>
+<li>On an improperly structured web page, a screen reader user might need to tab through each item (approx 10 items * 3 categories)</li>
+<li>Properly marking headers will allow a screen reader user to navigate directly through headings, reducing steps by an order of magnitude</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 19</div>
+<div class="slide" aria-hidden="true"><img src='images/images.019.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Example 3: StickyKeys</h2>
+<ul><li>StickyKeys is a system-wide feature to make modifier keys (shift, ctrl, alt) modal</li>
+<li>To get $ -> press Shift and then press 4</li>
+<li>So, to get from 0 to 1:</li>
+<li>(K(Shift)+K(tab))*10 -> 20 keystrokes</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 20</div>
+<div class="slide" aria-hidden="true"><img src='images/images.020.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>StickyKeys</h2>
+<ul><li>Adding a basic feature: press modifier twice to hold it down</li>
+<li>K(shift)+K(shift)+K(tab)*10 = 12 (40% reduction in keystrokes)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 21</div>
+<div class="slide" aria-hidden="true"><img src='images/images.021.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Summary: KLM</h2>
+<ul><li>Isn't this just common sense?</li>
+<li>In some ways, yes - estimating this informally is often good enough</li>
+<li>But, there are times where this can be important</li>
+<li>Mission critical tasks</li>
+<li>Important to compare all possible input methods</li>
+<li>Sometimes it really is incredibly inefficient for users of alternative UIs</li>
+<li>Designers usually make sure that whatever method they use is efficient</li>
+</ul>
+</div><div class="notes"><p>We now have a way to talk about sophisticated interactions in objective terms.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 22</div>
+<div class="slide" aria-hidden="true"><img src='images/images.022.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Next: Input devices</h2>
+<ul></ul>
+</div><div class="notes"><p>Much of this is from the optional readings.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 23</div>
+<div class="slide" aria-hidden="true"><img src='images/images.023.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Talking about input devices</h2>
+<ul><li>What is sensed? Actuating a button or switch, position, movement, force, etc.</li>
+<li>Dimensions of input / degrees of freedom</li>
+<li>Characteristics of the input device: sensor speed, latency, precision</li>
+<li>Direct vs. indirect input</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 24</div>
+<div class="slide" aria-hidden="true"><img src='images/images.024.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Current trends</h2>
+<ul><li>Move from single interaction mode to multiple interaction modes (multimodal interaction)</li>
+<li>New sensing technologies give us even more freedom to define interactions (Nintendo Labo)</li>
+<li>Complementary technologies: voice good for picking a song, maybe less so for laying out a poster</li>
+</ul>
+</div><div class="notes"><p>We may find ourselves switching between input modalities.</p><p>Remember the UX aphorism "common tasks should be easy, and uncommon tasks should be possible". We may want to support all tasks via all methods, even if they aren't the most efficient way to accomplish that task.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 25</div>
+<div class="slide" aria-hidden="true"><img src='images/images.025.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>"Natural" and "intuitive"</h2>
+<ul><li>Can be misleading</li>
+<li>It's difficult to separate out what we know naturally from what we've learned</li>
+<li>Force yourself to think through what about it seems natural or intuitive</li>
+</ul>
+</div><div class="notes"><h3 id="images">Images</h3><ul><li>Scotty, the engineer from Star Trek, talks into a mouse. From Star Trek 4.</li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 26</div>
+<div class="slide" aria-hidden="true"><img src='images/images.026.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why is this intuitive?</h2>
+<ul><li>Can see all the options (don't need to remember them)</li>
+<li>Can click to select one (don't need to remember a command)</li>
+<li>Icons enable quick visual search</li>
+</ul>
+</div><div class="notes"><p>What we consider intuitive may be quite different for different types of interaction.</p><h3 id="images">Images</h3><ul><li>Image of the system preferences window from Mac OS shows the subcategories of preferences available</li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 27</div>
+<div class="slide" aria-hidden="true"><img src='images/images.027.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Considering unconventional use</h2>
+<ul><li>Often people will use devices in unconventional ways or situations</li>
+<li>This may affect what is possible via that input mode</li>
+</ul>
+</div><div class="notes"><ul><li>Image: Man in a wheelchair using an iPhone mounted to his wheelchair's foot rest. <a href="https://www.flickr.com/photos/nicksherman/2694316131/">Image credit: Nick Sherman</a></li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 28</div>
+<div class="slide" aria-hidden="true"><img src='images/images.028.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Deceptive Devices and Illusory Interactions
+Anderson, Grossman, Wigdor, Fitzmaurice</h2>
+<ul></ul>
+</div><div class="notes"><p><a href="https://www.youtube.com/watch?v=nJyqxjMWVC4">Link to video</a> Short video: https://www.youtube.com/watch?v=x02Rq7_0Lhg Image: screenshot from video showing a coffee cup with a screen hidden inside</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 29</div>
+<div class="slide" aria-hidden="true"><img src='images/images.029.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Understanding input</h2>
+<ul><li>Direct vs. indirect</li>
+<li>Absolute vs. relative</li>
+<li>Transfer functions</li>
+<li>Clutching</li>
+<li>Modeling input state</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 30</div>
+<div class="slide" aria-hidden="true"><img src='images/images.030.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Direct vs. indirect input</h2>
+<ul><li>Direct: input and output are collocated</li>
+<li>Indirect: input and output are separate, input usually shown with a cursor </li>
+</ul>
+</div><div class="notes"><p>The big idea is whether the user directly manipulates the user interface (direct) or whether there is a cursor (indirect).</p><h3 id="images">Images:</h3><p>Image of a hand on a touch screen representing direct input Image of a hand on a touchpad, and corresponding cursor on a laptop screen, representing indirect input</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 31</div>
+<div class="slide" aria-hidden="true"><img src='images/images.031.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Direct or indirect?</h2>
+<ul><li>Mouse</li>
+<li>Touchpad</li>
+<li>Trackball</li>
+<li>Touch screen</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 32</div>
+<div class="slide" aria-hidden="true"><img src='images/images.032.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Benefits of direct vs. indirect input?</h2>
+<ul><li>Benefits of direct input?</li>
+<li>Less indirection, more self-contained, greater expressivity, easier to learn</li>
+<li>Benefits of indirect input?</li>
+<li>Precision, "fat finger problem"</li>
+<li>Efficiency, specialized devices</li>
+<li>Density of controls which could be faster</li>
+<li>Occlusion</li>
+<li>Tactile / proprioceptive sensations</li>
+</ul>
+</div><div class="notes"><p>Benefits of direct input: More compact Keep attention in the same place</p><p>Benefits of indirect input: Can have additional sensors Smaller precision (e.g. avoid "fat finger syndrome") Can be better ergonomically (e.g. avoid "gorilla arm")</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 33</div>
+<div class="slide" aria-hidden="true"><img src='images/images.033.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Absolute vs. relative pointing</h2>
+<ul></ul>
+</div><div class="notes"><p>It's usually the case that direct input is also absolute.</p><h3 id="images">Images</h3><ul><li>Left: Absolute pointing. Touching in the top left puts the cursor in the top left</li><li>Right: Relative pointing. Moving over the touchpad moves the cursor</li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 34</div>
+<div class="slide" aria-hidden="true"><img src='images/images.034.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Transfer function</h2>
+<ul><li>How do we map movement on a relative pointing device to cursor movement?</li>
+<li>Transfer function f(dx,dy) relates to cursor movement</li>
+<li>What if we get it wrong? Too low? Too high?</li>
+<li>Clutching: picking up and repositioning an input device, such as a mouse</li>
+</ul>
+</div><div class="notes"><p>What if it's too low? For example: one inch per pixel What if it's too high? For example: one inch per 1000 pixels</p><p>In reality, transfer functions can be more complicated. It may not be a linear relationship, and transfer may be calculated differently in specific locations (e.g. on the edges of the pointing device)</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 35</div>
+<div class="slide" aria-hidden="true"><img src='images/images.035.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Input device state</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 36</div>
+<div class="slide" aria-hidden="true"><img src='images/images.036.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Input modeling</h2>
+<ul><li>Understand that interaction takes place in stages</li>
+<li>From the user's perspective: pointing, clicking</li>
+<li>From the device's perspective: mouse button up, mouse button down</li>
+<li>We can model the states (and transitions) of input devices to understand how they work</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 37</div>
+<div class="slide" aria-hidden="true"><img src='images/images.037.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why modeling input state matters</h2>
+<ul><li>Comparing two input devices: can one be substituted for another?</li>
+<li>Identifying parts of the user interface that will be tricky on a new type of device</li>
+<li>Finding underutilized input methods and using them to provide more expressive input</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 38</div>
+<div class="slide" aria-hidden="true"><img src='images/images.038.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Example: right-click</h2>
+<ul><li>Most mouse-based user interfaces have the capability of "right-click" or other alternate selection</li>
+<li>Most touch screens do not</li>
+<li>How have designers dealt with that issue?</li>
+</ul>
+</div><div class="notes"><p>Image: A folder on Mac OS that has been right-clicked, showing a context menu.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 39</div>
+<div class="slide" aria-hidden="true"><img src='images/images.039.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Solving no right click</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 40</div>
+<div class="slide" aria-hidden="true"><img src='images/images.040.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Solving the no-right-click problem</h2>
+<ul><li>Touch and hold ("dwell") - slows down input</li>
+<li>Add another layer of menus - adds steps</li>
+<li>Use gestures - this can work, since gestures are physically easy to perform on touch screens, but may be difficult to learn or remember</li>
+<li>Pressure sensing - add new sensing capabilities to the input device</li>
+</ul>
+</div><div class="notes"><p>The lack of contextual menus is a major reason why the pressure-sensing features were added to some touch platforms.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 41</div>
+<div class="slide" aria-hidden="true"><img src='images/images.041.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Previewing gestureson iOS</h2>
+<ul><li>Drag item slightly to the side</li>
+<li>Options "peek out"</li>
+</ul>
+</div><div class="notes"><h3 id="images">Images</h3><ul><li>Screenshot from Overcast app for iOS shows that you can drag to reveal the results of a swipe gesture. <a href="https://www.macstories.net/reviews/overcast-2-0-streaming-chapters-new-patronage-model-and-an-interview-with-marco-arment/">Image from MacStories</a></li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 42</div>
+<div class="slide" aria-hidden="true"><img src='images/images.042.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>State models</h2>
+<ul><li>We can represent the state of an input device using a state-transition diagram</li>
+<li>Draw a circle for each state, and draw arrows showing how to transition between each state</li>
+<li>Track what data is recorded during each state</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 43</div>
+<div class="slide" aria-hidden="true"><img src='images/images.043.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Mouse state-transition diagram</h2>
+<ul></ul>
+</div><div class="notes"><p>This is a slightly expanded version of the model in the Hinckley and Wigdor text. Note: we actually can't know the position of the mouse in 3D space.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 44</div>
+<div class="slide" aria-hidden="true"><img src='images/images.044.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Touch screen state-transitions</h2>
+<ul></ul>
+</div><div class="notes"><p>What this means: We have no idea where the user's finger is when it's not on the screen There's no concept of "hover" in this model</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 45</div>
+<div class="slide" aria-hidden="true"><img src='images/images.045.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Mouse vs. touch screen</h2>
+<ul></ul>
+</div><div class="notes"><p>This is a slightly expanded version of the model in the Hinckley and Wigdor text. Note: we actually can't know the position of the mouse in 3D space.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 46</div>
+<div class="slide" aria-hidden="true"><img src='images/images.046.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Mouse vs. touch: so what?</h2>
+<ul><li>Mouse has "hover" state, touch doesn't</li>
+<li>Need alternative ways to preview actions</li>
+<li>No way to "lift" the mouse cursor off of the screen</li>
+<li>Need to move cursor from A to B</li>
+<li>Usually this means actions are only taken when the mouse button is down</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 47</div>
+<div class="slide" aria-hidden="true"><img src='images/images.047.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The three-state model</h2>
+<ul><li>Standard model for user input devices, proposed by Bill Buxton in 1990</li>
+<li>Out-of-range: system cannot sense the input device</li>
+<li>Tracking: system is tracking the position of the device (but no interaction)</li>
+<li>Dragging: user moves an item on screen by moving the input device</li>
+</ul>
+</div><div class="notes"><p>Not all devices support all states. There may also be other states.</p><h3 id="links">Links</h3><ul><li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.139.1700&amp;rep=rep1&amp;type=pdf">Buxton, 1990, A three state model of graphical input</a></li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 48</div>
+<div class="slide" aria-hidden="true"><img src='images/images.048.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How programs handle input</h2>
+<ul><li>Input events - our programming environment has built-in functionality for tracking keyboard, mouse, touch input</li>
+<li>Example events: mouseDown, mouseUp, mouseMove, keyDown, keyUp</li>
+<li>We can write event handlers that respond to those events</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 49</div>
+<div class="slide" aria-hidden="true"><img src='images/images.049.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Event handling in JQuery</h2>
+<ul><li>$("#dialer_pad").click(function() {</li>
+<li>   // do something</li>
+<li>})</li>
+<li>$("#dialer_pad").mousemove(function(event) {</li>
+<li>   alert(event.x)</li>
+<li>})</li>
+</ul>
+</div><div class="notes"><p>Events can have parameters</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 50</div>
+<div class="slide" aria-hidden="true"><img src='images/images.050.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Repurposing leftover degrees of freedom</h2>
+<ul><li>Hover Widgets(Grossman, Hinckley, Baudisch, Agrawala, Balakrishnan)</li>
+</ul>
+</div><div class="notes"><p>If you have extra degrees of freedom ### Links <a href="https://www.youtube.com/watch?v=WPbiPn1b1zQ">Hover widgets video</a> <a href="https://dl.acm.org/citation.cfm?id=1124898">Hover widgets paper</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 51</div>
+<div class="slide" aria-hidden="true"><img src='images/images.051.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Let's model some input devices</h2>
+<ul><li>To my left: Model a two-button mouse</li>
+<li>To my right: Model the pen used in hover widgets </li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 52</div>
+<div class="slide" aria-hidden="true"><img src='images/images.052.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>State models</h2>
+<ul><li>Two-button mouse</li>
+<li>…</li>
+<li>Active stylus</li>
+<li>…</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 53</div>
+<div class="slide" aria-hidden="true"><img src='images/images.053.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Adding complexity</h2>
+<ul><li>So how would you prototype something like Hover Widgets?</li>
+<li>Usually, track low level events, and keep track of the state</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 54</div>
+<div class="slide" aria-hidden="true"><img src='images/images.054.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>HoverWidgets in pseudocode</h2>
+<ul><li>var isHovering = false;</li>
+<li>function onMove(direction) {</li>
+<li>  if (direction == right) isHovering = true;</li>
+<li>  else if (direction == left) isHovering = false;</li>
+<li>  else if (direction == down) isHovering = false;</li>
+<li>  else if (direction == up) {</li>
+<li>    if (isHovering) == true doHoverAction()</li>
+<li>    else isHovering = false </li>
+<li>}</li>
+</ul>
+</div><div class="notes"><p>In this model, the hover menu only starts if you move right and then move up (without moving in other directions). To implement that, we keep track of the input state in a variable. If we start moving right, watch for up movements. If you move in any other direction, reset the state. If we move right and then up, open the hover menu.</p><p>Note that we can prototype stuff</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 55</div>
+<div class="slide" aria-hidden="true"><img src='images/images.055.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Summary: input devices</h2>
+<ul><li>Several categories / dimensions of input devices</li>
+<li>We can model the sensing state of devices and map them back to a task</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 56</div>
+<div class="slide" aria-hidden="true"><img src='images/images.056.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Pointing</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 57</div>
+<div class="slide" aria-hidden="true"><img src='images/images.057.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What is pointing, anyway?</h2>
+<ul><li>We might think of it in narrow terms: e.g., using a mouse to move a cursor and click an icon</li>
+<li>More generally, all aimed movements are pointing</li>
+<li>Typing == pointing at a series of physical keys, and actuating them</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 58</div>
+<div class="slide" aria-hidden="true"><img src='images/images.058.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Hand movements in pointing</h2>
+<ul><li>Pointing is closed loop movement</li>
+<li>User responds to visual and proprioceptive feedback</li>
+<li>First, a fast, inaccurate ballistic movement</li>
+<li>Then, a series of small, iterative, precise corrective movements</li>
+</ul>
+</div><div class="notes"><p>What would be an example of an open loop movement? Throwing a dart, for example. Images: Tablet PC shows a user pointing at a target with a fast ballistic movement and a slower corrective movement</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 59</div>
+<div class="slide" aria-hidden="true"><img src='images/images.059.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Ballistic vs. corrective movement</h2>
+<ul></ul>
+</div><div class="notes"><p>Image: screen shot from <a href="http://depts.washington.edu/madlab/proj/fittsstudy/">FittsStudy</a> software shows mouse data from a single pointing trial, including the distance over time, velocity over time, acceleration over time, and jerk (the change in acceleration) over time.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 60</div>
+<div class="slide" aria-hidden="true"><img src='images/images.060.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Ballistic vs. corrective movement</h2>
+<ul></ul>
+</div><div class="notes"><p>Image: close up of the previous slide shows overshoot and corrective movement phase.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 61</div>
+<div class="slide" aria-hidden="true"><img src='images/images.061.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Evaluating pointing?</h2>
+<ul><li>How should we evaluate whether our input techniques are good?</li>
+<li>Let's brainstorm criteria</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 62</div>
+<div class="slide" aria-hidden="true"><img src='images/images.062.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Evaluating input devices</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 63</div>
+<div class="slide" aria-hidden="true"><img src='images/images.063.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Question</h2>
+<ul><li>Which is better, a mouse or trackball?</li>
+<li>How do we answer a question like this?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 64</div>
+<div class="slide" aria-hidden="true"><img src='images/images.064.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>An effective pointing device is…</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 65</div>
+<div class="slide" aria-hidden="true"><img src='images/images.065.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Questions about pointing</h2>
+<ul><li>Answer questions like:</li>
+<li>How does this input device compare to another?</li>
+<li>Is interface layout A or B more efficient?</li>
+<li>Does interface C or D work better for User X?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 66</div>
+<div class="slide" aria-hidden="true"><img src='images/images.066.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Evaluating pointing</h2>
+<ul><li>We can measure movement times (and error rates)</li>
+<li>But these have relatively little explanatory power</li>
+<li>If pointing is slow, should we always just make the cursor move faster?</li>
+<li>What knobs should we turn to improve performance?</li>
+<li>What do our test results tell us about other situations?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 67</div>
+<div class="slide" aria-hidden="true"><img src='images/images.067.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts' Law</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 68</div>
+<div class="slide" aria-hidden="true"><img src='images/images.068.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Big idea: Fitts' Law</h2>
+<ul><li>Formula that provides an accurate model of pointing performance in a given context</li>
+<li>Allows us to estimate in what-if scenarios</li>
+<li>Helps explain differences between different pointing scenarios</li>
+<li>Provides actionable steps for changing pointing performance</li>
+</ul>
+</div><div class="notes"><p>We talk quite a bit about Fitts in 3002 and 5839. Today we'll bring everyone up to speed - but there is more to learn</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 69</div>
+<div class="slide" aria-hidden="true"><img src='images/images.069.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts' Law</h2>
+<ul><li>Movement time = f(target size, target distance, efficiency of the pointing device)</li>
+<li>MT = a + b * log2(A / W + 1)</li>
+<li>A = amplitude (aka distance of movement)</li>
+<li>W = width (aka target size)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 70</div>
+<div class="slide" aria-hidden="true"><img src='images/images.070.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Index of difficulty</h2>
+<ul><li>MT = a + bx, where x = log2(A / W + 1)</li>
+<li>x is the Index of Difficulty</li>
+<li>It represents the difficulty of the pointing task</li>
+<li>a and b are constants</li>
+<li>These represent performance characteristics of the pointing device itself! AKA index of performance</li>
+</ul>
+</div><div class="notes"><p>OK, so what does our index of difficulty tell us about pointing tasks?</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 71</div>
+<div class="slide" aria-hidden="true"><img src='images/images.071.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts' study data</h2>
+<ul></ul>
+</div><div class="notes"><p>It's not any given measurement that matters, it's the overall trend. Index of Performance is measured in bits per second</p><p>Image: two scatterplots showing movement time vs. index of difficulty for index finger (left) and thumb (right). The plot on the left has a lower slope, indicating higher throughput and suggesting the index finger is a more efficient pointing device.</p><p>Which is better?</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 72</div>
+<div class="slide" aria-hidden="true"><img src='images/images.072.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts' Law: What to remember</h2>
+<ul><li>Index of difficulty (A and W) describes a pointing task, and is the same across the devices</li>
+<li>Index of performance (a and b) represents the efficiency of a given pointing device / context</li>
+<li>If y is MT and x is ID, IP is the slope!</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 73</div>
+<div class="slide" aria-hidden="true"><img src='images/images.073.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>So what?</h2>
+<ul><li>A and W give us a way to talk about pointing task difficulty</li>
+<li>a and b give us a way of comparing different pointing contexts</li>
+<li>Different pointing devices (mouse vs. trackball)</li>
+<li>User groups (older adults vs. kids)</li>
+<li>Contexts (sitting vs. standing vs. walking)</li>
+<li>1/b is often called Index of Performance (or throughput)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 74</div>
+<div class="slide" aria-hidden="true"><img src='images/images.074.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 75</div>
+<div class="slide" aria-hidden="true"><img src='images/images.075.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Using Fitts's Law</h2>
+<ul><li>We can predict how pointing performance would change on an easier or more difficult interface</li>
+<li>We can compare objective performance between devices, even if they perform differently in different contexts</li>
+<li>e.g. Input device A is great at small targets but overall slow; input device B is pretty good at all target sizes - which is better?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 76</div>
+<div class="slide" aria-hidden="true"><img src='images/images.076.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts's Law history</h2>
+<ul><li>Developed by Paul M. Fitts in 1954</li>
+<li>Designed for a reciprocal pointing task</li>
+<li>Movement in 1 dimension only</li>
+<li>Used a stylus on touch pads</li>
+</ul>
+</div><div class="notes"><h3 id="images">Images:</h3><p>Top: Image of Paul Fitts, from <a href="https://lsa.umich.edu/psych/news-events/all-news/awards/psychology-awards-banquet-celebrates-department-achievements-and.html">University of Michigan</a> Bottom: Reciprocal tapping task from <a href="http://www.yorku.ca/mack/GI92.html">Scott MacKenzie</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 77</div>
+<div class="slide" aria-hidden="true"><img src='images/images.077.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Does Fitts's Law apply to me?</h2>
+<ul><li>It has been tested across a variety of user groups, body parts, input devices, even underwater</li>
+<li>It is a loose approximation that works in many contexts</li>
+<li>Useful as long as we can measure start time, end time, target distance, target size</li>
+<li>Applies to 1-dimensional movement only</li>
+<li>Models for 2D and 3D movement have been proposed</li>
+</ul>
+</div><div class="notes"><p>Even a touch screen - although we can't track movement above the screen.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 78</div>
+<div class="slide" aria-hidden="true"><img src='images/images.078.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Using Fitts's Law</h2>
+<ul><li>If we know a and b</li>
+<li>Predict movement times for different indices of difficulty (A and W)</li>
+<li>If we don't know a and b</li>
+<li>Run tests to collect movement times; solve for a and b</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 79</div>
+<div class="slide" aria-hidden="true"><img src='images/images.079.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Running a Fitts's Law study</h2>
+<ul><li>When we want to calculate a and b </li>
+<li>Use a variety of indices of difficulty</li>
+<li>Collect movement times</li>
+<li>Use regression to calculate a and b</li>
+</ul>
+</div><div class="notes"><p>a and b are more general measurements. think current speed vs. horsepower rating</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 80</div>
+<div class="slide" aria-hidden="true"><img src='images/images.080.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts's Law Software</h2>
+<ul><li>FittsStudy by Jake Wobbrock (Windows)</li>
+<li>GoFitts from Scott MacKenzie</li>
+<li>Interactive Fitts Visualization from Simon Weller</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 81</div>
+<div class="slide" aria-hidden="true"><img src='images/images.081.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Limitations of Fitts's Law</h2>
+<ul><li>Does not tell us anything about error rate</li>
+<li>Expects a fixed 4% error rate</li>
+<li>Does not consider speed-accuracy tradeoffs</li>
+<li>Other models focus on errors (e.g. Harada et al)</li>
+<li>Only 1D movement</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 82</div>
+<div class="slide" aria-hidden="true"><img src='images/images.082.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fitts's Law is an approximation</h2>
+<ul><li>Doesn't actually model anything about the user</li>
+<li>Individual dexterity, practice, fatigue</li>
+<li>Doesn't model other aspects of pointing</li>
+<li>Visual search, cognition</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 83</div>
+<div class="slide" aria-hidden="true"><img src='images/images.083.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Interesting physiological problems</h2>
+<ul><li>Fat Finger problem - fingers are too large to select some targets, can occlude touch screen</li>
+<li>Gorilla arms - inability to keep arms raised</li>
+<li>Midas Touch problem - more on this later</li>
+</ul>
+</div><div class="notes"><p>Midas touch: On some devices, it's difficult to separate out pointing and selection.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 84</div>
+<div class="slide" aria-hidden="true"><img src='images/images.084.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Other trade-offs</h2>
+<ul><li>What is optimal for pointing may negatively affect readability, aesthetics, etc.</li>
+<li>Larger buttons may mean more screens to click through</li>
+<li>Hit area of target does not need to exactly match visual appearance</li>
+</ul>
+</div><div class="notes"><p>Image: clickable region on iOS address book is larger than the visual size of the button.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 85</div>
+<div class="slide" aria-hidden="true"><img src='images/images.085.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Pointing facilitation</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 86</div>
+<div class="slide" aria-hidden="true"><img src='images/images.086.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Can we beat Fitts's Law?</h2>
+<ul><li>How does Fitts's Law teach us how to improve performance?</li>
+<li>Reduce (effective) distance to target</li>
+<li>Increase (effective) size of target </li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 87</div>
+<div class="slide" aria-hidden="true"><img src='images/images.087.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Improving performance</h2>
+<ul><li>Pointing performance will be improved when targets are nearby and large</li>
+<li>So, design UIs such that important functions are nearby and large</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 88</div>
+<div class="slide" aria-hidden="true"><img src='images/images.088.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Radial menus</h2>
+<ul><li>Place menus around the cursor</li>
+<li>Often used in games and artistic software</li>
+<li>Limitations?</li>
+</ul>
+</div><div class="notes"><p>Not scalable. Not discoverable.</p><p>Image: radial menu shows menu options clustered in a circle around the cursor.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 89</div>
+<div class="slide" aria-hidden="true"><img src='images/images.089.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Edges and corners</h2>
+<ul><li>Edges and corners typically have infinite size</li>
+<li>No penalty for overshooting the target</li>
+</ul>
+</div><div class="notes"><p>Sometimes visual target doesn't match what is clickable.</p><p>Image: Apple Menu in the top-left corner of Mac OS.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 90</div>
+<div class="slide" aria-hidden="true"><img src='images/images.090.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Pointing facilitation</h2>
+<ul><li>Two fundamental approaches</li>
+<li>Target aware - the system knows where targets are on the screen</li>
+<li>Target agnostic - the system does not know where targets are on the screen</li>
+</ul>
+</div><div class="notes"><p>Target agnostic is more challenging but potentially more robust.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 91</div>
+<div class="slide" aria-hidden="true"><img src='images/images.091.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why target agnostic?</h2>
+<ul><li>Sometimes the programmer does not have the ability to programmatically identify UI layout (e.g. old UI toolkits)</li>
+<li>Sometimes the number of targets is too large (e.g. I can click on any letter in this sentence)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 92</div>
+<div class="slide" aria-hidden="true"><img src='images/images.092.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Facilitating movement</h2>
+<ul><li>Jump between icons or make "sticky" icons</li>
+<li>"Gravity fields"</li>
+</ul>
+</div><div class="notes"><p>These are target-aware methods: the system needs to know where the targets are for this method to work.</p><p>Image: Gravity wells can pull the pointer in when it approaches a target. From <a href="http://www.weriumsolutions.com/wp-content/uploads/2017/03/preprint-mousefield.pdf">MouseField by Velasco et al., 2012</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 93</div>
+<div class="slide" aria-hidden="true"><img src='images/images.093.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Area Cursors</h2>
+<ul><li>One way to improve pointing is to increase the size of the cursor: easier to hit targets with a bigger cursor</li>
+<li>Downside: this method can break down when targets are close to each other</li>
+</ul>
+</div><div class="notes"><p>Image: area cursor is shown as a square rather than a point, from <a href="https://www.cc.gatech.edu/gvu/people/Faculty/hudson/papers/older_adults/cursors_paper.html">Worden et al.</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 94</div>
+<div class="slide" aria-hidden="true"><img src='images/images.094.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Limitation of area cursor</h2>
+<ul><li>What to do with densely packed targets?</li>
+</ul>
+</div><div class="notes"><p>Densely packed targets.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 95</div>
+<div class="slide" aria-hidden="true"><img src='images/images.095.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Bubble Cursor (Grossman and Balakrishnan 2005)</h2>
+<ul><li>Dynamically resize area cursor to contain the closest target, but not the second closest</li>
+<li>Considered by many to be the best pointer facilitation method</li>
+</ul>
+</div><div class="notes"><h3 id="links">Links</h3><p><a href="https://dl.acm.org/citation.cfm?id=1055012">Bubble Cursor paper</a> <a href="https://www.youtube.com/watch?v=JUBXkD_8ZeQ">Bubble Cursor video</a></p><h3 id="images">Images</h3><ul><li>Image: Bubble Cursor expands in size to envelop the closest target, but not the second-closest</li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 96</div>
+<div class="slide" aria-hidden="true"><img src='images/images.096.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Target-agnostic methods</h2>
+<ul><li>Angle Mouse (Wobbrock et al.)</li>
+<li>Detect when corrective movements start (based on speed and angular deviation)</li>
+<li>Slow the cursorduring correctionphase</li>
+</ul>
+</div><div class="notes"><h3 id="links">Links</h3><p><a href="https://dl.acm.org/citation.cfm?id=1518701.1518912">Angle Mouse paper</a> <a href="https://www.youtube.com/watch?v=O4ahGmHenps">Angle Mouse video</a></p><h3 id="images">Images</h3><ul><li>Image: Illustration of the angle mouse. When the mouse moves toward the target, the change in angle is minimal and the cursor moves quickly. When the user begins the corrective phase, the angular deviation increases, and the Angle Mouse system improves precision.</li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 97</div>
+<div class="slide" aria-hidden="true"><img src='images/images.097.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>More target-agnostic methods</h2>
+<ul><li>Steady Clicks (Trewin et al.)</li>
+<li>For pen-based interfaces</li>
+<li>Some users, especially older users, accidentally "slip" the cursor while clicking</li>
+<li>Detect this movement (based on characteristic shape) and find the target from a few seconds before</li>
+</ul>
+</div><div class="notes"><h3 id="links">Links</h3><ul><li><a href="https://dl.acm.org/citation.cfm?id=1168993">Steady Clicks paper</a></li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 98</div>
+<div class="slide" aria-hidden="true"><img src='images/images.098.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>User-specific models</h2>
+<ul><li>Some individuals may have additional, atypical challenges related to pointing</li>
+<li>Examples</li>
+<li>Parkinson's Disease may cause tremor when using a pointing device</li>
+<li>Muscular Dystrophy may impair large movements, but doesn't affect precision</li>
+<li>Can we build user-specific models of pointing?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 99</div>
+<div class="slide" aria-hidden="true"><img src='images/images.099.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Supple++ (Gajos et al.)</h2>
+<ul></ul>
+</div><div class="notes"><h3 id="links">Links</h3><ul><li><a href="https://dl.acm.org/citation.cfm?doid=1294211.1294253">Supple++ paper</a></li></ul><h3 id="images">Images</h3><ul><li>Image: Supple++ produces three versions of a user interface: 1) the standard user interface, representing a font-choice dialog; 2) a user interface optimized for a user with muscular dystrophy, where icons are small and close together; 3) a user interface optimized for an eye tracker user, with large targets.</li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 100</div>
+<div class="slide" aria-hidden="true"><img src='images/images.100.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Mini-design activity</h2>
+<ul><li>Consider our phone dialer user interface</li>
+<li>Sketch out a variant for</li>
+<li>User with tremor</li>
+<li>User with hand fatigue</li>
+<li>User with low vision (but fine motor ability)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 101</div>
+<div class="slide" aria-hidden="true"><img src='images/images.101.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>For next time</h2>
+<ul><li>We'll test Fitts Law</li>
+<li>Come up with a hypothesis to test today</li>
+</ul>
+</div><div class="notes"></div></div>
+</div>
+</div>
+</body>
+</html>
