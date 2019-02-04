@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>Phone Demo</title>
+		<link rel="stylesheet" href="phone.css">
+  </head>
+  <body>
+	  <div id="tabs">
+		  <button id="tab_dialer">Dialer</button>
+		  <button id="tab_contacts">Contact List</button>
+		  <button id="tab_add_contact">Add Contact</button>
+	  </div>
+	  <div id="content">
+		  <div id="content_dialer">
+		      <h1>Dialer</h1>
+			  <form>
+				  <input id="number_input"/>
+			  </form>
+			  <div id="dialer_pad">
+				  <div>
+					  <button id="dialer1">1</button>
+					  <button id="dialer2">2</button>
+					  <button id="dialer3">3</button>
+				  </div>
+				  <div>
+					  <button id="dialer4">4</button>
+					  <button id="dialer5">5</button>
+					  <button id="dialer6">6</button>
+				  </div>
+				  <div>
+					  <button id="dialer7">7</button>
+					  <button id="dialer8">8</button>
+					  <button id="dialer9">9</button>
+				  </div>
+				  <div>
+					  <button id="dialer_star">*</button>
+					  <button id="dialer0">0</button>
+					  <button id="dialer_octothorpe">#</button>
+				  </div>
+			  </div>
+			  <div id="dialer_controls">
+				  <button id="button_dial">Dial</button>
+				  <button id="button_dialer_clear">Clear</button>
+			  </div>
+		  </div>
+		  <div id="content_contacts">
+		      <h1>Contact List</h1>
+			  <div id="contact_list">
+				  <button class="pure-button">Robert Drake</button>
+				  <button class="pure-button">Emma Frost</button>
+				  <button class="pure-button">Doreen Green</button>
+				  <button class="pure-button">Jean Grey</button>
+				  <button class="pure-button">James Howlett</button>
+				  <button class="pure-button">Ororo Munroe</button>
+				  <button class="pure-button">Katherine Pryde</button>
+				  <button class="pure-button">Piotr Rasputin</button>
+				  <button class="pure-button">Scott Summers</button>
+				  <button class="pure-button">Kurt Wagner</button>
+				  <button class="pure-button">Warren Worthington</button>
+				  <button class="pure-button">Charles Xavier</button>
+			  </div>
+		  </div>
+		  <div id="content_add_contact">
+			  <h1>Add Contact</h1>
+			  <form>
+					<div>
+				  <label for="name">Name</label>
+				  <input id="name" placeholder="Jane Smith">
+					</div>
+					<div>
+				  <label for="phone_number">Phone number</label>
+				  <input id="phone_number" placeholder="123-456-7890">
+					</div>
+				  <div>
+					<label for="email">Email address</label>
+				  <input id="email" placeholder="jane.smith@colorado.edu">
+					</div>
+			  </form>
+			  <button>Add Contact</button>
+			  <button id="button_add_clear">Clear</button>
+		  </div>
+	  </div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="phone.js"></script>
+  </body>
+</html>
