@@ -1,0 +1,717 @@
+<html>
+<head>
+<title>Designing for Vision Impairments</title>
+<style> body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+.slide { width: 600px; height: 338px;}
+.notes { width: 600px;}
+.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+.slide, .notes, .html { margin-bottom: 10px;}
+.html img { display: none;}
+.sr-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.wrapper { margin: auto; max-width: 600px;}
+.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; };</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>Designing for Vision Impairments</h1>
+<p>Download slides: (<a href="05-blindness.key">keynote</a>, <a href="05-blindness.pdf">pdf</a>)</p>
+<div class='content'><div class="row">
+<div class="slideNumber">Slide 1</div>
+<div class="slide" aria-hidden="true"><img src='images/images.001.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Designing for Vision Impairments</h2>
+<ul><li>Input, Interaction, and Accessibility</li>
+<li>Spring 2019</li>
+</ul>
+</div><div class="notes"><p>Image: Mark Riccobono, a blind man, is driving a semi-autonomous car in the blind driver challenge. Image from http://www.oddee.com/item_98614.aspx</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 2</div>
+<div class="slide" aria-hidden="true"><img src='images/images.002.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>This week</h2>
+<ul><li>Monday</li>
+<li>Catchup on inclusive design perspective</li>
+<li>Exploring vision accessibility</li>
+<li>Time for project 1 (20 minutes)</li>
+<li>Wednesday</li>
+<li>Test driving screen readers</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 3</div>
+<div class="slide" aria-hidden="true"><img src='images/images.003.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>An inclusive design perspective</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 4</div>
+<div class="slide" aria-hidden="true"><img src='images/images.004.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Considering diverse users</h2>
+<ul><li>How do we think about the individual?</li>
+<li>How do we think about the design process?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 5</div>
+<div class="slide" aria-hidden="true"><img src='images/images.005.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Disability & inclusion</h2>
+<ul><li>We'll spend much of our time talking about access for people with disabilities. Why?</li>
+<li>There are many well-known but remaining accessibility problems</li>
+<li>Addressing these problems can significantly impact people's lives</li>
+</ul>
+</div><div class="notes"><p>This certainly does not mean that these problems are more important.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 6</div>
+<div class="slide" aria-hidden="true"><img src='images/images.006.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Inclusion beyond disability</h2>
+<ul></ul>
+</div><div class="notes"><p>Link: Danah Boyd, Is the Oculus Rift sexist? https://qz.com/192874/is-the-oculus-rift-designed-to-be-sexist/</p><p>Two ways that humans detect depth: motion parallax, shape-from-shading danah boyd found that women favor shape-from-shading; men the opposite But most current VR systems use motion parallax (it's also easier to compute)</p><p>PCWorld: https://www.pcworld.com/article/209708/Is_Microsoft_Kinect_Racist.html Some rumors about sensing technology not working with dark skin.</p><p>These kinds of problems are probably only going to become more common over time as sensing UIs.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 7</div>
+<div class="slide" aria-hidden="true"><img src='images/images.007.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Accessibility can affect lots of groups</h2>
+<ul><li>Future technologies, but also issues of affordability, resources, etc.</li>
+<li>We should keep this in mind throughout what we do here</li>
+<li>For now, we'll talk more about disability</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 8</div>
+<div class="slide" aria-hidden="true"><img src='images/images.008.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Some terminology re: disability</h2>
+<ul><li>PWD - people with disabilities</li>
+<li>Accessibility - the practice of designing artifacts that are usable (usually focusing on PWD)</li>
+<li>a11y - "cool" abbreviation for accessibility; [a+11 letters+y]. Inspired by internationalization ? i18n</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 9</div>
+<div class="slide" aria-hidden="true"><img src='images/images.009.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>More on PWD terminology</h2>
+<ul><li>Class follows the reasonable person principle: assume everyone is reasonable, acting in good faith</li>
+<li>Disability isn't a bad word</li>
+<li>Some terms have gone out of fashion (e.g., wheelchair bound, mental retardation)</li>
+<li>Some terms raise questions: what does it mean to call something normal?</li>
+</ul>
+</div><div class="notes"><p>Don't be afraid of saying the wrong thing. It's better to speak clearly, and adjust your language as you learn more.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 10</div>
+<div class="slide" aria-hidden="true"><img src='images/images.010.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What, even, is disability?</h2>
+<ul><li>Who is included? Excluded?</li>
+<li>How to think and talk about it?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 11</div>
+<div class="slide" aria-hidden="true"><img src='images/images.011.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Models of disability</h2>
+<ul><li>Medical model: people with disabilities (PWD) are patients; our goal is to restore or replace function</li>
+<li>Social model: What counts as "disability" is defined socially; people are naturally different, but society sets the bounds for what is considered normal and what is abnormal. Maybe we don't need to fix people.</li>
+</ul>
+</div><div class="notes"><p>This is a pretty big idea. Worth thinking about. It's somewhat straightforward to imagine a perspective where there's nothing "wrong" with a disabled person. It's a whole different thing to take the perspective that the very idea of disability is a social construct.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 12</div>
+<div class="slide" aria-hidden="true"><img src='images/images.012.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The social model in action</h2>
+<ul><li>The Shared Sign Language of Martha's Vineyard </li>
+<li>In the 18th century, deafness was common on the island of Martha's Vineyard</li>
+<li>Sign language was commonly used by everyone</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="www.missedinhistory.com/podcasts/the-shared-sign-language-of-marthas-vineyard.htm">Sign language on Martha's Vineyard</a></p><p>Image: boat pier on Martha's Vineyard with text "By the early 18th century, it was not uncommon for peopleon Martha's Vineyard to be deaf from birth. This had a profound effect on the culture of Martha's Vineyard, and one that went on to influence Deaf cilture in the United States as a whole."</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 13</div>
+<div class="slide" aria-hidden="true"><img src='images/images.013.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Definitions change over time</h2>
+<ul><li>Being nearsighted was not a significant disability until literacy become common</li>
+<li>Changing norms around texting may benefit some (e.g., deaf people) and impair others (e.g., people with dyslexia)</li>
+</ul>
+</div><div class="notes"><p>In the future, one could imagine stereo vision or VR sickness to count as disability.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 14</div>
+<div class="slide" aria-hidden="true"><img src='images/images.014.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>WHO model of disability (2012)</h2>
+<ul><li>Body functions and body structures describes how a person's body functions</li>
+<li>Impairments refer to functional limitations of a person's body</li>
+<li>Activity limitations refer to difficulties performing specific activities</li>
+<li>Participation restrictions refer to difficulties participating in activities of daily life</li>
+<li>(and all of this is affected by environmental factors)</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="http://www.who.int/classifications/icf/icfbeginnersguide.pdf">WHO document</a></p><p>The WHO has moved to more complex classifications; but this is a clear model that is useful for getting the big idea.</p><p>For example, a deaf person might not be able to hear. We might consider that an impairment. But does it affect activities, like conversation? And if so, does that affect participation in school, work, social life, etc.?</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 15</div>
+<div class="slide" aria-hidden="true"><img src='images/images.015.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Is impairment situational?</h2>
+<ul></ul>
+</div><div class="notes"><p>For more info on this idea: see Sears, A., Lin, M., Jacko, J., &amp; Xiao, Y. (2003, June). When computers fade: Pervasive computing and situationally-induced impairments and disabilities. In The HCI Handbook.</p><p>Image source: Cast: https://study.com/academy/lesson/long-leg-short-leg-casts.html</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 16</div>
+<div class="slide" aria-hidden="true"><img src='images/images.016.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Situational vs. lifelong impairments</h2>
+<ul><li>Must consider</li>
+<li>Compensatory skills</li>
+<li>Assistive technologies</li>
+<li>Ability to change the impairing context (e.g. by changing activity)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 17</div>
+<div class="slide" aria-hidden="true"><img src='images/images.017.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Perspectives and solutions "What should we do about it?"</h2>
+<ul><li>Rehabilitation technology - enable people to restore natural function (usually temporary)</li>
+<li>Assistive technology - provide technology to solve an accessibility problem (usually permanent)</li>
+<li>Special education - focus on access to education and empowerment</li>
+<li>Legal perspective - focus on rights and societal supports</li>
+<li>Whose responsibility is this problem?</li>
+</ul>
+</div><div class="notes"><p>Ladner groups these in as models of disability. I think that's fine, but it is useful to separate out the underlying perspective on what disability is, from the perspectives of how to intervene</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 18</div>
+<div class="slide" aria-hidden="true"><img src='images/images.018.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Design approaches</h2>
+<ul><li>Assistive technology - developing technology to "repair" a disability or address an activity limitation</li>
+<li>Universal design - build it from the ground up to accommodate the widest user group</li>
+<li>Inclusive design - often more pragmatic than universal design (include more, but not everyone), emphasizes participation by excluded users in the design process</li>
+</ul>
+</div><div class="notes"><p>Assistive technology might be a ramp attached to a building, while universal design would involve building the floor at the ground level so there are no steps to get in anyway.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 19</div>
+<div class="slide" aria-hidden="true"><img src='images/images.019.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Universal design in action</h2>
+<ul><li>"Born accessible" vs. bolt-on</li>
+</ul>
+</div><div class="notes"><p>Left ramp: https://s-media-cache-ak0.pinimg.com/originals/8f/6a/94/8f6a949af4a719ba622c34429783363a.jpg Right ramp: http://wheelchairassistance.com/wheelchair-ramp/50.jpg</p><p>Curb cut: https://www.columbian.com/news/2016/aug/10/curb-cuts-southeast-park-crest-avenue/</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 20</div>
+<div class="slide" aria-hidden="true"><img src='images/images.020.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>More design approaches</h2>
+<ul><li>Ability-based design - develop systems that model and adapt to a user's ability</li>
+<li>Design for empowerment - emphasize empowering and increasing representation from marginalized groups</li>
+<li>Value Sensitive Design - consider other values in design other than usability (e.g., independence, self-determination)</li>
+<li>Example: if we could, should we replace ASL interpreters with ASL-translating smart gloves? Why or why not?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 21</div>
+<div class="slide" aria-hidden="true"><img src='images/images.021.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>But who is right?</h2>
+<ul><li>ø\_(?)_/ø</li>
+<li>All of these perspectives may be useful at certain times</li>
+<li>Not necessarily mutually exclusive</li>
+<li>Useful to be aware of any implicit assumptions we are carrying with us</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 22</div>
+<div class="slide" aria-hidden="true"><img src='images/images.022.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Considering impact</h2>
+<ul><li>Often we are considering trade-offs between the size of the group we are including and the magnitude of the impact</li>
+<li>Consider:</li>
+<li>Helping 1 million people do their jobs 1% faster</li>
+<li>Helping 100k people gain access to education</li>
+<li>Helping 500 people live independently</li>
+<li>In reality, we are often dealing with external constraints. But it's worth taking a moment to consider this in the abstract case.</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 23</div>
+<div class="slide" aria-hidden="true"><img src='images/images.023.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why make things accessible?</h2>
+<ul><li>Laws or regulations</li>
+<li>Because we want to do the right thing</li>
+<li>Because accessible design is good design</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 24</div>
+<div class="slide" aria-hidden="true"><img src='images/images.024.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Laws and regulations in the US</h2>
+<ul><li>Section 508 of Rehabilitation Act - guidelines for access to electronic resources</li>
+<li>Americans with Disabilities Act - guidelines for "reasonable accommodations" to work, education, public life</li>
+<li>Individuals with Disabilities Education Act (IDEA) - guidelines for access to education</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://webaim.org/articles/laws/usa/">Summary of US laws related to technology access</a></p><p>Often these laws tell us what the expectations are in providing access, but don't tell us how.</p><p>Section 508 provides somewhat clear guidelines for web accessibility.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 25</div>
+<div class="slide" aria-hidden="true"><img src='images/images.025.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How to know what to do?</h2>
+<ul><li>In the old days, sometimes it was difficult or impossible to create accessible versions of our programs</li>
+<li>Fortunately, we now have better tools on our side:</li>
+<li>Programming frameworks that support accessibility (if you do the right thing)</li>
+<li>Guidelines for accessible design (and sometimes automated testing tools)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 26</div>
+<div class="slide" aria-hidden="true"><img src='images/images.026.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>HTML is great for this</h2>
+<ul><li>Well defined standards for creating accessible content</li>
+<li>Web Content Accessibility Guidelines (WCAG)</li>
+<li>By design, the web separates content (HTML) from presentation (CSS)</li>
+<li>Everything is rendered as HTML, can be scraped or altered by user's own device</li>
+</ul>
+</div><div class="notes"><p>HTML can support remixing through tools like Greasemonkey, that allow you to customize your own</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 27</div>
+<div class="slide" aria-hidden="true"><img src='images/images.027.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Remixing the Web</h2>
+<ul></ul>
+</div><div class="notes"><p>This slide shows images of the Twitter homepage that are customized using the Stylish browser extension. <a href="https://userstyles.org/styles/browse/twitter">Image source</a></p><p>This can change not only the visual appearance, but the layout as well - showing and hiding elements for example.</p><p>The <a href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en">Stylish</a> browser extension renders custom CSS for pages. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">Tampermonkey</a> and its ancestor Greasemonkey, allow you to run custom JavaScript on web pages.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 28</div>
+<div class="slide" aria-hidden="true"><img src='images/images.028.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Ways to think about accessibility</h2>
+<ul><li>Following standards - this helps our design work on a variety of current and future devices</li>
+<li>Presenting content in multiple ways - since people may consume media in different ways, have we included the appropriate content for doing so?</li>
+<li>Supporting various input methods - including mouse, touch, keyboard</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 29</div>
+<div class="slide" aria-hidden="true"><img src='images/images.029.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>More ways to think about accessibility</h2>
+<ul><li>Using appropriate accessibility features of HTML (e.g., alt tags for images, ARIA labels for dynamic user interfaces)</li>
+<li>Semantic UI code - should represent the logical structure of the interface, not just visual</li>
+<li>Support end-user customization - e.g. font size, color contrast</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 30</div>
+<div class="slide" aria-hidden="true"><img src='images/images.030.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Where we go wrong</h2>
+<ul><li>Writing buggy UI code</li>
+<li>Neglecting to include alternative representations (image descriptions, video captions) - or including lousy versions of these</li>
+<li>Getting the visual presentation right but messing up the semantic representation (no semantic UI)</li>
+</ul>
+</div><div class="notes"><p>Semantic = related to meaning in language</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 31</div>
+<div class="slide" aria-hidden="true"><img src='images/images.031.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Semantic UI?</h2>
+<ul><li><h1>My favorite animals</h1></li>
+<li><ul></li>
+<li><li>Cat</li></li>
+<li><li>Goat</li></li>
+<li><li>Capybara</li></li>
+<li><li>Axlotl</li></li>
+<li></ul></li>
+</ul>
+</div><div class="notes"><p>These two code snippets will render as mostly identical (close enough, anyway) on most browsers. But the structure of the code is very different.</p><p>The left example, semantically, reads: a heading, then a list of items. The right one reads as 5 paragraphs. The left code tells us that the 4 animals are part of a set. The right code does not.</p><p>A note on typography: For the bullet I used the Unicode bullet character (¥); you could also use the html code "¥". However, you pretty much never want to do this. Instead, specify your list using a list tag.</p><p>We need to mark what our user interface is, not just how it looks.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 32</div>
+<div class="slide" aria-hidden="true"><img src='images/images.032.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Blindness & accessibility</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 33</div>
+<div class="slide" aria-hidden="true"><img src='images/images.033.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Technology for vision impairments</h2>
+<ul><li>What people tend to use now</li>
+<li>History and research</li>
+<li>Key research challenges</li>
+<li>This week we will consider technologies for individuals with very limited or no vision; next week we will look at other levels of visual ability</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 34</div>
+<div class="slide" aria-hidden="true"><img src='images/images.034.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The big idea</h2>
+<ul><li>Interacting using audio (and other non-visual media) is very different than interacting with visual representations</li>
+<li>It's worth getting practice to understand these differences</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 35</div>
+<div class="slide" aria-hidden="true"><img src='images/images.035.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Accessibility challenges</h2>
+<ul><li>Talk with your neighbor</li>
+<li>What have you done so far today?</li>
+<li>What accessibility barriers would have come up if you found yourself unable to see?</li>
+<li>menti.com, 69 75 86</li>
+</ul>
+</div><div class="notes"><p>An important meta point here. It's rarely going to be good enough just to enumerate the problems that a person might encounter. It's important to understand the underlying challenges.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 36</div>
+<div class="slide" aria-hidden="true"><img src='images/images.036.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Some takeaways</h2>
+<ul><li>It's easy to overlook accessibility challenges if you don't experience them yourself</li>
+<li>At the same time, sighted people lack compensatory skills, familiarity with tools</li>
+</ul>
+</div><div class="notes"><p>You could pick up a white cane and use it to navigate, but that is going to go very differently than if you are trained in orientation &amp; mobility.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 37</div>
+<div class="slide" aria-hidden="true"><img src='images/images.037.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Common access technologies</h2>
+<ul></ul>
+</div><div class="notes"><h3 id="images">Images</h3><p>iPhone from apple.com MacBook from apple.com Refreshable Braille display White cane Service dog</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 38</div>
+<div class="slide" aria-hidden="true"><img src='images/images.038.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Specialized technology</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 39</div>
+<div class="slide" aria-hidden="true"><img src='images/images.039.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>From specialized to general</h2>
+<ul><li>Smartphones offer many capabilities that can be used for access</li>
+<li>Camera, GPS, Bluetooth for Braille or audio</li>
+<li>Apps enable new features to be easily added</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 40</div>
+<div class="slide" aria-hidden="true"><img src='images/images.040.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>General strategies</h2>
+<ul><li>Represent visual information in an alternative format</li>
+<li>Audio or tactile</li>
+<li>But these are very different than the visual sense in terms of transmission rate, simultaneous interaction, saliency</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 41</div>
+<div class="slide" aria-hidden="true"><img src='images/images.041.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Visual imagery is complicated</h2>
+<ul><li>Relatively easy to filter information / access superimposed information</li>
+<li>Non-linear access</li>
+<li>We know lots about how to use visual attention in design</li>
+</ul>
+</div><div class="notes"><p>For example, this map is designed so that important landmarks use color and shape to "pop" out. We can find these quickly using visual search.</p><p>Image: Map of the CU campus from Google Maps.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 42</div>
+<div class="slide" aria-hidden="true"><img src='images/images.042.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Mini-activity</h2>
+<ul><li>Write a text description of this image</li>
+<li>Post it menti.com, 69 75 86</li>
+</ul>
+</div><div class="notes"><p>Image: Star Trek, the Animated Series.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 43</div>
+<div class="slide" aria-hidden="true"><img src='images/images.043.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Considering context</h2>
+<ul><li>How would the description change for:</li>
+<li>A book about animation</li>
+<li>A Star Trek: TAS episode guide</li>
+<li>A find-the-hidden object game</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 44</div>
+<div class="slide" aria-hidden="true"><img src='images/images.044.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Creating alternative representations</h2>
+<ul><li>Approach 1: Have humans translate</li>
+<li>How do we convince people to create alternative information?</li>
+<li>How do we know what to translate?</li>
+<li>Approach 2: Have machines translate</li>
+<li>New technology</li>
+<li>What happens if the computer is wrong?</li>
+</ul>
+</div><div class="notes"><p>Getting a bad translation matters much more in some situations than in others. For example, incorrectly identifying a crosswalk would usually be worse than incorrectly identifying a Starbucks.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 45</div>
+<div class="slide" aria-hidden="true"><img src='images/images.045.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Text vs. nonspeech/tactile</h2>
+<ul><li>Often we provide access through text, either spoken or Braille</li>
+<li>Alternatives include tactile representations (such as tactile graphics) and sonification (representing data as sound)</li>
+<li>We'll focus on text for now, visit other approaches later</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 46</div>
+<div class="slide" aria-hidden="true"><img src='images/images.046.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Computer access</h2>
+<ul><li>Typically use screen reader software</li>
+<li>Provides description of operating system and applications as output</li>
+<li>May map to audio, Braille, or both</li>
+<li>Supports keyboard navigation as input</li>
+<li>Must provide a mental model for navigating applications, responding to alerts, etc.</li>
+</ul>
+</div><div class="notes"><p>Screen readers became much more complex once the Graphical User Interface became the primary way of using our computers.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 47</div>
+<div class="slide" aria-hidden="true"><img src='images/images.047.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Braille vs. audio output</h2>
+<ul><li>With training, screen reader audio output can be up to 300+ WPM</li>
+<li>Braille reading speed can be 200-400 WPM</li>
+<li>Using Braille is silent, preserves aural attention </li>
+<li>Braille literacy is low; this could create problems in the future</li>
+<li>We should not assume that a blind person has access to a Braille display, or even that they read Braille</li>
+</ul>
+</div><div class="notes"><p>Preferences may depend on the material or task.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 48</div>
+<div class="slide" aria-hidden="true"><img src='images/images.048.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Braille alphabet</h2>
+<ul></ul>
+</div><div class="notes"><p>Important to note: Braille is not tactile representations of letters. Numbers use a number symbol plus the same patterns as letters.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 49</div>
+<div class="slide" aria-hidden="true"><img src='images/images.049.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Specialized Braille (Nemeth code)</h2>
+<ul></ul>
+</div><div class="notes"><p>Latex is often used for input.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 50</div>
+<div class="slide" aria-hidden="true"><img src='images/images.050.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Grade 2 Braille</h2>
+<ul><li>Uses contractions to condense text</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 51</div>
+<div class="slide" aria-hidden="true"><img src='images/images.051.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Refreshable Braille</h2>
+<ul><li>Devices can be quite expensive (thousands of dollars)</li>
+<li>Braille input uses chorded typing</li>
+<li>Devices connect to computer via Bluetooth</li>
+</ul>
+</div><div class="notes"><p>Braille device image https://jebswebs.net/blog/2016/05/low-cost-refreshable-braille-display-set-revolutionise-market/</p><p>Some Braille displays have self-contained computers</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 52</div>
+<div class="slide" aria-hidden="true"><img src='images/images.052.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Embossed Braille</h2>
+<ul><li>Produced via a Braille embosser (more or less a printer)</li>
+<li>Typically large, non-portable, expensive</li>
+<li>May be available at work or school</li>
+</ul>
+</div><div class="notes"><p>On the CU campus, OIT has resources for Brailling.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 53</div>
+<div class="slide" aria-hidden="true"><img src='images/images.053.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Best practices for Braille</h2>
+<ul><li>Helpful to have Braille version available</li>
+<li>Don't assume that everyone has access to Braille devices, or reads Braille</li>
+<li>Presenting content as well-structured text enables the end user to decide on the format</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 54</div>
+<div class="slide" aria-hidden="true"><img src='images/images.054.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Screen readers</h2>
+<ul><li>Most common form of computer access</li>
+<li>Represents applications and their components in a hierarchical form</li>
+<li>"an infinite set of nested lists"</li>
+<li>Typically paired with keyboard input (and not mouse input)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 55</div>
+<div class="slide" aria-hidden="true"><img src='images/images.055.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Screen reader use</h2>
+<ul><li>At top level: navigate between system and applications</li>
+<li>Navigate between different parts of application, based on underlying UI code</li>
+<li>Often jump around between parts of a document: headings, links, etc.</li>
+<li>May be combined with screen magnification, for low vision users)</li>
+</ul>
+</div><div class="notes"><p>You'll try one yourself!</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 56</div>
+<div class="slide" aria-hidden="true"><img src='images/images.056.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>The representation is much more linear.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 57</div>
+<div class="slide" aria-hidden="true"><img src='images/images.057.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How to think about screen reader use</h2>
+<ul><li>Text is linear and takes time to hear</li>
+<li>Little success in simultaneous speech</li>
+<li>Users may adjust verbosity in some applications</li>
+<li>Providing landmarks to navigate content is key</li>
+<li>Don't count on mouse input</li>
+</ul>
+</div><div class="notes"><p>What pops out in a screen reader is usually its position in the structure, rather than its visual characteristics.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 58</div>
+<div class="slide" aria-hidden="true"><img src='images/images.058.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Screen reader popularity</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 59</div>
+<div class="slide" aria-hidden="true"><img src='images/images.059.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Gesture-based screen readers</h2>
+<ul><li>Available in most off the shelf devices (Talkback on Android, VoiceOver on iOS)</li>
+<li>Uses a cursor to select active content</li>
+<li>Midas Touch problem: if I need to touch to know what's there, won't I touch things by mistake?</li>
+<li>Separate navigation (directional swipes) from selection (double tap or two-finger tap)</li>
+</ul>
+</div><div class="notes"><p>Image: Shaun Kane et al., 2008, Slide Rule: https://www.cs.rochester.edu/u/jbigham/pubs/pdfs/slide-rule.pdf</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 60</div>
+<div class="slide" aria-hidden="true"><img src='images/images.060.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Gesture-based screen readers</h2>
+<ul><li>Available in most off the shelf devices (Talkback on Android, VoiceOver on iOS)</li>
+<li>Uses a cursor to select active content</li>
+<li>Midas Touch problem: if I need to touch to know what's there, won't I touch things by mistake?
+</li>
+</ul>
+</div><div class="notes"><p>Image: Shaun Kane et al., 2008, Slide Rule: https://www.cs.rochester.edu/u/jbigham/pubs/pdfs/slide-rule.pdf</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 61</div>
+<div class="slide" aria-hidden="true"><img src='images/images.061.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Specifying voice characteristics</h2>
+<ul><li>You can do this in CSS!</li>
+<li>But it's rare</li>
+<li>In general, it's preferred to defer to user's screen reader, rather than self-voicing</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 62</div>
+<div class="slide" aria-hidden="true"><img src='images/images.062.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Exciting research problems</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 63</div>
+<div class="slide" aria-hidden="true"><img src='images/images.063.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How do we help?</h2>
+<ul><li>Proposed project: powered skates for a blind person</li>
+<li>Say the destination and it takes you there</li>
+<li>What are the strengths and weaknesses of this approach?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 64</div>
+<div class="slide" aria-hidden="true"><img src='images/images.064.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why not rocket skates?</h2>
+<ul><li>Control: Are we giving the user more control or less control?</li>
+<li>Dependence: Are we creating a dependency on a technology? What if the technology fails? </li>
+<li>Empowerment: Does this technology improve the user's condition? Can they learn and improve themselves?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 65</div>
+<div class="slide" aria-hidden="true"><img src='images/images.065.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Open research problems</h2>
+<ul><li>Independent navigation (pedestrian, public transit, cars)</li>
+<li>Outdoor navigation supported by GPS</li>
+<li>Indoor navigation often requires infrastructure that we don't have</li>
+<li>Navigation styles may differ based on location, existing navigation skills or technology</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 66</div>
+<div class="slide" aria-hidden="true"><img src='images/images.066.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The Blind Driver Challenge</h2>
+<ul><li>https://www.youtube.com/watch?v=cTHa_5Y5IA4</li>
+</ul>
+</div><div class="notes"><p>Youtube link: https://www.youtube.com/watch?v=cTHa_5Y5IA4</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 67</div>
+<div class="slide" aria-hidden="true"><img src='images/images.067.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Research problem 2</h2>
+<ul><li>Access to visual information</li>
+<li>Many approaches: speech, non-speech, tactile</li>
+<li>What should be represented?</li>
+<li>How do we generate good descriptions?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 68</div>
+<div class="slide" aria-hidden="true"><img src='images/images.068.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>VizWiz</h2>
+<ul><li>Use crowd workers to answer visual questions</li>
+<li>User takes a photo and records a question</li>
+<li>People on Mechanical Turk answer questions for a few cents</li>
+</ul>
+</div><div class="notes"><p>What are the problems of using VizWiz? Privacy, latency</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 69</div>
+<div class="slide" aria-hidden="true"><img src='images/images.069.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 70</div>
+<div class="slide" aria-hidden="true"><img src='images/images.070.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 71</div>
+<div class="slide" aria-hidden="true"><img src='images/images.071.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>VizWiz</h2>
+<ul><li>Benefits: Humans are good at answering questions</li>
+<li>Challenges: ?? </li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 72</div>
+<div class="slide" aria-hidden="true"><img src='images/images.072.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Some challenges of WizWiz</h2>
+<ul><li>Privacy</li>
+<li>Domain expertise (for example, fashion)</li>
+<li>How to take accurate photos?</li>
+<li>Latency (but VizWiz is optimized for answers in 3-5 minutes)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 73</div>
+<div class="slide" aria-hidden="true"><img src='images/images.073.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Research problem 3</h2>
+<ul><li>Supporting automated description</li>
+<li>How to gain representative data?</li>
+<li>How to convey uncertainty?</li>
+<li>How to deal with errors?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 74</div>
+<div class="slide" aria-hidden="true"><img src='images/images.074.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Automated description at Facebook</h2>
+<ul></ul>
+</div><div class="notes"><p>Paper link: https://research.fb.com/wp-content/uploads/2017/02/aat_cscw2017_camera_ready_20161031-2.pdf</p><p>A really interesting aspect of this work is that the system needs different thresholds for different types of descriptions. For example, it's not necessarily a big deal to mislabel food, but it could be more frustrating to mislabel gender.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 75</div>
+<div class="slide" aria-hidden="true"><img src='images/images.075.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Facebook automatic alt text</h2>
+<ul></ul>
+</div><div class="notes"><p>Paper link: https://research.fb.com/wp-content/uploads/2017/02/aat_cscw2017_camera_ready_20161031-2.pdf</p><p>A really interesting aspect of this work is that the system needs different thresholds for different types of descriptions. For example, it's not necessarily a big deal to mislabel food, but it could be more frustrating to mislabel gender.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 76</div>
+<div class="slide" aria-hidden="true"><img src='images/images.076.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Use automated image descriptions</h2>
+<ul><li>APIs available via Google and Microsoft</li>
+</ul>
+</div><div class="notes"><h3 id="links">Links</h3><p><a href="https://azure.microsoft.com/en-us/services/cognitive-services/">Microsoft Cognitive Services</a> <a href="https://cloud.google.com/vision/">Google Vision API</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 77</div>
+<div class="slide" aria-hidden="true"><img src='images/images.077.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Research problem 4</h2>
+<ul><li>Supporting activities of daily living (ADLs)</li>
+<li>Not just work, what about games, sports, TV, art?</li>
+<li>If non-disabled people do it, it should be accessible</li>
+</ul>
+</div><div class="notes"><p>Including crime!</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 78</div>
+<div class="slide" aria-hidden="true"><img src='images/images.078.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Research problem 5</h2>
+<ul><li>Providing equal access to collaborative work</li>
+<li>Shared notes (e.g. whiteboards)</li>
+<li>Visual attention</li>
+<li>Incompatible user interfaces ("hey, can you proofread that text in the top right?")</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 79</div>
+<div class="slide" aria-hidden="true"><img src='images/images.079.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Non-visual UIs for everyone</h2>
+<ul><li>Non-visual UIs becoming more popular</li>
+<li>Home agents (e.g., Alexa, Siri)</li>
+<li>Complex multimodal tasks (e.g., air traffic control, military or police operations)</li>
+<li>Understanding the differences between user groups is an ongoing problem</li>
+</ul>
+</div><div class="notes"><p>Some upcoming work on this at the CHI 2018 conference.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 80</div>
+<div class="slide" aria-hidden="true"><img src='images/images.080.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Let's work on Project 1</h2>
+<ul><li>Finalize a team if you haven't already</li>
+<li>Work on UI sketches</li>
+</ul>
+</div><div class="notes"></div></div>
+</div>
+</div>
+</body>
+</html>
