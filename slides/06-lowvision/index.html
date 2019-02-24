@@ -1,0 +1,676 @@
+<html>
+<head>
+<title>Designing for Low Vision</title>
+<style> body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+.slide { width: 600px; height: 338px;}
+.notes { width: 600px;}
+.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+.slide, .notes, .html { margin-bottom: 10px;}
+.html img { display: none;}
+.sr-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.wrapper { margin: auto; max-width: 600px;}
+.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; };</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>Designing for Low Vision</h1>
+<p>Download slides: (<a href="06-lowvision.key">Keynote</a>, <a href="06-lowvision.pdf">pdf</a>)</p>
+<div class='content'><div class="row">
+<div class="slideNumber">Slide 1</div>
+<div class="slide" aria-hidden="true"><img src='images/images.001.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Designing for Low Vision</h2>
+<ul><li>Input, Interaction, and Accessibility</li>
+<li>Spring 2019</li>
+</ul>
+</div><div class="notes"><p>Image: A high-contrast theme for a blog post editor. Image from <a href="https://developer.paciellogroup.com/blog/2010/01/high-contrast-proof-css-sprites/">Paciello Group</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 2</div>
+<div class="slide" aria-hidden="true"><img src='images/images.002.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Housekeeping</h2>
+<ul><li>Project 1 due in one week (2/25)</li>
+<li>We'll have time this Weds to work on it</li>
+<li>Screen reader assignment due next Weds (2/27)</li>
+<li>No new assignment this week</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 3</div>
+<div class="slide" aria-hidden="true"><img src='images/images.003.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Course feedback</h2>
+<ul><li>shaun.cat/feedback</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 4</div>
+<div class="slide" aria-hidden="true"><img src='images/images.004.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Key points from last week</h2>
+<ul><li>Be familiar with different types of assistive technology used by blind people</li>
+<li>Primary challenges: computer access, independent navigation & many others</li>
+<li>Captioning is an open problem</li>
+<li>Best way to understand audio interaction is through experiencing it</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 5</div>
+<div class="slide" aria-hidden="true"><img src='images/images.005.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What screen readers do people actually use? (2017)</h2>
+<ul><li> </li>
+</ul>
+</div><div class="notes"><p>https://webaim.org/projects/screenreadersurvey7/ 1792 respondents in 2017</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 6</div>
+<div class="slide" aria-hidden="true"><img src='images/images.006.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What screen readers do people actually use? (2017)</h2>
+<ul><li> </li>
+</ul>
+</div><div class="notes"><p>This chart is of frequently used screen readers - participants could select multiple options.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 7</div>
+<div class="slide" aria-hidden="true"><img src='images/images.007.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What screen readers do people actually use? (2017)</h2>
+<ul><li> </li>
+</ul>
+</div><div class="notes"><p>Note that this is a convenience sample. Doesn't reflect everyone. Probably skews more tech literate, with more up to date technology.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 8</div>
+<div class="slide" aria-hidden="true"><img src='images/images.008.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What screen readers do people actually use? (2017)</h2>
+<ul><li> </li>
+</ul>
+</div><div class="notes"><p>Note that this is a convenience sample. Doesn't reflect everyone. Probably skews more tech literate, with more up to date technology.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 9</div>
+<div class="slide" aria-hidden="true"><img src='images/images.009.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Using mobile screen readers</h2>
+<ul><li>How to deal with audio in public?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 10</div>
+<div class="slide" aria-hidden="true"><img src='images/images.010.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Mobile screen reader poses</h2>
+<ul><li>How to deal with audio in public?</li>
+</ul>
+</div><div class="notes"><p>Aaron Cannon: https://www.youtube.com/watch?v=OUGOGepwsHE Lucy Edwards: https://www.youtube.com/watch?v=HnY36JLMJAg</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 11</div>
+<div class="slide" aria-hidden="true"><img src='images/images.011.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>YouTube demos</h2>
+<ul><li>Many, many demos of assistive technology use</li>
+<li>Emerging YT policies like Tommy Edison</li>
+</ul>
+</div><div class="notes"><p>Tommy Edison: https://www.youtube.com/user/TommyEdisonXP/videos</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 12</div>
+<div class="slide" aria-hidden="true"><img src='images/images.012.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>Tommy Edison</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 13</div>
+<div class="slide" aria-hidden="true"><img src='images/images.013.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Distinctions between groups</h2>
+<ul><li>Born blind vs. became blind</li>
+<li>"Total blindness" vs., for example, light perception</li>
+<li>In my experience, these distinctions usually don't matter as much as we would think</li>
+<li>Do all sighted people care what color their shirt is?</li>
+<li>Are all sighted people good at reading maps?</li>
+<li>Other differentiating factors: What AT do they use? What is the task and what are the functional challenges?</li>
+<li>But, some surprises: For example, did the person learn to write?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 14</div>
+<div class="slide" aria-hidden="true"><img src='images/images.014.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Low vision</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 15</div>
+<div class="slide" aria-hidden="true"><img src='images/images.015.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Big ideas: low vision</h2>
+<ul><li>People with low vision use a very different set of technologies than others</li>
+<li>Where we can, take advantage of user's visual abilities</li>
+<li>Solutions will often involve customizable user interfaces</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 16</div>
+<div class="slide" aria-hidden="true"><img src='images/images.016.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What is low vision anyway?</h2>
+<ul><li>An estimated 253 million people live with vision impairment: 36 million (14%) are blind and 217 million (85%) have moderate to severe vision impairment </li>
+<li>81% of people who are blind or have moderate or severe vision impairment are aged 50 years and above</li>
+<li>Data from World Health Organization</li>
+</ul>
+</div><div class="notes"><h3 id="links">Links</h3><ul><li><a href="http://www.who.int/mediacentre/factsheets/fs282/en/">World Health Organization stats</a></li></ul></div></div>
+<div class="row">
+<div class="slideNumber">Slide 17</div>
+<div class="slide" aria-hidden="true"><img src='images/images.017.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Legally blind?</h2>
+<ul><li>Defined in USA as:</li>
+<li>Visual acuity of 20/200 or less (in "best" eye) with correction</li>
+<li>Or a visual field of 20 degrees or less (vs. ~190 degrees for typical vision)</li>
+</ul>
+</div><div class="notes"><p>Sources: - http://www.afb.org/info/blindness-statistics/key-definitions-of-statistical-terms/25 - https://stanford.edu/class/ee267/lectures/lecture5.pdf</p><p>20/200? This means that what the person sees at 20 feet is as clear as what a person with "normal" vision sees at 200 feet. For more details, see https://en.wikipedia.org/wiki/Visual_acuity</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 18</div>
+<div class="slide" aria-hidden="true"><img src='images/images.018.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Brainstorming problems</h2>
+<ul><li>What are some tasks that you did today that might be negatively affected by low vision?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 19</div>
+<div class="slide" aria-hidden="true"><img src='images/images.019.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Problems</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 20</div>
+<div class="slide" aria-hidden="true"><img src='images/images.020.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Problems (2018)</h2>
+<ul><li>Lecture slides</li>
+<li>Where can you sit?</li>
+<li>Transit stuff</li>
+<li>Shopping / finding stuff</li>
+<li>Understanding code structure</li>
+<li>Errors</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 21</div>
+<div class="slide" aria-hidden="true"><img src='images/images.021.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Common challenges</h2>
+<ul><li>Seeing fine details</li>
+<li>Differentiating colors or patterns</li>
+<li>Visual comparisons (when zoomed in)</li>
+<li>Peripheral vision and group awareness</li>
+<li>Increased sensitivity to environmental effects: glare, brightness, darkness</li>
+</ul>
+</div><div class="notes"><p>As always, we should think about activities and how they might be impeded. For example, working in the kitchen can involve distance vision, or comparing multiple items side by side.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 22</div>
+<div class="slide" aria-hidden="true"><img src='images/images.022.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Using technology</h2>
+<ul><li>Often prefer vision over screen reader (why?)</li>
+<li>Typically use magnification </li>
+<li>É and sometimes high-contrast mode</li>
+<li>Even when screen readers could be more efficient</li>
+<li>May involve use of a magnifying lens, or placing face close to the screen</li>
+<li>Need support both for computer screens and other documents (paper documents, projection screens, etc.)</li>
+</ul>
+</div><div class="notes"><p>Why prefer vision? Audio is tough to learn (as you know); it breaks down for complex spatial tasks; it can be stigmatizing; hard to use in public; may lack training.</p><p>The point here is that we can't assume that a person will use the most efficient method.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 23</div>
+<div class="slide" aria-hidden="true"><img src='images/images.023.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Magnification example</h2>
+<ul><li>https://www.youtube.com/watch?v=fCrZhnFrxjk</li>
+</ul>
+</div><div class="notes"><p><a href="https://www.youtube.com/watch?v=fCrZhnFrxjk">Video: Web Accessibility 101: Screen Magnification &amp; Reflow in Acrobat Reader</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 24</div>
+<div class="slide" aria-hidden="true"><img src='images/images.024.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What is it like using a magnifier?</h2>
+<ul><li>Subtle visual details can be blown out</li>
+<li>Very little information on the screen at one time</li>
+<li>Requires lots of scrolling</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 25</div>
+<div class="slide" aria-hidden="true"><img src='images/images.025.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Magnification or screen reader?</h2>
+<ul><li>Learning to use a screen reader is difficult</li>
+<li>People will often hold onto their visual reading ability, even when performance is worse</li>
+<li>Magnification is often personalized: magnification level, colors</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 26</div>
+<div class="slide" aria-hidden="true"><img src='images/images.026.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Presentations of low vision</h2>
+<ul><li>Clockwise from top: Normal vision, simulated cataracts, simulated glaucoma, simulated retinopathy</li>
+</ul>
+</div><div class="notes"><p><a href="https://www.visionaware.org/blog/visionaware-blog/what-is-it-like-to-have-low-vision-a-new-sight-simulator-can-help-you-understand/12">Images: four images of a house representing "normal" vision, a blurry image representing cataracts, a blurry and washed out image representing glaucoma, and an image covered with dark spots representing retinopathy</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 27</div>
+<div class="slide" aria-hidden="true"><img src='images/images.027.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Other ways low vision users are different</h2>
+<ul><li>Many potential manifestations: blurry vision, limited field of view, etc.</li>
+<li>Can be progressive (e.g. Usher Syndrome)</li>
+<li>Comorbid conditions: deafness (deafblind), cognitive, motor, aging</li>
+<li>May not have blindness training skills (Braille, white cane, screen readers)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 28</div>
+<div class="slide" aria-hidden="true"><img src='images/images.028.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Functional effects</h2>
+<ul><li>Limited field of view</li>
+<li>Occluded areas</li>
+<li>Blurriness</li>
+<li>Lack of contrast</li>
+<li>Limited near or far vision</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 29</div>
+<div class="slide" aria-hidden="true"><img src='images/images.029.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>https://webaim.org/projects/screenreadersurvey7/</p><p>People often mix between screen reader and magnifier.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 30</div>
+<div class="slide" aria-hidden="true"><img src='images/images.030.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>(Some) technologies used</h2>
+<ul><li>Low tech: magnifiers, scope</li>
+<li>High tech: desktop magnifier, phone</li>
+</ul>
+</div><div class="notes"><p>Of course a low vision person might also use a white cane or a service dog.</p><h3 id="images">Images</h3><ul><li>From left: handheld magnifier, handheld telescope for distance vision, desktop magnifier showing a document, iPhone camera showing magnified book page</li></ul><h3 id="links">Links</h3><p><a href="http://www.visionaware.org/info/your-eye-condition/eye-health/overview-of-low-vision-devices/low-vision-optical-devices/1245">Low vision technologies</a> <a href="http://www.ashlowvision.com/desktop-magnifiers-low-vision-devices-low-vision-aids/horizon-portable-magnifier-digital-magnifier-desktop-magnifier-video-magnifier.2024.html">Desktop magnifier from Ash</a> <a href="https://www.imore.com/how-use-magnifier-iphone-and-ipad">iMore: how to use the magnifier on iPhone</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 31</div>
+<div class="slide" aria-hidden="true"><img src='images/images.031.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Simulating low vision</h2>
+<ul><li>On the desktop: SeeNow</li>
+<li>Google Cardboard: SimViz</li>
+<li>É but individual experiences may be very different</li>
+</ul>
+</div><div class="notes"><h3 id="images">Images</h3><p>Top: <a href="https://simulator.seenow.org/webgl.html">blurry street view from SeeNow</a> Bottom: <a href="https://www.youtube.com/watch?v=XQ6fehkula8">Simulated color deficiency in VR from SimViz</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 32</div>
+<div class="slide" aria-hidden="true"><img src='images/images.032.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Limitations of simulation</h2>
+<ul><li>'New research findings from the University of Colorado indicate that blindness simulations Ð intended to be bridge-builders resulting in greater compassion and understanding Ð can sometimes harm rather than help. According to the authors, simulation activities, and blindness simulations in particular, "highlight the initial challenges of becoming disabled" and thus "decrease the perceived adaptability of being disabled and reduce the judged capabilities of disabled people."' </li>
+</ul>
+</div><div class="notes"><p>http://www.visionaware.org/blog/visionaware-blog/new-research-blindness-simulation-activities-may-do-more-harm-than-good-1746/12</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 33</div>
+<div class="slide" aria-hidden="true"><img src='images/images.033.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How to handle low vision on the web</h2>
+<ul><li>Offer font size buttons</li>
+<li>Offer a high-contrast or large print stylesheet</li>
+<li>Users may adopt their own custom stylesheet</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 34</div>
+<div class="slide" aria-hidden="true"><img src='images/images.034.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Research challenges</h2>
+<ul><li>Low vision AT often underexplored in research (why?)</li>
+<li>Partial vision can even be a deterrent to participating in research</li>
+<li>Big challenges: Better magnification, better UI support for magnification, help with finding stuff</li>
+</ul>
+</div><div class="notes"><p>Why might people with low vision not be included in research? Easier to focus on lowest common denominator. Research studies may want people with consistent visual ability, but there is a lot of variation. Low vision tech often requires significant UI customization, which we are not good at.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 35</div>
+<div class="slide" aria-hidden="true"><img src='images/images.035.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Other visual challenges</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 36</div>
+<div class="slide" aria-hidden="true"><img src='images/images.036.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>User groups to consider</h2>
+<ul><li>Older adults</li>
+<li>Color blindness</li>
+<li>Deafblindness</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 37</div>
+<div class="slide" aria-hidden="true"><img src='images/images.037.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Older users on the web (65+)</h2>
+<ul><li>As of 2012, about 19 million older Americans on the web</li>
+<li>Aging can affect vision, motor control, memory, and more</li>
+</ul>
+</div><div class="notes"><p><a href="https://www.nngroup.com/articles/usability-for-senior-citizens/">Data from Nielsen Norman Group</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 38</div>
+<div class="slide" aria-hidden="true"><img src='images/images.038.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Visual design for older adults</h2>
+<ul><li>Design with high visual contrast</li>
+<li>Allow users to change text size without breaking anything</li>
+<li>AARP recommends providing on-screen controls for changing text size (why?)</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://assets.aarp.org/www.aarp.org_/articles/research/oww/AARP-50Sites.pdf">AARP Design Guidelines in PDF format</a></p><p>Why provide text size buttons? A few reasons: lets the designer decide how to implement changes. But most importantly, it is more discoverable.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 39</div>
+<div class="slide" aria-hidden="true"><img src='images/images.039.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Color blindness</h2>
+<ul><li>Affects about 10% of men; fewer women</li>
+<li>Difficulty distinguishing colors is the primary functional challenge</li>
+<li>Several "types" of color blindness, but individual differences remain</li>
+</ul>
+</div><div class="notes"><p>Color blind people don't actually see the world in black and white. Instead, they tend to see colors that most people recognize as different colors, as a single color.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 40</div>
+<div class="slide" aria-hidden="true"><img src='images/images.040.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>The important point is not that color blind people have weird vision. The point is that this can affect what people are trying to do, like identifying a specific bird, or picking a ripe tomato.</p><p>Images from <a href="https://www.boredpanda.com/different-types-color-blindness-photos/">Bored Panda</a>. Left: 4 copies of a photo showing three parrots; showing normal vision, deuteranomaly, protanopia, and tritanopia. Right: 4 copies of an image of tomatoes with the same 4 conditions.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 41</div>
+<div class="slide" aria-hidden="true"><img src='images/images.041.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Designing for color blindness</h2>
+<ul><li>Don't use color alone to distinguish items</li>
+<li>Instead, combine with shape, texture, or some other factor</li>
+<li>Avoid a special color blind friendly mode; make it work out of the box</li>
+</ul>
+</div><div class="notes"><p>It is possible to test for the different types of color blindness and accommodate them, but some users might still be unable to use your product due to their unique color vision. It is better just to have a backup way of differentiating items.</p><p>Image: Trello offers color blind friendly mode which changes the visual texture of labels. The only thing they could do better would be to make this by default.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 42</div>
+<div class="slide" aria-hidden="true"><img src='images/images.042.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Universal design for color deficiency</h2>
+<ul><li>=</li>
+</ul>
+</div><div class="notes"><p>Image: the game Bejeweled uses both different shapes and different colors to differentiate the different gems. On the left is the color image; on the right is a black and white version. In both cases it is possible to identify the gems by shape.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 43</div>
+<div class="slide" aria-hidden="true"><img src='images/images.043.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Simulating color blindness</h2>
+<ul><li>Web tools (e.g. vischeck.com)</li>
+<li>Accessibility testing tools built into Photoshop, Sketch</li>
+<li>Greyscale mode on Mac, iOS</li>
+<li>SimViz on Google Cardboard</li>
+<li>Or print it out</li>
+</ul>
+</div><div class="notes"><p>Image: screen shot of vischeck.com</p><p>Link: <a href="https://medium.com/sketch-app-sources/how-to-design-in-sketch-for-color-blind-users-2b189c0d58fe">color blindness testing tools</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 44</div>
+<div class="slide" aria-hidden="true"><img src='images/images.044.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Using contrast</h2>
+<ul><li>WCAG requires 4.5:1 contrast ratio for text and background</li>
+<li>Some tools exist, e.g. WebAIM contrast checker</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://webaim.org/resources/contrastchecker/">WebAIM contrast checker</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 45</div>
+<div class="slide" aria-hidden="true"><img src='images/images.045.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Wednesday</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 46</div>
+<div class="slide" aria-hidden="true"><img src='images/images.046.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Today</h2>
+<ul><li>Some interesting research</li>
+<li>Deafblindness technology</li>
+<li>Project time</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 47</div>
+<div class="slide" aria-hidden="true"><img src='images/images.047.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Low vision tech</h2>
+<ul><li>ForeSee</li>
+<li>CueSee</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 48</div>
+<div class="slide" aria-hidden="true"><img src='images/images.048.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Shiri Azenkot</h2>
+<ul><li>Faculty @ Cornell Tech</li>
+<li>Working on AR/VR tools for low vision</li>
+</ul>
+</div><div class="notes"><p>It's interesting to see people who are working on accessibility problems similar to those they may have encountered in their own lives. It is likely true that this gives them some additional insight into these problems.</p><p>At the same time, it can also be limiting</p><p>Image: Shiri's homepage at shiriazenkot.com</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 49</div>
+<div class="slide" aria-hidden="true"><img src='images/images.049.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>ForeSee</h2>
+<ul><li>Using AR to act like a magnifier for the real world environment</li>
+<li>Paper</li>
+<li>Demo video</li>
+</ul>
+</div><div class="notes"><p>Paper: https://dl.acm.org/citation.cfm?id=2809865 Demo video: https://www.youtube.com/watch?v=JnZ-tTg799Y&amp;feature=youtu.be</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 50</div>
+<div class="slide" aria-hidden="true"><img src='images/images.050.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>No audio on this video. :-(</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 51</div>
+<div class="slide" aria-hidden="true"><img src='images/images.051.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>CueSee</h2>
+<ul><li>Extend concept of ForeSee to help with a new task: locating objects</li>
+<li>Explores methods for</li>
+<li>Paper</li>
+<li>Demo video</li>
+</ul>
+</div><div class="notes"><p>Paper: https://dl.acm.org/citation.cfm?id=2971730 Demo video: https://www.youtube.com/watch?v=0b8Q4832bjk</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 52</div>
+<div class="slide" aria-hidden="true"><img src='images/images.052.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 53</div>
+<div class="slide" aria-hidden="true"><img src='images/images.053.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Color blindness research</h2>
+<ul><li>Modeling color vision deficiencies</li>
+<li>AR for color vision</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 54</div>
+<div class="slide" aria-hidden="true"><img src='images/images.054.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>David Flatla</h2>
+<ul><li>University of Guelph ??</li>
+<li>Is color blind & researches color blindness</li>
+</ul>
+</div><div class="notes"><p>Image is a screenshot of David's official homepage at https://www.uoguelph.ca/computing/people/david-flatla but his Google Scholar page is more useful: https://scholar.google.com/citations?user=pJjyC-AAAAAJ&amp;hl=en&amp;oi=ao</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 55</div>
+<div class="slide" aria-hidden="true"><img src='images/images.055.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>Paper: https://dl.acm.org/citation.cfm?id=2384946</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 56</div>
+<div class="slide" aria-hidden="true"><img src='images/images.056.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Impacts of color blindness</h2>
+<ul></ul>
+</div><div class="notes"><p>As with other issues, color blindness does not necessarily seem like a huge life challenge in the abstract. But there are tasks where it does matter. Dealing with these obstacles relies on being able to understand how color blindness affects work. How can we learn this?</p><p>Images: Left, array of images from the Flatla study (see previous slide) Right, two images of steaks from http://facweb.cs.depaul.edu/sgrais/colorvisiondefi.htm</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 57</div>
+<div class="slide" aria-hidden="true"><img src='images/images.057.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Collecting data about color vision</h2>
+<ul></ul>
+</div><div class="notes"><p>For more examples, see labinthewild.org</p><p>This work enabled a study of 30,000+ users. https://homes.cs.washington.edu/~reinecke/Publications_files/ReineckeCHI2016.pdf</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 58</div>
+<div class="slide" aria-hidden="true"><img src='images/images.058.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Chroma: AR for color blindness</h2>
+<ul><li>Overlays information about color in the environment</li>
+<li>Multiple modes depending on the task</li>
+</ul>
+</div><div class="notes"><p>Web site: http://chroma-glass.ucsd.edu</p><p>Note this is not a project from David Flatla. But it's still cool.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 59</div>
+<div class="slide" aria-hidden="true"><img src='images/images.059.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 60</div>
+<div class="slide" aria-hidden="true"><img src='images/images.060.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Some interesting blind AT systems</h2>
+<ul><li>Sensory substitution</li>
+<li>Braille input</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 61</div>
+<div class="slide" aria-hidden="true"><img src='images/images.061.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The vOICe</h2>
+<ul><li>Vision to sound with AR glasses</li>
+<li>Sound maps to visual characteristics</li>
+</ul>
+</div><div class="notes"><p>https://www.seeingwithsound.com</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 62</div>
+<div class="slide" aria-hidden="true"><img src='images/images.062.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>https://www.youtube.com/watch?v=AnP3vjW5fq0</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 63</div>
+<div class="slide" aria-hidden="true"><img src='images/images.063.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>https://www.youtube.com/watch?v=XuosPzluCRg</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 64</div>
+<div class="slide" aria-hidden="true"><img src='images/images.064.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Brainport</h2>
+<ul><li>Camera connects to electrodes placed in a grid on the tongue</li>
+<li>20x20 grid</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 65</div>
+<div class="slide" aria-hidden="true"><img src='images/images.065.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Braille input?</h2>
+<ul><li>On paper</li>
+<li>On the computer</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 66</div>
+<div class="slide" aria-hidden="true"><img src='images/images.066.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Slate and stylus</h2>
+<ul></ul>
+</div><div class="notes"><p>You have to write backwards! Image: https://nationalbraillepress.wordpress.com/2014/06/25/all-praise-to-the-humble-slate-and-stylus/</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 67</div>
+<div class="slide" aria-hidden="true"><img src='images/images.067.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Blind sketching</h2>
+<ul></ul>
+</div><div class="notes"><p>One product, the Sensational Blackboard http://www.sensationalbooks.com/products.html</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 68</div>
+<div class="slide" aria-hidden="true"><img src='images/images.068.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Braille computer input</h2>
+<ul></ul>
+</div><div class="notes"><p>Images: Left, chording Braille keyboard, http://www.atcourse.org/chorded.html Right, Braille cell, http://brailleaustralia.org/about-braille/</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 69</div>
+<div class="slide" aria-hidden="true"><img src='images/images.069.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Deafblindness</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 70</div>
+<div class="slide" aria-hidden="true"><img src='images/images.070.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Deafblindness</h2>
+<ul><li>Combine some vision loss with some hearing loss</li>
+<li>Between 70,000 and 100,00 in the US</li>
+<li>About 50% have a condition called Usher Syndrome</li>
+<li>Born deaf, lose vision over time (especially peripheral vision)</li>
+<li>May grow up speaking sign languages like ASL; may learn tactile sign language and Braille</li>
+<li>Typically use Braille for computer access</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="http://www.aadb.org/FAQ/faq_DeafBlindness.html#count">Color Blindness FAQ from the American Association of the Deaf-Blind</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 71</div>
+<div class="slide" aria-hidden="true"><img src='images/images.071.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Communicating while deaf-blind</h2>
+<ul><li>What do you do??</li>
+<li>Let's brainstorm some solutions</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 72</div>
+<div class="slide" aria-hidden="true"><img src='images/images.072.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Deafblind communication methods</h2>
+<ul></ul>
+</div><div class="notes"><p>I knew a guy who was deaf blind; he had a booklet of cards like these. It was fascinating how he had written them - he had a lot of clarification points like "do not place me in a wheelchair." The cards were labeled in Braille.</p><p>Deafblind people may also use an interpreter.</p><h3 id="images">Images</h3><p>Deaf blind communication card reads "Please help me to cross street. Tap me if you can help. I am deaf and blind." Image from <a href="http://www.sauerburger.org/dona/dbcard.htm">sauerburger.org</a> Deaf Blind Communicator consists of a Braille computing device and a second smartphone. The deaf blind person hands the smartphone to their conversation partner and communicates with them via text. Image from <a href="http://www.perkinselearning.org/videos/webcast/communication-technology-persons-who-are-deafblind">Perkins Learning</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 73</div>
+<div class="slide" aria-hidden="true"><img src='images/images.073.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Protactile signing</h2>
+<ul><li>Adaptation of ASL onto the body</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 74</div>
+<div class="slide" aria-hidden="true"><img src='images/images.074.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>https://www.youtube.com/watch?v=9GrK3P15TYU</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 75</div>
+<div class="slide" aria-hidden="true"><img src='images/images.075.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>TeleTouch (1950s)</h2>
+<ul><li>Physical typewriter mechanically connected to a Braille cell</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 76</div>
+<div class="slide" aria-hidden="true"><img src='images/images.076.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>https://www.youtube.com/watch?v=usaf3bVVvjY&amp;feature=youtu.be&amp;t=669</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 77</div>
+<div class="slide" aria-hidden="true"><img src='images/images.077.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>DeafBlind Communicator (2009)</h2>
+<ul><li>One device for the sighted partner to type on, connected to a portable Braille terminal</li>
+<li>Interesting in part because it's a 2 device solution</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 78</div>
+<div class="slide" aria-hidden="true"><img src='images/images.078.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 79</div>
+<div class="slide" aria-hidden="true"><img src='images/images.079.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Up next</h2>
+<ul><li>Continue on Project 1</li>
+<li>Next week: Speech UIs</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 80</div>
+<div class="slide" aria-hidden="true"><img src='images/images.080.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Situational vision impairments</h2>
+<ul><li>What are some situations that could affect visual acuity for everyone?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 81</div>
+<div class="slide" aria-hidden="true"><img src='images/images.081.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Some impairing situations</h2>
+<ul><li>Bright lights (e.g. sun)</li>
+<li>Dark rooms</li>
+<li>Interacting at a distance</li>
+<li>Reduced visual attention may have similar effects(e.g. using tech while driving)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 82</div>
+<div class="slide" aria-hidden="true"><img src='images/images.082.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Takeaways</h2>
+<ul><li>Many different forms of vision impairment</li>
+<li>So, take a functional approach</li>
+<li>Give users control over presentation</li>
+<li>Use color and contrast wisely</li>
+<li>Consider opportunities to make the outside world more accessible too</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 83</div>
+<div class="slide" aria-hidden="true"><img src='images/images.083.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Further reading</h2>
+<ul><li>W3C guidelines for low vision</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://www.w3.org/TR/low-vision-needs/">W3C guidelines for low vision</a>1</p></div></div>
+</div>
+</div>
+</body>
+</html>
