@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>Responsive Web Demo</title>
+		<link rel="stylesheet" href="phone.css">
+  </head>
+  <body>
+	  <div id="tabs">
+		  <button id="tab_dialer">Dialer</button>
+		  <button id="tab_contacts">Contact List</button>
+		  <button id="tab_add_contact">Add Contact</button>
+		  <button id="tab_about">About Demo</button>
+	  </div>
+	  <div id="content">
+		  <div id="content_dialer">
+		      <h1>Dialer</h1>
+			  <form>
+				  <input id="number_input"/>
+			  </form>
+			  <div id="dialer_pad">
+					  <button id="dialer1">1</button>
+					  <button id="dialer2">2</button>
+					  <button id="dialer3">3</button>
+					  <button id="dialer4">4</button>
+					  <button id="dialer5">5</button>
+					  <button id="dialer6">6</button>
+					  <button id="dialer7">7</button>
+					  <button id="dialer8">8</button>
+					  <button id="dialer9">9</button>
+					  <button id="dialer_star">*</button>
+					  <button id="dialer0">0</button>
+					  <button id="dialer_octothorpe">#</button>
+			  </div>
+			  <div id="dialer_controls">
+				  <button id="button_dial">Dial</button>
+				  <button id="button_dialer_clear">Clear</button>
+			  </div>
+		  </div>
+		  <div id="content_contacts">
+		      <h1>Contact List</h1>
+			  <div id="contact_list">
+				  <div class="contact">
+				  	<img width="50" height="50" class="contact-icon" src="xmen.png"/><a href="wiki.com">Robert Drake</a>
+				  </div>
+				  <div class="contact">
+				  	<img width="50" height="50" class="contact-icon" src="xmen.png"/><a href="wiki.com">Emma Frost</a>
+				  </div>
+				  <div class="contact">
+				  	<img width="50" height="50" class="contact-icon" src="xmen.png"/><a href="wiki.com">Doreen Green</a>
+				  </div>
+				  <div class="contact">
+				  	<img width="50" height="50" class="contact-icon" src="xmen.png"/><a href="wiki.com">Jean Grey</a>
+				  </div>
+				  <div class="contact">
+				  	<img width="50" height="50" class="contact-icon" src="xmen.png"/><a href="wiki.com">Ororo Munroe</a>
+				  </div>
+			  </div>
+		  </div>
+		  <div id="content_add_contact">
+			  <h1>Add Contact</h1>
+			  <form>
+					<div>
+				  <label for="name">Name</label><br/>
+				  <input id="name" placeholder="Charles Xavier">
+					</div>
+					<div>
+				  <label for="phone_number">Phone number</label><br/>
+				  <input id="phone_number" placeholder="123-456-7890">
+					</div>
+				  <div>
+					<label for="email">Email address</label><br/>
+				  <input id="email" placeholder="professor.x@xavier.edu">
+					</div>
+			  </form>
+			  <button>Add Contact</button>
+			  <button id="button_add_clear">Clear</button>
+		  </div>
+		  <div id="content_about">
+			  <h3>About this demo</h3>
+			  <p><a href="https://github.com/shaunkane/csci4849-spring2019/code/responsive-demo">View code on Github</a></p>
+			  <p>This demonstrates several ways to make the phone dialer application act more like a responsive app. These examples were partly inspired by <a href="https://marksheet.io/css-responsiveness.html">this tutorial from Marksheet.io</a>.</p>
+			  <p>Note that there is no universally correct way to make a web page responsive; what you do depends on how you want your web page to work. Here are a few techniques demonstrated here. Note that all of the "responsive" behavior came about through changes to the CSS only. There are a few minor changes to the HTML, and one change to the JS (to add this new tab and select it by default).</p>
+			  <p>Changes to the HTML structure:</p>
+			  <ul>
+				  <li>Added the "About Demo" tab and content</li>
+				  <li>Added line break tags ("br") after the form labels to make them a little easier to read</li>
+				  <li>Moved the number pad numbers into one div. Previously each row of three buttons was in its own div. However, that means that the buttons can't reflow to be two buttons wide, or four buttons wide, etc. Now they show by default at three buttons wide but can show more or fewer as the page width changes. This is a great example of where there's not an obvious "right" answer - users may be familiar with the traditional 3 x 4 keypad, but we may want to fill the available screen space, especially on small screens.</li>
+				  <li>Added a placeholder image to contacts in the contact list.</li>
+			  </ul>
+			  <p>All of the other changes are in the CSS file and are summarized here:</p>
+			  <ul>
+				  <li>Changed the number pad buttons to be a percentage width, with a minimum width attribute. Now they will stretch to fill the available space; when they reach their minimum size, only then will they break onto multiple lines.</li>
+				  <li>Added a "wide screen" view for screen widths > 800px. In this mode, the tab list and content are moved to the left side using the CSS "float: left" property. In this mode, the contact icons are shown - they are hidden in the other modes.</li>
+				  <li>Added a narrow view for screens < 550px. This one is a little bit tricky - here the CSS overrides the "display: none" attribute for each of the tab content containers, by using the "!important" attribute. It's not obvious unless you look at the JQuery documentation, but the <a href="http://api.jquery.com/hide/">JQuery hide() function</a> uses display: none to hide the tabs. For this narrow CSS mode, we unhide all the tabs so that the user can just scroll down to see all of the tab content. Since we are no longer using the tab bar, we hide it for this mode.</li>
+			  </ul>
+				  
+		  </div>
+	  </div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="phone.js"></script>
+  </body>
+</html>
