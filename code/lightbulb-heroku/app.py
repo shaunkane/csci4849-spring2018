@@ -12,6 +12,12 @@
 # https://github.com/datademofun/heroku-basic-flask
 #
 # we use a simple redis database because heroku apps can't reliably
+# retain their state. this uses the free heroku redis store
+# from https://elements.heroku.com/addons/heroku-redis
+#
+# about this app: this app tracks the status of three lights in a house
+# (kitchen, livingroom, bedroom). each can be turned on and off
+# and the status can be read. in the current version, this just updates
 # the database, but you should be able to connect this to real stuff
 # without much work
 #
