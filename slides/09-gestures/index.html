@@ -1,0 +1,658 @@
+<html>
+<head>
+<title>Gestural InteractionCSCI 4849 Fall 2019</title>
+<style> body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+.slide { width: 600px; height: 338px;}
+.notes { width: 600px;}
+.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+.slide, .notes, .html { margin-bottom: 10px;}
+.html img { display: none;}
+.sr-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.wrapper { margin: auto; max-width: 600px;}
+.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; };</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>Gestural InteractionCSCI 4849 Fall 2019</h1>
+<p>Download slides: <a href='09-gestures.key'>Keynote</a>, <a href='09-gestures.pdf'>PDF</a></p>
+<div class='content'><div class="row">
+<div class="slideNumber">Slide 1</div>
+<div class="slide" aria-hidden="true"><img src='images/images.001.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Gestural InteractionCSCI 4849 Fall 2019</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 2</div>
+<div class="slide" aria-hidden="true"><img src='images/images.002.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Working with gestures</h2>
+<ul><li>What is a gesture?</li>
+<li>Sensing gestures</li>
+<li>Recognizing gestures</li>
+<li>Designing gestures</li>
+<li>Evaluating gestures</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 3</div>
+<div class="slide" aria-hidden="true"><img src='images/images.003.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What is a gesture anyway?</h2>
+<ul></ul>
+</div><div class="notes"><p>Take a moment to think about the gestures you use as computer input.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 4</div>
+<div class="slide" aria-hidden="true"><img src='images/images.004.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What is a gesture anyway?</h2>
+<ul><li>Interaction involving some body movement – usually hands, but not necessarily</li>
+<li>Often considered a discrete command: e.g., shake device to undo</li>
+<li>May occur on a surface, in air, on body</li>
+<li>May represent directional movements (1D), 2D or 3D shapes</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 5</div>
+<div class="slide" aria-hidden="true"><img src='images/images.005.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why this is important</h2>
+<ul><li>Gestures are increasingly becoming a core part of our user interfaces</li>
+<li>New input technologies lead to new gestures</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 6</div>
+<div class="slide" aria-hidden="true"><img src='images/images.006.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Sensing gestures</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 7</div>
+<div class="slide" aria-hidden="true"><img src='images/images.007.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Sensing gestures</h2>
+<ul><li>How we sense gestures reflects what gestures are possible </li>
+<li>Common gesture input methods</li>
+<li>Touch screen</li>
+<li>Mouse/touchpad</li>
+<li>2D camera</li>
+<li>Depth camera</li>
+<li>Accelerometer/gyroscope</li>
+<li>Pen gestures</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 8</div>
+<div class="slide" aria-hidden="true"><img src='images/images.008.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Touch screens</h2>
+<ul><li>Two main sensing technologies: resistive and capacitive</li>
+<li>Resistive: activated when user presses layers together</li>
+<li>Requires force to activate</li>
+<li>Typically averages multiple contacts to center point</li>
+<li>Examples: airplane screens, Nintendo DS</li>
+<li>Capacitive: activated when contact made with human skin (or other electrically conductive object)</li>
+<li>Requires electrically conductive contact</li>
+<li>Can support gestures, multiple touches</li>
+<li>Examples: most smartphones and tablets</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 9</div>
+<div class="slide" aria-hidden="true"><img src='images/images.009.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"><p>Examples from scienceline: http://scienceline.org/2012/01/okay-but-how-do-touch-screens-actually-work/ Resistive touch screen image: http://www.chassis-plans.com/white_paper_resistive_touchscreen_technology.html Capacitive touch screen image: http://www.electrotest.com.sg/cap_touch.htm</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 10</div>
+<div class="slide" aria-hidden="true"><img src='images/images.010.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Touch screen gestures</h2>
+<ul><li>Can typically measure:</li>
+<li>Movement, direction, speed, number of contacts</li>
+<li>Can sometimes measure (depending on hardware):</li>
+<li>Pressure*, interactions off the surface*</li>
+<li>Usually cannot measure:</li>
+<li>which fingers are being used, orientation of hand,</li>
+</ul>
+</div><div class="notes"><p>Re: pressure sensing. This is changing somewhat with pressure-sensing screens. Can sometimes be approximated using touch contact size.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 11</div>
+<div class="slide" aria-hidden="true"><img src='images/images.011.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Mouse/touchpad</h2>
+<ul><li>Typically requires some mode switch to distinguish gestures from regular cursor movement (segmentation)</li>
+<li>Often involves "indirect" gestures – general movement rather than gesturing on a specific on-screen object</li>
+<li>Can be useful for expert use; e.g. marking menus</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 12</div>
+<div class="slide" aria-hidden="true"><img src='images/images.012.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Mouse gestures</h2>
+<ul><li>Recall our three-state model</li>
+<li>Issues with accidental activation; segmentation</li>
+<li>Add another state (in this case, right mouse button)</li>
+</ul>
+</div><div class="notes"><p>We will see that segmentation of gestures is an important issue.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 13</div>
+<div class="slide" aria-hidden="true"><img src='images/images.013.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>2D cameras</h2>
+<ul><li>Mostly used in research prototypes; hasn't taken off in commercial devices</li>
+<li>Can track hands and other objects using computer vision</li>
+<li>Requires marking hands or performing (sometimes noisy) image segmentation</li>
+<li>Difficult to determine surface contact (another segmentation problem)</li>
+</ul>
+</div><div class="notes"><p>Gestures from Kane et al, Bonfire, UIST 2009: https://dl.acm.org/citation.cfm?id=1622202</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 14</div>
+<div class="slide" aria-hidden="true"><img src='images/images.014.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Depth cameras (3D)</h2>
+<ul><li>Examples: Microsoft Kinect, Intel RealSense, LeapMotion</li>
+<li>Tracks 3D movement</li>
+<li>Can sometimes infer body parts</li>
+<li>Cons: may be less precise, not very portable, 3D gestures are difficult to perform, gorilla arm</li>
+</ul>
+</div><div class="notes"><p>Side note: interesting that these technologies often filter down to research/experimentation PrimeSense camera 0,000 -&gt; Kinect 00</p><p>Kinect image: https://upload.wikimedia.org/wikipedia/commons/3/3d/Kinect_Skeleton_View.jpg</p><p>We need to consider resting position for gestures.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 15</div>
+<div class="slide" aria-hidden="true"><img src='images/images.015.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Accelerometer/gyroscope</h2>
+<ul><li>Use motion of device itself as gesture input</li>
+<li>Accelerometer: detect acceleration along device x,y,z axes</li>
+<li>Can infer orientation (by detecting gravity)</li>
+<li>Can detect thumps / whacks / collisions</li>
+<li>Often requires big movements due to gravity, noise</li>
+<li>Theoretically, can integrate acceleration to track velocity/position, in practice you can't</li>
+<li>Gyroscope: can detect angular movement</li>
+<li>Inertial Measurement Unit (IMU): may include accelerometer, gyroscope, and mafgnetometer; reports orientation</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 16</div>
+<div class="slide" aria-hidden="true"><img src='images/images.016.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Case study: Wiimote</h2>
+<ul><li>Uses accelerometer to detect gestural movements</li>
+<li>Later augmented by MotionPlus (w/ gyroscope)</li>
+<li>Not accurate enough for pointing, supplemented by infrared pointing input via sensor bar</li>
+</ul>
+</div><div class="notes"><p>Interesting how wii sensor bar works: it's actually just 2 infrared lights, Wiimote has camera</p><p>Wiimote image: https://www.wikihow.com/images/3/3a/Pitch-Under-Hand-in-Wii-Sports-Step-3-Version-2.jpg Wii menu: https://cdn02.nintendo-europe.com/media/images/06_screenshots/systems_4/wii_10/wii_channels/wii_menu/CI-Wii-Wii-Menu-02-UK_CMM_small.jpg</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 17</div>
+<div class="slide" aria-hidden="true"><img src='images/images.017.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Pen/stylus gestures</h2>
+<ul><li>Can augment pen with sensors to detect position, orientation, etc.</li>
+<li>Can add buttons on pen barrel</li>
+<li>Easy to detect contact on surface</li>
+<li>Can sometimes detect "hover" state</li>
+</ul>
+</div><div class="notes"><p>If we can't sense what we want using existing devices, we may need to add an additional sensing device. A stylus is a good example of this. It has the additional benefit of being especially useful for drawing and precision interaction.</p><p>Microsoft Surface Pen: http://cnpichub1.freepicturehub.com/Microsoft/6.jpg</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 18</div>
+<div class="slide" aria-hidden="true"><img src='images/images.018.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Sensing via wireless radio</h2>
+<ul></ul>
+</div><div class="notes"><p>https://dl.acm.org/citation.cfm?id=2702591</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 19</div>
+<div class="slide" aria-hidden="true"><img src='images/images.019.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Augmenting the body</h2>
+<ul><li>Saponas et al., Optically sensing tongue gestures for computer input</li>
+</ul>
+</div><div class="notes"><p>Paper: https://dl.acm.org/citation.cfm?id=1622209</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 20</div>
+<div class="slide" aria-hidden="true"><img src='images/images.020.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Designing gestures for weird devices</h2>
+<ul><li>Gesture-sensing retainer supports tongue swipes (left, right, front, back)</li>
+<li>Must balance sensing capability, reliability, usability</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 21</div>
+<div class="slide" aria-hidden="true"><img src='images/images.021.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Other sensing technology</h2>
+<ul><li>Device sensors: camera, ambient light sensor, face tracker, eye tracker</li>
+<li>Body sensing: EEG, EMG</li>
+<li>Research opportunities to use new sensors in interesting ways</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 22</div>
+<div class="slide" aria-hidden="true"><img src='images/images.022.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>NeuroPhone (Campbell et al. 2010)</h2>
+<ul><li>EEG-based mobile phone dialer </li>
+<li>Relatively limited signal from brain without going inside the skull</li>
+<li>So, uses scanning interface</li>
+</ul>
+</div><div class="notes"><p>Images: Top: man sitting on bench using a phone. Bottom: Image of the NeuroPhone interface shows 6 photos. This is a scanning-based interface. The user can concentrate to dial the number of the currently highlighted person.</p><p>Video from <a href="https://www.youtube.com/watch?v=tc82Z_yfEwc">Matt Mukerjee via YouTube</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 23</div>
+<div class="slide" aria-hidden="true"><img src='images/images.023.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 24</div>
+<div class="slide" aria-hidden="true"><img src='images/images.024.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Recognizing gestures</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 25</div>
+<div class="slide" aria-hidden="true"><img src='images/images.025.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Recognizing gestures</h2>
+<ul><li>Typical methods</li>
+<li>Heuristic methods</li>
+<li>Shape-based recognition</li>
+<li>Machine learning-based methods</li>
+<li>Of course, the correct recognition method may depend on the problem, sensing method, gesture set, etc.</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 26</div>
+<div class="slide" aria-hidden="true"><img src='images/images.026.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Heuristic gesture recognizers</h2>
+<ul><li>Can wire up gesture recognizer using existing UI events</li>
+<li>Specify gesture in terms of substeps</li>
+<li>Useful for prototyping</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 27</div>
+<div class="slide" aria-hidden="true"><img src='images/images.027.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Let's try it</h2>
+<ul><li>Sketch out pseudocode for double tap</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 28</div>
+<div class="slide" aria-hidden="true"><img src='images/images.028.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Limitations of heuristic approach</h2>
+<ul><li>Hard coded values may not represent what users actually do</li>
+<li>No capability to adapt behavior to user or context</li>
+<li>Clunky, but often our best option</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 29</div>
+<div class="slide" aria-hidden="true"><img src='images/images.029.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Shape-based recognition</h2>
+<ul><li>Compare shape of gesture to set of reference gestures</li>
+<li>Common algorithms: Dynamic time warping, Rubine (1991), $1 recognizer</li>
+<li>Limitations: can be confused by direction of movement (clockwise or CCW), multi-stroke gestures</li>
+</ul>
+</div><div class="notes"><p>Yet again, segmentation is a problem.</p><p>Dollar Recognizer: http://depts.washington.edu/madlab/proj/dollar/</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 30</div>
+<div class="slide" aria-hidden="true"><img src='images/images.030.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Machine learning approaches</h2>
+<ul><li>Various algorithms: neural networks, SVMs, AdaBoost</li>
+<li>Can be more robust to individual differences, can be trained by example</li>
+<li>But, models are sometimes opaque, must choose appropriate features, more trial and error</li>
+<li>Good starting point: Fiebrink et al., Wekinator</li>
+</ul>
+</div><div class="notes"><p>Wekinator: http://www.wekinator.org</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 31</div>
+<div class="slide" aria-hidden="true"><img src='images/images.031.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Recognition challenges</h2>
+<ul><li>Segmentation: how do we know when a gesture begins or ends?</li>
+<li>Rest position / "off state"</li>
+<li>Assumptions of training data set</li>
+<li>Size, speed, orientation, etc.</li>
+<li>Does training data reflect all valid ways to perform the gesture?</li>
+</ul>
+</div><div class="notes"><p>Approaches to segmentation: starting movement, out of band action, keypress</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 32</div>
+<div class="slide" aria-hidden="true"><img src='images/images.032.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Choosing gesture recognition methods</h2>
+<ul><li>Sense data as directly as possible</li>
+<li>Touch screens are very precise; almost everything else is noisier</li>
+<li>Measurement noise is cumulative (e.g., accelerometer -> position)</li>
+<li>Identify segmentation rules</li>
+<li>Time-based, speed-based, auxiliary sensor</li>
+</ul>
+</div><div class="notes"><p>This is an interesting problem. Remember that we often have the capability to change all parts of the system: sensing mechanism, segmentation, gesture set.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 33</div>
+<div class="slide" aria-hidden="true"><img src='images/images.033.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Adapting to different parts of the body</h2>
+<ul><li>Gestures can be performed by different body parts</li>
+<li>May be especially useful for accessibility</li>
+<li>But, consider variations in dexterity</li>
+<li>Range of movement, speed, force, conductivity</li>
+<li>May not always be symmetric</li>
+<li>Decide whether to support ambidextrous use (or other body parts)</li>
+</ul>
+</div><div class="notes"><p>Conductivity may be important for capacitive sensing</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 34</div>
+<div class="slide" aria-hidden="true"><img src='images/images.034.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Next time</h2>
+<ul><li>Designing gestures</li>
+<li>Evaluating gestures</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 35</div>
+<div class="slide" aria-hidden="true"><img src='images/images.035.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Evaluating gestures</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 36</div>
+<div class="slide" aria-hidden="true"><img src='images/images.036.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Evaluating gestures</h2>
+<ul><li>How should we evaluate whether a gesture is good or bad?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 37</div>
+<div class="slide" aria-hidden="true"><img src='images/images.037.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Evaluation criteria</h2>
+<ul><li>Sufficiently distinct from each other (to person or system)</li>
+<li>Not embarrassing / socially appropriate</li>
+<li>Consistent use across system (multiple systems)</li>
+<li>Good mapping to existing actions</li>
+<li>Magnitude of gesture should map to magnitude of result</li>
+<li>Physical exertion / ergonomics</li>
+<li>Sensitive to context of use</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 38</div>
+<div class="slide" aria-hidden="true"><img src='images/images.038.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Evaluation criteria</h2>
+<ul><li>Recognition accuracy</li>
+<li>Ergonomics / reachability</li>
+<li>Intuitiveness / learnability</li>
+<li>Social acceptability</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 39</div>
+<div class="slide" aria-hidden="true"><img src='images/images.039.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Recognition accuracy</h2>
+<ul><li>Types of errors: false positive, false negative,  matched to other gesture</li>
+<li>Costs/effects differ by error</li>
+<li>Users will expect high accuracy: 95-99%</li>
+<li>Identify commonly confused gestures and change them (or change recognizer)</li>
+</ul>
+</div><div class="notes"><p>Each type of error has different implications</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 40</div>
+<div class="slide" aria-hidden="true"><img src='images/images.040.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Ergonomics</h2>
+<ul><li>Consider reach, physical effort, repetitive movements</li>
+<li>"Gorilla arm" — humans are very bad at holding arms out for extended periods</li>
+</ul>
+</div><div class="notes"><p>iPhone image: https://www.gizmodo.com.au/2014/09/how-to-design-for-thumbs-in-the-era-of-huge-screens/ Minority report image: https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/02/11/11/Kinect-Minority-Report-UI-2.jpg</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 41</div>
+<div class="slide" aria-hidden="true"><img src='images/images.041.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Considering contextual and physical limitations</h2>
+<ul><li>Users can be constrained by their abilities or context</li>
+<li>Free hands?</li>
+<li>Holding something?</li>
+<li>Sitting/standing/walking?</li>
+<li>Example: Google Maps supports two finger pinch to zoom, also double tap + slide up/down</li>
+</ul>
+</div><div class="notes"><p>Google Maps image: https://developers.google.com/maps/documentation/ios-sdk/images/url_scheme_pizza.png</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 42</div>
+<div class="slide" aria-hidden="true"><img src='images/images.042.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Intuitiveness</h2>
+<ul><li>How could we measure intuitiveness of a gesture?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 43</div>
+<div class="slide" aria-hidden="true"><img src='images/images.043.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What is intuitiveness anyway?</h2>
+<ul><li>Understandable</li>
+<li>Feedback </li>
+<li>Predictable outcome</li>
+<li>Can be explained concisely, "makes sense"</li>
+<li>Using what you know / no need for specialized knowledge</li>
+<li>Guessable</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 44</div>
+<div class="slide" aria-hidden="true"><img src='images/images.044.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Testing intuitiveness</h2>
+<ul><li>Learnability: how long does it take someone to learn?</li>
+<li>Memorability: do users remember gestures after some time away?</li>
+<li>Guessability: tell user what the goal is, ask them to guess what the gesture will be</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 45</div>
+<div class="slide" aria-hidden="true"><img src='images/images.045.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Are obscure gestures useful?</h2>
+<ul><li>Not a great idea to hide dangerous features behind gestures</li>
+<li>May activate by accident</li>
+<li>Unclear what gesture does</li>
+<li>May be some social benefit in learning obscure gestures</li>
+<li>"Why Snapchat's Design is Deliberately Confusing"</li>
+</ul>
+</div><div class="notes"><p>To keep out the olds, but also to support social learning</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 46</div>
+<div class="slide" aria-hidden="true"><img src='images/images.046.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Social acceptability</h2>
+<ul><li>Some gestures may be intuitive, memorable, highly recognizable, and embarrassing</li>
+<li>Must consider (and test) whether users are willing to perform gestures</li>
+<li>Consider type of movement, location on body, etc.</li>
+<li>May vary based on context and cultural factors</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 47</div>
+<div class="slide" aria-hidden="true"><img src='images/images.047.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Profita et al.,  Don't mind me touching my wrist</h2>
+<ul></ul>
+</div><div class="notes"><p>https://dl.acm.org/citation.cfm?id=2494331</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 48</div>
+<div class="slide" aria-hidden="true"><img src='images/images.048.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Designing gestures</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 49</div>
+<div class="slide" aria-hidden="true"><img src='images/images.049.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Designing gestures</h2>
+<ul><li>Approaches for designing gestures</li>
+<li>Handling complexity</li>
+<li>Having a system of gestures</li>
+<li>Determining what's important</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 50</div>
+<div class="slide" aria-hidden="true"><img src='images/images.050.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Approaches to designing gestures</h2>
+<ul><li>Developing conventions</li>
+<li>Using physical metaphors</li>
+<li>User-defined elicitation methods</li>
+<li>Dealing with complexity</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 51</div>
+<div class="slide" aria-hidden="true"><img src='images/images.051.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Developing conventions</h2>
+<ul><li>This is an issue of mappings</li>
+<li>How do characteristics of gesture (direction, shape, number of fingers) map to effect?</li>
+<li>Users may have difficulty remembering complex mappings</li>
+</ul>
+</div><div class="notes"><p>iOS voiceover gestures: https://www.interactiveaccessibility.com/education/training/downloads/iOS-Cheatsheet.pdf Left to right: forward or back Number of fingers: granularity. More fingers == bigger items</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 52</div>
+<div class="slide" aria-hidden="true"><img src='images/images.052.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Using metaphors</h2>
+<ul><li>Gestures can map to metaphors</li>
+<li>At a basic level, direct manipulation of items on screen</li>
+<li>Drag left, item goes left</li>
+<li>Developing vocabulary of gestures can help in adoption</li>
+</ul>
+</div><div class="notes"><p>Figures from Wu and Balakrishnan, http://www.dgp.toronto.edu/research/tabletop/mwu_UIST2003.pdf</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 53</div>
+<div class="slide" aria-hidden="true"><img src='images/images.053.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Gesture elicitation(Wobbrock et al., 2009)</h2>
+<ul><li>Big idea: allowing users to pick their own gestures will lead to more intuitive gestures</li>
+<li>But, users may pick gestures that conflict, or are difficult to memorize</li>
+<li>Solution: elicit gestures from a set of representative users, maximize agreement</li>
+<li>This method has become extremely popular and has been used for many types of gestures: mobile devices, body gestures, drone interactions…</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 54</div>
+<div class="slide" aria-hidden="true"><img src='images/images.054.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Eliciting gestures</h2>
+<ul><li>Show participants outcome of action; allow them to demonstrate a gesture for that action</li>
+<li>Pick gestures with largest # of agreeing participants</li>
+<li>Can reverse it; show gestures toguess outcome</li>
+<li>Can't just pick top gestures, must deal with overloading, conventions</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 55</div>
+<div class="slide" aria-hidden="true"><img src='images/images.055.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Dealing with complexity</h2>
+<ul><li>Gestures have many variables</li>
+<li>Example: for one-handed touch screen gestures, speed, size, number of figures, direction, location</li>
+<li>It's important to be clear about which variables change how the gesture is interpreted, and which don't</li>
+<li>Users may feel more strongly about certain variables</li>
+<li>e.g., users do not feel strongly about the number of fingers in a gesture (Wobbrock et al., 2009)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 56</div>
+<div class="slide" aria-hidden="true"><img src='images/images.056.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Teaching gestures</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 57</div>
+<div class="slide" aria-hidden="true"><img src='images/images.057.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How to teach gestures effectively?</h2>
+<ul><li>Show, don't tell</li>
+<li>Provide feedforward and feedback</li>
+<li>Hint at possible gestures</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 58</div>
+<div class="slide" aria-hidden="true"><img src='images/images.058.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Show, don't tell</h2>
+<ul><li>"To zoom, pinch your fingers" vs.</li>
+</ul>
+</div><div class="notes"><p>Many aspects of the gesture are not clear: speed, movement, where do you start?</p><p>Note: this great gesture figure was done through tracing.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 59</div>
+<div class="slide" aria-hidden="true"><img src='images/images.059.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Feedforward and feedback</h2>
+<ul><li>Feedforward?</li>
+</ul>
+</div><div class="notes"><p>What are these?</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 60</div>
+<div class="slide" aria-hidden="true"><img src='images/images.060.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Feedforward and feedback</h2>
+<ul><li>Feedback: make it clear what I did</li>
+<li>Feedforward: show possible actions from here</li>
+<li>One (complex) example: Octopocus by Bau et al.(paper, video)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 61</div>
+<div class="slide" aria-hidden="true"><img src='images/images.061.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Hinting at possible gestures</h2>
+<ul><li>Show that there is more content offscreen</li>
+<li>Or show which objects can move</li>
+<li>A simple form of feedforward</li>
+</ul>
+</div><div class="notes"><p>The Windows example is aggressively cut off, signals "there is more here" iOS button bounces the screen a little bit</p><p>Windows Metro: http://www.gadgethelpline.com/wp-content/uploads/2011/06/windows-phone-7-metro-490x343-1.jpg iOS: http://tapsmart.wpengine.netdna-cdn.com/wp-content/uploads/2016/08/open-from-lock-screen-header-750x400.jpg</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 62</div>
+<div class="slide" aria-hidden="true"><img src='images/images.062.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Gesture miscellany</h2>
+<ul><li>Documenting gestures</li>
+<li>User tests with gestures</li>
+<li>Gesture accessibility</li>
+<li>Downsides of gestures</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 63</div>
+<div class="slide" aria-hidden="true"><img src='images/images.063.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Documenting gestures</h2>
+<ul><li>Video may be ideal: shows all aspects of how to perform gesture correctly</li>
+<li>For figures, it's often easiest to take a photo and then trace it</li>
+<li>Use arrows to show motion</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 64</div>
+<div class="slide" aria-hidden="true"><img src='images/images.064.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>User testing gestures</h2>
+<ul><li>Provide an introduction to the gesture set, then take away hints and documentation</li>
+<li>Users will not have documentation in most cases</li>
+<li>Test recognizer for accuracy, errors, confusion</li>
+<li>Test gesture set usability by learnability, memorability, types of errors</li>
+<li>Think aloud can help here</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 65</div>
+<div class="slide" aria-hidden="true"><img src='images/images.065.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Gesture accessibility</h2>
+<ul><li>Many users may have difficulty performing certain gestures (due to reach, hand pose, tremor, ability to touch and lift-off)</li>
+<li>Many gestures rely on vision (to position on screen, to precisely control shape)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 66</div>
+<div class="slide" aria-hidden="true"><img src='images/images.066.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Eyes-Free Touch Screens</h2>
+<ul><li>How can we design touch screen user interfaces that can be operated without sight?</li>
+<li>Can we achieve this with off-the-shelf devices?</li>
+</ul>
+</div><div class="notes"><p>The first project is called Slide Rule. It began with the question: how can we take an existing touch screen based mobile device, which is not accessible, and redesign the fundamental interactions that it supports</p><p>And to give you some context about this project, although we did see accessibility on the iPhone in the video. This project, Slide Rule, predates that work. At the time this work began, most commercially available touch screen devices provided no accessibility support, and those that did were quite limited.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 67</div>
+<div class="slide" aria-hidden="true"><img src='images/images.067.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Gesture accessibility: what to do</h2>
+<ul><li>Keep in mind that some users may be unable to perform some gestures, even standard gestures</li>
+<li>Provide alternatives for keyboard, mouse, etc.</li>
+<li>For blind and vision impaired users:Support system-wide accessibility systems (e.g. VoiceOver on iOS, Talkback on Android)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 68</div>
+<div class="slide" aria-hidden="true"><img src='images/images.068.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Downsides of gestures</h2>
+<ul><li>Very low discoverability</li>
+<li>Unclear what gesture requirements are</li>
+<li>No standard gesture set</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 69</div>
+<div class="slide" aria-hidden="true"><img src='images/images.069.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Discoverability</h2>
+<ul><li>Replacing explicit UI with gestures can negatively affect usability</li>
+<li>How can we address this problem?</li>
+</ul>
+</div><div class="notes"><p>See www.jnd.org/dn.mss/gestural_interfaces_a_step_backwards_in_usability_6.html</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 70</div>
+<div class="slide" aria-hidden="true"><img src='images/images.070.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Discoverability solutions</h2>
+<ul><li>Show help on screen</li>
+<li>Use gestures as an accelerator (with buttons as a backup)</li>
+<li>Hint at gestures in UI design</li>
+</ul>
+</div><div class="notes"><p>Hint page from ActionNotes: https://davehornsby.wordpress.com/2011/03/25/actionnotes-for-the-ipad-is-out-today/</p></div></div>
+</div>
+</div>
+</body>
+</html>
