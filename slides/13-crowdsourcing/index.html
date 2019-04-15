@@ -1,0 +1,490 @@
+<html>
+<head>
+<title>Crowdsourcing
+CSCI 4849 Spring 2019</title>
+<style> body { font-family: Helvetica, Arial, sans-serif; margin: 50px; }
+.slide { width: 600px; height: 338px;}
+.notes { width: 600px;}
+.html { width: 580px; min-height: 318px; background: #000; color: #fff; padding: 10px}
+.slide, .notes, .html { margin-bottom: 10px;}
+.html img { display: none;}
+.sr-only { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.wrapper { margin: auto; max-width: 600px;}
+.slideNumber { font-weight: bold; margin-bottom: 10px; margin-top: 40px; };</style>
+</head>
+<body>
+<div class='wrapper'>
+<h1>Crowdsourcing
+CSCI 4849 Spring 2019</h1>
+<p>Download slides: <a href='13-crowdsourcing.key'>Keynote</a>, <a href='13-crowdsourcing.pdf'>PDF</a></p>
+<div class='content'><div class="row">
+<div class="slideNumber">Slide 1</div>
+<div class="slide" aria-hidden="true"><img src='images/images.001.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Crowdsourcing
+CSCI 4849 Spring 2019</h2>
+<ul><li>Inclusive Design & Assistive TechnologySpring 2017</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="http://www.digitaltrends.com/social-media/uber-cheezburger-partnering-fill-office-kittens-yes-really/">Kittens</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 2</div>
+<div class="slide" aria-hidden="true"><img src='images/images.002.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Crowdsourcing</h2>
+<ul><li>What?</li>
+<li>Why?</li>
+<li>How?</li>
+<li>Notable examples</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 3</div>
+<div class="slide" aria-hidden="true"><img src='images/images.003.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What is crowdsourcing?</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 4</div>
+<div class="slide" aria-hidden="true"><img src='images/images.004.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>One definition:</h2>
+<ul><li>"Crowdsourcing is the act of taking a job traditionally performed by a designated agent (usually an employee) and outsourcing it to an undefined, generally large group of people in the form of an open call." – Jeff Howe, Wired</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 5</div>
+<div class="slide" aria-hidden="true"><img src='images/images.005.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Crowdsourcing experiences?</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 6</div>
+<div class="slide" aria-hidden="true"><img src='images/images.006.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Amazon Mechanical Turk</h2>
+<ul><li>Primary platform for conducting paid crowdsourcing</li>
+<li>Amazon manages payment accounts</li>
+<li>Requesters create tasks and provide a cash value</li>
+<li>Workers can search tasks, and complete them</li>
+<li>Requesters can verify work and provide payment</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 7</div>
+<div class="slide" aria-hidden="true"><img src='images/images.007.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Mechanical Turk demo</h2>
+<ul><li>As requester</li>
+<li>As worker</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 8</div>
+<div class="slide" aria-hidden="true"><img src='images/images.008.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Integrating MTurk into code</h2>
+<ul><li># Import CrowdLib and your settings file with your account key and HIT defaults.</li>
+<li>import crowdlib as cl, crowdlib_settings, time</li>
+<li># Create a HIT type, with the title and description for this group of HITs.</li>
+<li>hit_type = cl.create_hit_type("Who invented this?", "Answer a simple question.")</li>
+<li># Post a HIT.</li>
+<li>hit = hit_type.create_hit([cl.text_field("Who invented the umbrella?", "q1")])</li>
+<li># Wait until the HIT has been completed by a worker.</li>
+<li>while hit.is_available:</li>
+<li>    time.sleep(10) # poll every 10 seconds</li>
+<li># Fetch and print the result.</li>
+<li>print( tuple(hit.assignments)[0]["q1"] )</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="http://www.cs.umd.edu/hcil/crowdlib/">CrowdLib library from University of Maryland</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 9</div>
+<div class="slide" aria-hidden="true"><img src='images/images.009.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Crowdsourcing for accessibility</h2>
+<ul><li>People can perform tasks that some people can't do (and AI can't yet do) - or faster, more accurately, etc.</li>
+<li>Reading text, annotating images, generating speech…</li>
+<li>Prototype "intelligent", AI-like systems quickly and without tons of training data</li>
+<li>Supports many domains with minimal customization</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 10</div>
+<div class="slide" aria-hidden="true"><img src='images/images.010.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Trade-offs</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 11</div>
+<div class="slide" aria-hidden="true"><img src='images/images.011.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Trade-offs</h2>
+<ul><li>Cost per use</li>
+<li>Requires internet connectivity</li>
+<li>Latency</li>
+<li>Potential privacy concerns </li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 12</div>
+<div class="slide" aria-hidden="true"><img src='images/images.012.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Why design for the crowd is interesting</h2>
+<ul><li>Need to design for unskilled workers</li>
+<li>Or train them on the job</li>
+<li>Design for tasks that can be dropped and picked up at any time</li>
+<li>Accounting for bad input (intentional or not)</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 13</div>
+<div class="slide" aria-hidden="true"><img src='images/images.013.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Crowdsourcing research</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 14</div>
+<div class="slide" aria-hidden="true"><img src='images/images.014.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Key challenges</h2>
+<ul><li>Breaking down a complex task into smaller parts</li>
+<li>Ensuring quality output from (potentially noisy) data</li>
+<li>? Crowd algorithms</li>
+<li>Minimizing response time</li>
+<li>Providing meaningful output to user</li>
+<li>Managing privacy for end users and workers</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 15</div>
+<div class="slide" aria-hidden="true"><img src='images/images.015.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How to do it</h2>
+<ul><li>Choose a problem that can be supported by crowd</li>
+<li>Or break an existing problem into very small steps</li>
+<li>What skills must crowd workers have?</li>
+<li>What contextual info does the crowd need?</li>
+<li>What is worker's incentive?</li>
+<li>How to ensure quality/fast results?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 16</div>
+<div class="slide" aria-hidden="true"><img src='images/images.016.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Incentivizing crowd workers</h2>
+<ul><li>Volunteering - Be My Eyes</li>
+<li>Paid</li>
+<li>Experts - UpWork</li>
+<li>Non-experts - Mechanical Turk </li>
+<li>Gamification - The ESP Game</li>
+</ul>
+</div><div class="notes"><p>Limits of volunteering: no pay! Interest may flag over time.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 17</div>
+<div class="slide" aria-hidden="true"><img src='images/images.017.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Examples from research</h2>
+<ul><li>The ESP Game</li>
+<li>Soylent</li>
+<li>VizWiz</li>
+<li>Legion</li>
+<li>LegionScribe</li>
+<li>RegionSpeak</li>
+<li>Crowdsourced map generation</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 18</div>
+<div class="slide" aria-hidden="true"><img src='images/images.018.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The ESP Game (von Ahn and Dabbish 2004)</h2>
+<ul><li>Incentivized accessibility via a game</li>
+<li>No need to pay workers</li>
+</ul>
+</div><div class="notes"><p>Luis von Ahn and Laura Dabbish. 2004. Labeling images with a computer game. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '04). ACM, New York, NY, USA, 319-326. DOI=http://dx.doi.org/10.1145/985692.985733</p><p>This is a very clever approach. But may not be applicable everywhere.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 19</div>
+<div class="slide" aria-hidden="true"><img src='images/images.019.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How to play the ESP Game</h2>
+<ul><li>2 players are matched at random</li>
+<li>Both players are shown the same image</li>
+<li>Players receive points for guessing the same words as others</li>
+<li>As long as they are not "taboo" words</li>
+</ul>
+</div><div class="notes"><p>Taboo words are forbidden. But why?</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 20</div>
+<div class="slide" aria-hidden="true"><img src='images/images.020.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What's the deal?</h2>
+<ul><li>Why is the ESP Game designed this way?</li>
+<li>Why are there taboo words?</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 21</div>
+<div class="slide" aria-hidden="true"><img src='images/images.021.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The ESP Game: Behind the scenes</h2>
+<ul><li>Players are incentivized to label images, solving a critical accessibility problem</li>
+<li>"Taboo" words prevent people from coming up with the most common word only, encourages new words</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 22</div>
+<div class="slide" aria-hidden="true"><img src='images/images.022.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The beauty of the ESP game</h2>
+<ul><li>Generates useful accessibility data for free</li>
+<li>Right combination of fun task + useful output</li>
+<li>van Ahn also founded reCAPTCHA</li>
+<li>Received the MacArthur "Genius" Award for this work</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 23</div>
+<div class="slide" aria-hidden="true"><img src='images/images.023.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>VizWiz: Nearly real-time answers to visual questions (Bigham et al. 2010)</h2>
+<ul><li>A blind person takes a photo with a smartphone and speaks a question</li>
+<li>Text is transcribed and sent to crowd workers</li>
+<li>QuikTurkit allows for fast responses; recruits workers to complete filler tasks until the user's request is ready</li>
+</ul>
+</div><div class="notes"><p>Jeffrey P. Bigham, Chandrika Jayant, Hanjie Ji, Greg Little, Andrew Miller, Robert C. Miller, Robin Miller, Aubrey Tatarowicz, Brandyn White, Samual White, and Tom Yeh. 2010. VizWiz: nearly real-time answers to visual questions. In Proceedings of the 23nd annual ACM symposium on User interface software and technology (UIST '10). ACM, New York, NY, USA, 333-342. DOI=http://dx.doi.org/10.1145/1866029.1866080</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 24</div>
+<div class="slide" aria-hidden="true"><img src='images/images.024.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>VizWiz questions</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 25</div>
+<div class="slide" aria-hidden="true"><img src='images/images.025.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>What's cool about VizWiz?</h2>
+<ul><li>Solved a seemingly impossible AI task – answering arbitrary questions about images</li>
+<li>Addressed the main limitation of crowd markets – latency for recruiting workers</li>
+<li>A real app that you can download from the App Store – although not currently available :( </li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 26</div>
+<div class="slide" aria-hidden="true"><img src='images/images.026.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>VizWiz for fashion(Burton et al., ASSETS 2012)</h2>
+<ul><li>Use human assistants for their subjective fashion sense</li>
+<li>Important to match raters with end users</li>
+<li>"Yes, I would like to know if the volunteer preferred 'big city' or 'small town' style of dress. Also, I would be interested to know if the volunteer had exposure or experience with various other cultures. Like color preferences and accent pieces for a complete look."</li>
+</ul>
+</div><div class="notes"><p>Link: https://dl.acm.org/citation.cfm?id=2384941</p><p>It's interesting to see questions that aren't just "what is this?"</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 27</div>
+<div class="slide" aria-hidden="true"><img src='images/images.027.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Legion Scribe (Lasecki et al. 2014)</h2>
+<ul><li>Support audio transcriptions using non-expert workers</li>
+<li>Provides support for capturing and merging partial transcripts</li>
+</ul>
+</div><div class="notes"><p>Walter S. Lasecki, Raja Kushalnagar, and Jeffrey P. Bigham. 2014. Legion scribe: real-time captioning by non-experts. In Proceedings of the 16th international ACM SIGACCESS conference on Computers &amp; accessibility (ASSETS '14). ACM, New York, NY, USA, 303-304. DOI: http://dx.doi.org/10.1145/2661334.2661352</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 28</div>
+<div class="slide" aria-hidden="true"><img src='images/images.028.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>RegionSpeak (Zhong et al. 2015) </h2>
+<ul><li>Combines crowd-based image tagging with computer vision-based tracking</li>
+<li>Crowd labels parts of an image</li>
+<li>User can explore image interactively by touching screen</li>
+</ul>
+</div><div class="notes"><p>Yu Zhong, Walter S. Lasecki, Erin Brady, and Jeffrey P. Bigham. 2015. RegionSpeak: Quick Comprehensive Spatial Descriptions of Complex Images for Blind Users. In Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems (CHI '15). ACM, New York, NY, USA, 2353-2362. DOI: https://doi.org/10.1145/2702123.2702437</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 29</div>
+<div class="slide" aria-hidden="true"><img src='images/images.029.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Limitations of these approaches?</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 30</div>
+<div class="slide" aria-hidden="true"><img src='images/images.030.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Some limitations</h2>
+<ul><li>Do crowd workers give good answers?</li>
+<li>Image quality</li>
+<li>Privacy</li>
+<li>Worker rights</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 31</div>
+<div class="slide" aria-hidden="true"><img src='images/images.031.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Ensuring quality answers</h2>
+<ul><li>Have workers complete a gold standard task for which the answer is known</li>
+<li>Recruit multiple workers to complete the same task; correct answers should be common across multiple workers</li>
+<li>Can use more complex crowd algorithms, like Find-Fix-Verify</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 32</div>
+<div class="slide" aria-hidden="true"><img src='images/images.032.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Soylent: A word processor with a crowd inside (Bernstein et al., UIST 2010)</h2>
+<ul><li>How do we enable paid crowd workers to edit a document?</li>
+<li>Keeping in mind that crowd workers:</li>
+<li>May make mistakes</li>
+<li>May input junk data</li>
+<li>May quit halfway through</li>
+<li>Benefits: smart find-and-replace (e.g. Michelle to Michael), natural language queries, human intelligence</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="http://up.csail.mit.edu/other-pubs/soylent.pdf">Soylent paper</a></p><p>A lot of these problems revolve around how to get high-quality output without the cost of high-quality workers.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 33</div>
+<div class="slide" aria-hidden="true"><img src='images/images.033.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>The solution: crowd algorithms!</h2>
+<ul><li>Break down tasks in a way that enables error checking, smaller sub-tasks </li>
+<li>Soylent introduces find, fix, verify algorithm</li>
+<li>Each sub-step handled by different workers</li>
+<li>Sent to multiple workers for agreement</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 34</div>
+<div class="slide" aria-hidden="true"><img src='images/images.034.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 35</div>
+<div class="slide" aria-hidden="true"><img src='images/images.035.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Structuring input to improve quality(Morash et al. 2015)</h2>
+<ul><li>Providing a template for describing an image results in higher-quality descriptions</li>
+</ul>
+</div><div class="notes"><p>Significantly improves transcription quality.</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 36</div>
+<div class="slide" aria-hidden="true"><img src='images/images.036.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Privacy</h2>
+<ul><li>Data may unintentionally contain private information</li>
+<li>"What is my credit card number?"</li>
+<li>Inadvertently including private information in image</li>
+<li>Important for users to know that humans have access to their data</li>
+<li>Detect sensitive information when possible</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 37</div>
+<div class="slide" aria-hidden="true"><img src='images/images.037.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Image quality (Brady et al. 2013)</h2>
+<ul><li>Capturing images to use in crowdsourcing can be a real challenge for blind and visually impaired people</li>
+<li>Issues: lighting, blur, framing </li>
+<li>Sometimes take picture of wrong thing entirely</li>
+<li>Feedback can help; this can be an iterative process</li>
+</ul>
+</div><div class="notes"><p>Link: <a href="https://dl.acm.org/citation.cfm?id=2481291">Paper</a></p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 38</div>
+<div class="slide" aria-hidden="true"><img src='images/images.038.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 39</div>
+<div class="slide" aria-hidden="true"><img src='images/images.039.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Crowd work for PWD?</h2>
+<ul><li>Crowd work could be a viable employment for people with disabilties (flexible hours, can work from home)</li>
+<li>But existing crowd systems present accessibility challenges</li>
+<li>Time limits</li>
+<li>Inaccessible user interfaces (often inaccessible halfway through a task)</li>
+<li>No way to discover task accessibility</li>
+<li>For more info, see Zyskowski et al. 2015</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 40</div>
+<div class="slide" aria-hidden="true"><img src='images/images.040.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fair pay & worker rights</h2>
+<ul><li>Hourly rates vary wildly</li>
+<li>Be clear what work is expected for a task</li>
+<li>One option: pay workers at least minimum wage where you are</li>
+<li>But costs of living vary widely across the world</li>
+<li>New crowdsourcing platforms like Daemo seek to provide workers with more control</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 41</div>
+<div class="slide" aria-hidden="true"><img src='images/images.041.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Other crowdsourcing systems</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 42</div>
+<div class="slide" aria-hidden="true"><img src='images/images.042.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Tohme (Hara et al. 2014)</h2>
+<ul><li>Computer vision system to detect pedestrian navigation features</li>
+<li>Use crowd workers to remove false positives/negatives; train ML system</li>
+<li>Human workers can often verify results quickly and accurately</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 43</div>
+<div class="slide" aria-hidden="true"><img src='images/images.043.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>SceneTalk (Kane et al. 2017)</h2>
+<ul><li>Use crowd to generate likely phrases for AAC</li>
+<li>Crowd identifies regions in images (still difficult for ML methods)</li>
+<li>Can be automated later</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 44</div>
+<div class="slide" aria-hidden="true"><img src='images/images.044.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Legion (Lasecki et al. 2011)</h2>
+<ul><li>Use crowd to control a complex user interface (e.g. a robot)</li>
+<li>Combine crowd input to choose best path</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 45</div>
+<div class="slide" aria-hidden="true"><img src='images/images.045.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Making crowd input usable (Legion)</h2>
+<ul></ul>
+</div><div class="notes"><p>Legion: https://dl.acm.org/citation.cfm?id=2047200</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 46</div>
+<div class="slide" aria-hidden="true"><img src='images/images.046.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Fansourcing</h2>
+<ul><li>Where else can we find willing volunteers? Fan communities.</li>
+<li>Take advantage of fans' excitement to share their favorite thing</li>
+</ul>
+</div><div class="notes"><p>YouDescribe: http://youdescribe.org</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 47</div>
+<div class="slide" aria-hidden="true"><img src='images/images.047.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Design exercise</h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 48</div>
+<div class="slide" aria-hidden="true"><img src='images/images.048.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Working with crowd workers…</h2>
+<ul><li>They are untrained (unless we filter or train them)</li>
+<li>They may have trouble following directions (especially if directions are confusing)</li>
+<li>They may not always do a good job</li>
+<li>They may quit if a task is boring</li>
+<li>They take time to recruit, and to complete the task</li>
+</ul>
+</div><div class="notes"><p>In general: explain why this stuff is difficult; and then why what you did is worthwhile</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 49</div>
+<div class="slide" aria-hidden="true"><img src='images/images.049.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>How to do it well</h2>
+<ul><li>A practice example: use the crowd to transcribe computer science talks</li>
+<li>We'll start with a bad version, and make a better one</li>
+</ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 50</div>
+<div class="slide" aria-hidden="true"><img src='images/images.050.png' width='600' height='338'></div>
+<div class="html sr-only"><h2></h2>
+<ul></ul>
+</div><div class="notes"></div></div>
+<div class="row">
+<div class="slideNumber">Slide 51</div>
+<div class="slide" aria-hidden="true"><img src='images/images.051.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Solutions</h2>
+<ul><li>Break into 1 minute segments, Give a sentence at a time</li>
+<li>Auto transcribe first and correct</li>
+<li>Competition! (between friends, high score list)</li>
+<li>Give correspondence between text and video</li>
+<li>Controls for video speed</li>
+<li>Gold standard test video</li>
+<li>Overlap between segments</li>
+</ul>
+</div><div class="notes"><p>Some ideas: break the task into pieces. Give better instructions. Tell workers what to focus on. Filter transcribers?</p></div></div>
+<div class="row">
+<div class="slideNumber">Slide 52</div>
+<div class="slide" aria-hidden="true"><img src='images/images.052.png' width='600' height='338'></div>
+<div class="html sr-only"><h2>Creating tasks in MTurk</h2>
+<ul><li>Use APIs to generate human intelligence tasks (HITs), retrieve results</li>
+<li>Official MTurk API</li>
+<li>Boto (a pretty good Python API)</li>
+<li>MTurk tasks: can be a web form created on mturk.com, or can create a custom web app (that handles specific MTurk query parameters)</li>
+</ul>
+</div><div class="notes"></div></div>
+</div>
+</div>
+</body>
+</html>
